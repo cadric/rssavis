@@ -1,0 +1,216 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .status-page {
+    display: grid;
+    justify-items: center;
+    gap: 0.625rem;
+    color: var(--rs-color-dim);
+    text-align: center;
+  }
+
+  .status-page[data-status-variant='full'] {
+    min-block-size: 18rem;
+    align-content: center;
+    padding-block: 3rem;
+  }
+
+  .status-page[data-status-variant='compact'] {
+    justify-items: start;
+    padding: 1rem;
+    text-align: start;
+  }
+
+  .status-page-visual {
+    display: inline-grid;
+    place-items: center;
+    color: var(--rs-color-dim);
+  }
+
+  .status-page-product-icon {
+    inline-size: 7rem;
+    block-size: 7rem;
+  }
+
+  .status-page-title,
+  .status-page-body {
+    max-inline-size: 36rem;
+    margin: 0;
+  }
+
+  .status-page-title {
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-title);
+  }
+
+  .status-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .toast-stack {
+    position: fixed;
+    inset-block-end: 1.5rem;
+    inset-inline: 0;
+    z-index: 20;
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    pointer-events: none;
+  }
+
+  /* AdwToast: dark osd pill, identical in light and dark schemes. */
+  .toast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--rs-toast-outer-spacing);
+    inline-size: fit-content;
+    max-inline-size: min(28rem, calc(100vw - 2rem));
+    padding: var(--rs-toast-block-padding);
+    padding-inline-start: var(--rs-toast-inline-start-padding);
+    border: 0;
+    border-radius: var(--rs-toast-radius);
+    background: var(--rs-color-toast-bg);
+    color: var(--rs-color-toast-fg);
+    box-shadow: var(--rs-toast-shadow);
+    pointer-events: auto;
+  }
+
+  .toast-message {
+    min-inline-size: 0;
+    margin: 0;
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .toast .text-button {
+    min-block-size: 2rem;
+    border-radius: var(--rs-toast-radius);
+    background: var(--rs-color-toast-action-bg);
+    color: var(--rs-color-toast-fg);
+  }
+
+  .toast .text-button:hover {
+    background: var(--rs-color-toast-action-hover-bg);
+  }
+
+  .toast .text-button:active {
+    background: var(--rs-color-toast-action-active-bg);
+  }
+
+  .toast-dismiss {
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: var(--rs-color-toast-fg);
+  }
+
+  .toast-dismiss:hover {
+    background: var(--rs-color-toast-flat-hover-bg);
+  }
+
+  .toast-dismiss:active {
+    background: var(--rs-color-toast-flat-active-bg);
+  }
+
+  .toast :is(.text-button, .toast-dismiss):focus-visible {
+    outline: 0.125rem solid var(--rs-color-toast-fg);
+    outline-offset: -0.125rem;
+  }
+
+  .banner-stack {
+    container-type: inline-size;
+    display: grid;
+  }
+
+  .adw-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--rs-banner-horizontal-spacing);
+    padding: var(--rs-banner-padding);
+    background: var(--rs-color-banner-bg);
+    color: var(--rs-color-banner-fg);
+  }
+
+  .adw-banner-title {
+    justify-self: center;
+    margin-inline-start: var(--rs-banner-centered-spacing);
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    font-weight: 700;
+    line-clamp: 3;
+    text-align: center;
+  }
+
+  .adw-banner-button {
+    min-inline-size: var(--rs-banner-action-min-inline-size);
+    min-block-size: 2rem;
+    background: var(--rs-color-banner-action-bg);
+  }
+
+  .adw-banner-button:hover:not(.suggested) {
+    background: var(--rs-color-banner-action-hover-bg);
+  }
+
+  .adw-banner-button:active:not(.suggested) {
+    background: var(--rs-color-banner-action-active-bg);
+  }
+
+  .adw-banner[hidden] {
+    display: none;
+  }
+
+  @container (inline-size < 26rem) {
+    .adw-banner {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--rs-banner-vertical-spacing);
+    }
+
+    .adw-banner-title {
+      margin-inline-start: 0;
+    }
+
+    .adw-banner-button {
+      justify-self: center;
+      min-inline-size: var(--rs-banner-action-stacked-min-inline-size);
+    }
+  }
+
+  @media (prefers-contrast: more) {
+    .toast,
+    .adw-banner {
+      box-shadow: 0 0 0 1px var(--rs-color-border);
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  @layer components {
+    .adw-banner {
+      border: 1px solid ButtonText;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @layer components {
+    .toast {
+      transition:
+        opacity var(--rs-transition-fast),
+        transform var(--rs-transition-fast);
+    }
+
+    @starting-style {
+      .toast {
+        opacity: 0;
+        transform: translateY(0.5rem);
+      }
+    }
+  }
+}

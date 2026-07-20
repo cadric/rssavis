@@ -1,0 +1,1215 @@
+{
+  "extensionName": {
+    "message": "RSSavis"
+  },
+  "extensionDescription": {
+    "message": "Local RSS and Atom reader for Firefox."
+  },
+  "openReader": {
+    "message": "Open RSSavis"
+  },
+  "openReaderMainUnreadOne": {
+    "message": "Open RSSavis — $count$ unread article in Main Stream",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "openReaderMainUnreadOther": {
+    "message": "Open RSSavis — $count$ unread articles in Main Stream",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "foundationLoaded": {
+    "message": "Foundation loaded"
+  },
+  "databaseBlocked": {
+    "message": "A database update is waiting. Close other RSSavis windows to continue."
+  },
+  "databaseReloadRequired": {
+    "message": "The database changed. Reload RSSavis to continue."
+  },
+  "databaseRecoveryHeading": {
+    "message": "Database recovery"
+  },
+  "databaseRecoveryCodeLabel": {
+    "message": "Error code"
+  },
+  "databaseRecoveryRetry": {
+    "message": "Try again"
+  },
+  "databaseRecoveryReload": {
+    "message": "Reload RSSavis"
+  },
+  "databaseRecoveryClose": {
+    "message": "Close"
+  },
+  "addFeedHeading": {
+    "message": "Add feed"
+  },
+  "addFeedHelp": {
+    "message": "Firefox asks for access to this feed site only. RSSavis uses that access to fetch the selected feed, not to read browser history."
+  },
+  "addFeedUrlLabel": {
+    "message": "Feed URL"
+  },
+  "addFeedTitleLabel": {
+    "message": "Feed title"
+  },
+  "addFeedSubmit": {
+    "message": "Add feed"
+  },
+  "addFeedToast": {
+    "message": "Feed added"
+  },
+  "addFeedErrorSummary": {
+    "message": "Fix the highlighted fields."
+  },
+  "addFeedUrlRequired": {
+    "message": "Enter a feed URL."
+  },
+  "addFeedUrlInvalid": {
+    "message": "Enter an HTTP or HTTPS feed URL."
+  },
+  "addFeedTitleRequired": {
+    "message": "Enter a feed title."
+  },
+  "dialogCancel": {
+    "message": "Cancel"
+  },
+  "dialogBack": {
+    "message": "Back"
+  },
+  "dialogConfirmation": {
+    "message": "Confirmation"
+  },
+  "readerSidebarTitle": {
+    "message": "RSSavis"
+  },
+  "readerNavTitle": {
+    "message": "Library"
+  },
+  "feedNavTitle": {
+    "message": "Feeds"
+  },
+  "feedNavEmpty": {
+    "message": "No feeds yet"
+  },
+  "scopeAll": {
+    "message": "All articles"
+  },
+  "scopeUnread": {
+    "message": "Unread"
+  },
+  "scopeStarred": {
+    "message": "Starred"
+  },
+  "scopeMain": {
+    "message": "Main Stream"
+  },
+  "readerTitle": {
+    "message": "Unread"
+  },
+  "readerSubtitle": {
+    "message": "No articles loaded"
+  },
+  "readerEmptyTitle": {
+    "message": "No unread articles"
+  },
+  "readerEmptyBody": {
+    "message": "Add a feed to start reading in RSSavis."
+  },
+  "readerScopeEmptyTitle": {
+    "message": "No articles"
+  },
+  "readerScopeEmptyBody": {
+    "message": "There are no articles in this view."
+  },
+  "settingsTitle": {
+    "message": "Preferences"
+  },
+  "tabUnreadTitle": {
+    "message": "($count$) · RSSavis",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settingsSubtitle": {
+    "message": "Appearance"
+  },
+  "settingsNavTitle": {
+    "message": "Sections"
+  },
+  "backToReader": {
+    "message": "Back to feeds"
+  },
+  "staticSubtitle": {
+    "message": "RSSavis"
+  },
+  "settingsGeneral": {
+    "message": "General"
+  },
+  "settingsAppearance": {
+    "message": "Appearance"
+  },
+  "settingsReading": {
+    "message": "Reading"
+  },
+  "settingsFeeds": {
+    "message": "Feeds"
+  },
+  "settingsFeedsSubtitle": {
+    "message": "Manage your subscriptions"
+  },
+  "settingsCategories": {
+    "message": "Categories"
+  },
+  "settingsCategoriesSubtitle": {
+    "message": "Group feeds and reorder them"
+  },
+  "settingsStorage": {
+    "message": "Storage & Cleanup"
+  },
+  "settingsImport": {
+    "message": "Import & Export"
+  },
+  "settingsSaved": {
+    "message": "Preferences saved."
+  },
+  "settingsReset": {
+    "message": "Reset preferences"
+  },
+  "settingsResetRowTitle": {
+    "message": "Reset all preferences"
+  },
+  "settingsResetRowSubtitle": {
+    "message": "Restore every option to its default value"
+  },
+  "settingsFormErrorSummary": {
+    "message": "Fix the highlighted preferences fields."
+  },
+  "settingsRangeError": {
+    "message": "Enter a whole number from $min$ to $max$.",
+    "placeholders": {
+      "min": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "settingsSpinDecrease": {
+    "message": "Decrease value"
+  },
+  "settingsSpinIncrease": {
+    "message": "Increase value"
+  },
+  "settingsLanguage": {
+    "message": "Language"
+  },
+  "settingsLanguageAuto": {
+    "message": "Automatic"
+  },
+  "settingsLanguageEnglish": {
+    "message": "English"
+  },
+  "settingsLanguageDanish": {
+    "message": "Danish"
+  },
+  "settingsRefreshInterval": {
+    "message": "Refresh interval"
+  },
+  "settingsFeedTimeout": {
+    "message": "Feed timeout"
+  },
+  "settingsAccentColor": {
+    "message": "Accent color"
+  },
+  "settingsAccentBlue": {
+    "message": "Blue"
+  },
+  "settingsAccentTeal": {
+    "message": "Teal"
+  },
+  "settingsAccentGreen": {
+    "message": "Green"
+  },
+  "settingsAccentYellow": {
+    "message": "Yellow"
+  },
+  "settingsAccentOrange": {
+    "message": "Orange"
+  },
+  "settingsAccentRed": {
+    "message": "Red"
+  },
+  "settingsAccentPink": {
+    "message": "Pink"
+  },
+  "settingsAccentPurple": {
+    "message": "Purple"
+  },
+  "settingsAccentSlate": {
+    "message": "Slate"
+  },
+  "settingsImageLoading": {
+    "message": "Remote images"
+  },
+  "settingsImageOnExpand": {
+    "message": "Load when article expands"
+  },
+  "settingsImageAlways": {
+    "message": "Always load"
+  },
+  "settingsImageNever": {
+    "message": "Never load"
+  },
+  "settingsLazyImages": {
+    "message": "Lazy-load images"
+  },
+  "settingsImagePrivacy": {
+    "message": "Remote images can contact third-party servers and reveal your IP address."
+  },
+  "settingsArticlesPerPage": {
+    "message": "Articles per page"
+  },
+  "settingsDefaultArticleView": {
+    "message": "Default article view"
+  },
+  "settingsOpenLinks": {
+    "message": "Open original links"
+  },
+  "settingsOpenBackground": {
+    "message": "Background tab"
+  },
+  "settingsOpenForeground": {
+    "message": "Foreground tab"
+  },
+  "settingsOpenCurrent": {
+    "message": "Current tab"
+  },
+  "settingsMarkReadExpand": {
+    "message": "Mark read on expand"
+  },
+  "settingsMarkReadOpen": {
+    "message": "Mark read when opening original"
+  },
+  "settingsMarkReadScroll": {
+    "message": "Mark read on scroll"
+  },
+  "settingsPurgeMaxArticles": {
+    "message": "Maximum articles"
+  },
+  "settingsPurgeMaxAge": {
+    "message": "Maximum age in days"
+  },
+  "settingsKeepUnread": {
+    "message": "Keep unread articles"
+  },
+  "settingsKeepStarred": {
+    "message": "Keep starred articles"
+  },
+  "storageEstimateLoading": {
+    "message": "Estimated storage usage is loading."
+  },
+  "storageEstimateSummary": {
+    "message": "Estimated $usage$ of $quota$ used for $articles$ articles across $feeds$ feeds.",
+    "placeholders": {
+      "usage": {
+        "content": "$1"
+      },
+      "quota": {
+        "content": "$2"
+      },
+      "articles": {
+        "content": "$3"
+      },
+      "feeds": {
+        "content": "$4"
+      }
+    }
+  },
+  "storagePurgeNow": {
+    "message": "Purge now"
+  },
+  "storagePurgeConfirm": {
+    "message": "Purge eligible articles now? Current article count: $count$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "cleanupComplete": {
+    "message": "Cleanup complete."
+  },
+  "storageRebuildStats": {
+    "message": "Rebuild stats"
+  },
+  "statsRebuildComplete": {
+    "message": "Stats rebuild complete."
+  },
+  "storageRepairIntegrity": {
+    "message": "Repair integrity"
+  },
+  "integrityRepairComplete": {
+    "message": "Integrity repair complete."
+  },
+  "storageResetData": {
+    "message": "Reset all data"
+  },
+  "storageResetDataConfirm": {
+    "message": "Type $phrase$ to delete all local RSSavis data.",
+    "placeholders": {
+      "phrase": {
+        "content": "$1"
+      }
+    }
+  },
+  "storageResetDataComplete": {
+    "message": "All local data was reset."
+  },
+  "colorSchemeLegend": {
+    "message": "Color scheme"
+  },
+  "themeSystem": {
+    "message": "System"
+  },
+  "themeLight": {
+    "message": "Light"
+  },
+  "themeDark": {
+    "message": "Dark"
+  },
+  "themeFamilyReadonly": {
+    "message": "Theme family: Adwaita"
+  },
+  "articleFilterLabel": {
+    "message": "Articles shown"
+  },
+  "articleFilterAll": {
+    "message": "All"
+  },
+  "articleFilterUnread": {
+    "message": "Unread"
+  },
+  "articleFilterRead": {
+    "message": "Read"
+  },
+  "articleFilterAppliedAll": {
+    "message": "Showing all articles."
+  },
+  "articleFilterAppliedUnread": {
+    "message": "Showing unread articles."
+  },
+  "articleFilterAppliedRead": {
+    "message": "Showing read articles."
+  },
+  "articleFilterEmptyUnreadTitle": {
+    "message": "No unread articles"
+  },
+  "articleFilterEmptyUnreadBody": {
+    "message": "There are no unread articles in this view."
+  },
+  "articleFilterEmptyReadTitle": {
+    "message": "No read articles"
+  },
+  "articleFilterEmptyReadBody": {
+    "message": "There are no read articles in this view."
+  },
+  "articleFilterShowAll": {
+    "message": "Show all"
+  },
+  "articleViewLabel": {
+    "message": "Article view"
+  },
+  "viewCompact": {
+    "message": "Compact"
+  },
+  "viewNormal": {
+    "message": "Normal"
+  },
+  "viewLarge": {
+    "message": "Large"
+  },
+  "viewOptionsTitle": {
+    "message": "View options"
+  },
+  "articleCountLabel": {
+    "message": "articles"
+  },
+  "articleLoadMore": {
+    "message": "Load more"
+  },
+  "articlesLoading": {
+    "message": "Please wait while articles are loaded."
+  },
+  "articlesLoadingTitle": {
+    "message": "Loading articles"
+  },
+  "articlesLoadFailed": {
+    "message": "Could not load articles."
+  },
+  "articlesLoadFailedTitle": {
+    "message": "Articles could not be loaded"
+  },
+  "articlesRefreshed": {
+    "message": "Articles refreshed."
+  },
+  "newArticlesAvailable": {
+    "message": "New articles are available."
+  },
+  "newArticlesShow": {
+    "message": "Show"
+  },
+  "readerRetry": {
+    "message": "Try again"
+  },
+  "readerScopeFallbackUnread": {
+    "message": "Showing unread articles."
+  },
+  "searchArticlesLabel": {
+    "message": "Search articles"
+  },
+  "searchPlaceholder": {
+    "message": "Search title, author, summary, or feed"
+  },
+  "searchHelp": {
+    "message": "Enter at least two characters to search this scope."
+  },
+  "searchEmpty": {
+    "message": "No search results found."
+  },
+  "searchEmptyTitle": {
+    "message": "No results"
+  },
+  "searchClose": {
+    "message": "Close search"
+  },
+  "markScopeReadMenu": {
+    "message": "Mark scope read"
+  },
+  "markScopeReadNone": {
+    "message": "No unread articles matched the current scope."
+  },
+  "markScopeReadConfirm": {
+    "message": "Mark $count$ articles in $scope$ as read?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "markScopeReadProgress": {
+    "message": "Marked $done$ of $count$ articles as read.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "count": {
+        "content": "$2"
+      }
+    }
+  },
+  "markScopeReadComplete": {
+    "message": "Marked $count$ articles as read.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsOpen": {
+    "message": "Keyboard shortcuts"
+  },
+  "shortcutsTitle": {
+    "message": "Keyboard shortcuts"
+  },
+  "shortcutSearch": {
+    "message": "Search articles"
+  },
+  "shortcutMarkRead": {
+    "message": "Mark current scope as read"
+  },
+  "shortcutSettings": {
+    "message": "Open preferences"
+  },
+  "shortcutMenu": {
+    "message": "Open primary menu"
+  },
+  "shortcutShortcuts": {
+    "message": "Show keyboard shortcuts"
+  },
+  "shortcutHelp": {
+    "message": "Open Help"
+  },
+  "shortcutsSectionGeneral": {
+    "message": "General"
+  },
+  "dialogClose": {
+    "message": "Close"
+  },
+  "toastDismissLabel": {
+    "message": "Dismiss toast"
+  },
+  "helpOpen": {
+    "message": "Help"
+  },
+  "helpTitle": {
+    "message": "Help"
+  },
+  "helpIntro": {
+    "message": "RSSavis is a local Firefox reader for unauthenticated RSS and Atom feeds."
+  },
+  "helpFeedsTitle": {
+    "message": "Feeds and reading"
+  },
+  "helpFeeds": {
+    "message": "Add feeds from the sidebar, then use Library scopes, feed rows, search, and article actions to read and organise items."
+  },
+  "helpPermissionsTitle": {
+    "message": "Permissions"
+  },
+  "helpPermissions": {
+    "message": "When you add a feed, Firefox asks for optional host permission for that origin so RSSavis can fetch that feed."
+  },
+  "helpKeyboardTitle": {
+    "message": "Keyboard shortcuts"
+  },
+  "helpKeyboard": {
+    "message": "Press F1 for Help or ? for Keyboard shortcuts."
+  },
+  "aboutOpen": {
+    "message": "About RSSavis"
+  },
+  "aboutTitle": {
+    "message": "About RSSavis"
+  },
+  "aboutVersion": {
+    "message": "Version $version$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
+  },
+  "aboutDetails": {
+    "message": "Details"
+  },
+  "aboutPrivacyTitle": {
+    "message": "Privacy"
+  },
+  "aboutPrivacyBody": {
+    "message": "RSSavis stores feeds, categories, articles, settings, and UI state locally in Firefox extension storage. It has no telemetry, analytics, remote logging, or remote configuration."
+  },
+  "aboutPermissionsTitle": {
+    "message": "Permissions"
+  },
+  "aboutPermissionsBody": {
+    "message": "RSSavis uses storage, alarms, unlimited storage, and optional host permissions for feed origins you add."
+  },
+  "aboutCreditsTitle": {
+    "message": "Credits"
+  },
+  "aboutCreditsBody": {
+    "message": "Built by the RSSavis contributors. Adwaita color values derive from the libadwaita 1.9.2 sources (GNOME Project)."
+  },
+  "aboutLegalTitle": {
+    "message": "Legal"
+  },
+  "aboutLegalBody": {
+    "message": "RSSavis is free software released under the Mozilla Public License 2.0. The full license text ships with the extension."
+  },
+  "aboutSourceCode": {
+    "message": "Source code"
+  },
+  "aboutReportSecurityIssue": {
+    "message": "Report a security issue"
+  },
+  "aboutViewFullLicense": {
+    "message": "View full license"
+  },
+  "aboutResourceOpenFailed": {
+    "message": "Could not open this resource."
+  },
+  "aboutCopyright": {
+    "message": "© 2026 RSSavis contributors"
+  },
+  "articleStar": {
+    "message": "Star article"
+  },
+  "articleUnstar": {
+    "message": "Unstar article"
+  },
+  "untitledArticle": {
+    "message": "Untitled article"
+  },
+  "articleReadStateRead": {
+    "message": "Read article"
+  },
+  "articleReadStateUnread": {
+    "message": "Unread article"
+  },
+  "articleActionsLabel": {
+    "message": "Article actions"
+  },
+  "articleDetailLoading": {
+    "message": "Loading article preview"
+  },
+  "articleDetailFailed": {
+    "message": "Could not load article preview."
+  },
+  "articleOpenOriginal": {
+    "message": "Open original"
+  },
+  "articleLinkDestinationLabel": {
+    "message": "Destination"
+  },
+  "articleOpenedOriginal": {
+    "message": "Opened original article."
+  },
+  "articleOpenFailed": {
+    "message": "Could not open article."
+  },
+  "openOriginalHeading": {
+    "message": "Opening original article"
+  },
+  "openOriginalStatus": {
+    "message": "RSSavis is opening the original article."
+  },
+  "openOriginalRecoveryHeading": {
+    "message": "Original article could not be opened"
+  },
+  "openOriginalInvalid": {
+    "message": "The article link is not available from this packaged page."
+  },
+  "openOriginalFailed": {
+    "message": "Could not open the original article."
+  },
+  "openOriginalReader": {
+    "message": "Return to RSSavis"
+  },
+  "openContentLinkHeading": {
+    "message": "Opening linked page"
+  },
+  "openContentLinkStatus": {
+    "message": "RSSavis is opening the linked page."
+  },
+  "openContentLinkRecoveryHeading": {
+    "message": "Linked page could not be opened"
+  },
+  "openContentLinkInvalid": {
+    "message": "The link is not available from this packaged page."
+  },
+  "openContentLinkFailed": {
+    "message": "Could not open the linked page."
+  },
+  "openContentLinkReader": {
+    "message": "Return to RSSavis"
+  },
+  "articleMarkRead": {
+    "message": "Mark read"
+  },
+  "articleMarkUnread": {
+    "message": "Mark unread"
+  },
+  "articleCopyLink": {
+    "message": "Copy link"
+  },
+  "articleLinkCopied": {
+    "message": "Link copied."
+  },
+  "articleCopyFailed": {
+    "message": "Could not copy link."
+  },
+  "articleUpdateFailed": {
+    "message": "Could not update article."
+  },
+  "articleImagePrivacy": {
+    "message": "Remote images can contact the image server."
+  },
+  "articleImageNever": {
+    "message": "Images are disabled for previews."
+  },
+  "closeSidebar": {
+    "message": "Close sidebar"
+  },
+  "openSidebar": {
+    "message": "Open sidebar"
+  },
+  "sidebarResize": {
+    "message": "Resize sidebar"
+  },
+  "toggleCategory": {
+    "message": "Toggle category"
+  },
+  "primaryMenuTitle": {
+    "message": "Main Menu"
+  },
+  "refreshAllFeeds": {
+    "message": "Refresh all feeds"
+  },
+  "refreshStarted": {
+    "message": "Refreshing feeds"
+  },
+  "refreshAllSummary": {
+    "message": "$checked$ feeds checked, $updated$ updated, $unchanged$ unchanged, $failed$ failed, $articles$ new articles.",
+    "placeholders": {
+      "checked": {
+        "content": "$1"
+      },
+      "updated": {
+        "content": "$2"
+      },
+      "unchanged": {
+        "content": "$3"
+      },
+      "failed": {
+        "content": "$4"
+      },
+      "articles": {
+        "content": "$5"
+      }
+    }
+  },
+  "managementSaved": {
+    "message": "Changes saved."
+  },
+  "managementFormErrorSummary": {
+    "message": "Fix the highlighted management fields."
+  },
+  "opmlHelp": {
+    "message": "Preview the OPML file before granting access. RSSavis imports subscriptions only after Firefox grants every listed origin."
+  },
+  "opmlFileLabel": {
+    "message": "OPML file"
+  },
+  "opmlPreview": {
+    "message": "Preview OPML"
+  },
+  "opmlCommit": {
+    "message": "Grant access and import"
+  },
+  "opmlExport": {
+    "message": "Export OPML"
+  },
+  "opmlExportSubtitle": {
+    "message": "Save all feeds and categories to a file"
+  },
+  "opmlPreviewReady": {
+    "message": "OPML preview is ready."
+  },
+  "opmlPreviewIssues": {
+    "message": "Some OPML entries need attention."
+  },
+  "opmlPreviewRequired": {
+    "message": "Preview an OPML file before importing."
+  },
+  "opmlPreviewInvalid": {
+    "message": "The OPML preview response was invalid."
+  },
+  "opmlMissingFile": {
+    "message": "Choose an OPML file before previewing."
+  },
+  "opmlValidCount": {
+    "message": "Valid subscriptions"
+  },
+  "opmlDuplicateInFileCount": {
+    "message": "Duplicates in file"
+  },
+  "opmlAlreadySubscribedCount": {
+    "message": "Already subscribed"
+  },
+  "opmlInvalidCount": {
+    "message": "Invalid entries"
+  },
+  "opmlCategoryCount": {
+    "message": "Categories"
+  },
+  "opmlUniqueOriginCount": {
+    "message": "Unique origins"
+  },
+  "opmlImportComplete": {
+    "message": "OPML import completed."
+  },
+  "opmlExportComplete": {
+    "message": "OPML export downloaded."
+  },
+  "feedTitleLabel": {
+    "message": "Feed title"
+  },
+  "feedCustomTitleHelp": {
+    "message": "Leave blank to use the feed's own title."
+  },
+  "feedTitleRequired": {
+    "message": "Enter a feed title."
+  },
+  "feedUrlLabel": {
+    "message": "Feed URL"
+  },
+  "feedUrlRequired": {
+    "message": "Enter a feed URL."
+  },
+  "feedUrlInvalid": {
+    "message": "Enter an HTTP or HTTPS feed URL."
+  },
+  "feedOptions": {
+    "message": "Feed options"
+  },
+  "feedOptionsFor": {
+    "message": "Feed options for $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedEdit": {
+    "message": "Edit"
+  },
+  "feedEditTitle": {
+    "message": "Edit feed"
+  },
+  "feedMainStream": {
+    "message": "Include in Main Stream"
+  },
+  "feedKeepReadOnPurge": {
+    "message": "Keep read articles when purging"
+  },
+  "feedIconSourceLabel": {
+    "message": "Icon"
+  },
+  "feedIconSourceAuto": {
+    "message": "Automatic"
+  },
+  "feedIconSourceFavicon": {
+    "message": "Site favicon"
+  },
+  "feedIconColorLabel": {
+    "message": "Icon color"
+  },
+  "feedIconColorAuto": {
+    "message": "Automatic"
+  },
+  "feedIconColor0": {
+    "message": "Blue"
+  },
+  "feedIconColor1": {
+    "message": "Teal"
+  },
+  "feedIconColor2": {
+    "message": "Green"
+  },
+  "feedIconColor3": {
+    "message": "Yellow"
+  },
+  "feedIconColor4": {
+    "message": "Orange"
+  },
+  "feedIconColor5": {
+    "message": "Red"
+  },
+  "feedIconColor6": {
+    "message": "Pink"
+  },
+  "feedIconColor7": {
+    "message": "Purple"
+  },
+  "feedIconColor8": {
+    "message": "Slate"
+  },
+  "feedEditSubmit": {
+    "message": "Save feed"
+  },
+  "feedRefresh": {
+    "message": "Reload feed"
+  },
+  "feedMarkRead": {
+    "message": "Mark as Read"
+  },
+  "feedDelete": {
+    "message": "Delete feed"
+  },
+  "confirmDeleteFeed": {
+    "message": "Delete feed $title$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedDeleting": {
+    "message": "is being deleted"
+  },
+  "feedMoveCategory": {
+    "message": "Move to category"
+  },
+  "feedMoveCategoryTitle": {
+    "message": "Move to category"
+  },
+  "feedMoveCurrentCategory": {
+    "message": "Current category: $category$",
+    "placeholders": {
+      "category": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedMoveTargetCategory": {
+    "message": "Category"
+  },
+  "feedMoveSubmit": {
+    "message": "Move feed"
+  },
+  "confirmMoveFeed": {
+    "message": "Move $title$ to $category$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "category": {
+        "content": "$2"
+      }
+    }
+  },
+  "feedLastError": {
+    "message": "Last error"
+  },
+  "feedHttpStatus": {
+    "message": "HTTP status"
+  },
+  "feedLastChecked": {
+    "message": "Last checked"
+  },
+  "feedNextRetry": {
+    "message": "Next retry"
+  },
+  "feedPermissionGranted": {
+    "message": "Permission granted"
+  },
+  "feedPermissionMissing": {
+    "message": "Permission missing"
+  },
+  "feedPermissionBannerMissing": {
+    "message": "RSSavis needs permission to fetch this feed from $host$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedPermissionBannerRedirect": {
+    "message": "This feed redirects to $host$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedPermissionBannerGrant": {
+    "message": "Grant Access"
+  },
+  "feedPermissionBannerAllow": {
+    "message": "Allow Redirect"
+  },
+  "feedRedirectPermissionRequired": {
+    "message": "Redirect needs permission"
+  },
+  "feedReorderGrip": {
+    "message": "Reorder feed"
+  },
+  "feedReorderGripFor": {
+    "message": "Reorder $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedReorderMoved": {
+    "message": "$title$ moved to position $position$ of $total$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "position": {
+        "content": "$2"
+      },
+      "total": {
+        "content": "$3"
+      }
+    }
+  },
+  "defaultCategoryTitle": {
+    "message": "Uncategorized"
+  },
+  "categoryNameLabel": {
+    "message": "Category name"
+  },
+  "categoryNameRequired": {
+    "message": "Enter a category name."
+  },
+  "categoryAdd": {
+    "message": "Add category"
+  },
+  "categoryCreate": {
+    "message": "Create category"
+  },
+  "categoryRename": {
+    "message": "Rename category"
+  },
+  "categoryRenameTitle": {
+    "message": "Rename category"
+  },
+  "categoryGrip": {
+    "message": "Reorder $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryReorderMoved": {
+    "message": "$title$ moved to position $position$ of $total$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "position": {
+        "content": "$2"
+      },
+      "total": {
+        "content": "$3"
+      }
+    }
+  },
+  "categoryDelete": {
+    "message": "Delete category"
+  },
+  "confirmDeleteCategory": {
+    "message": "Delete category $title$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryMoveUp": {
+    "message": "Move category up"
+  },
+  "categoryMoveDown": {
+    "message": "Move category down"
+  },
+  "errorInvalidMessage": {
+    "message": "The extension received an invalid internal message."
+  },
+  "errorValidationError": {
+    "message": "The saved data did not match the expected format."
+  },
+  "errorUnsupportedUrlScheme": {
+    "message": "Only HTTP and HTTPS URLs are supported."
+  },
+  "errorHostPermissionDenied": {
+    "message": "Firefox did not grant permission for this site."
+  },
+  "errorHostPermissionRevoked": {
+    "message": "The site permission was removed."
+  },
+  "errorFeedAlreadyExists": {
+    "message": "This feed is already subscribed."
+  },
+  "errorFeedNotFound": {
+    "message": "The feed could not be found."
+  },
+  "errorCategoryNotFound": {
+    "message": "The category could not be found."
+  },
+  "errorArticleNotFound": {
+    "message": "The article could not be found."
+  },
+  "errorFetchTimeout": {
+    "message": "The feed request timed out."
+  },
+  "errorFetchResponseTooLarge": {
+    "message": "The feed response is too large."
+  },
+  "errorHttpError": {
+    "message": "The feed server returned an HTTP error."
+  },
+  "errorAuthOrAccessDenied": {
+    "message": "The feed requires authentication or access was denied."
+  },
+  "errorFeedParseError": {
+    "message": "The feed could not be parsed."
+  },
+  "errorUnsupportedFeedFormat": {
+    "message": "This feed format is not supported."
+  },
+  "errorOpmlParseError": {
+    "message": "The OPML file could not be parsed."
+  },
+  "errorOpmlTooLarge": {
+    "message": "The OPML file is too large."
+  },
+  "errorDbOpenFailed": {
+    "message": "The local database could not be opened."
+  },
+  "errorDbSchemaMismatch": {
+    "message": "The local database schema is not compatible."
+  },
+  "errorDbVersionError": {
+    "message": "The local database version is not compatible."
+  },
+  "errorDbTransactionAborted": {
+    "message": "The database transaction was aborted."
+  },
+  "errorDbTransactionInactive": {
+    "message": "The database transaction ended too early."
+  },
+  "errorDbConstraint": {
+    "message": "The database rejected a duplicate or conflicting record."
+  },
+  "errorDbQuotaExceeded": {
+    "message": "Firefox storage is full."
+  },
+  "errorDbInvalidState": {
+    "message": "The database is in an invalid state."
+  },
+  "errorDbUnknown": {
+    "message": "An unknown database error occurred."
+  },
+  "errorDedupeCollision": {
+    "message": "Two feed entries produced the same identity."
+  },
+  "errorDedupeAmbiguous": {
+    "message": "A feed entry matched multiple existing articles."
+  },
+  "errorRedirectPermissionRequired": {
+    "message": "The feed redirected to a site that needs permission."
+  },
+  "errorDbUpgradeBlocked": {
+    "message": "The database upgrade is blocked by another open tab."
+  },
+  "errorInvalidCursor": {
+    "message": "The list cursor is invalid."
+  },
+  "errorCursorStale": {
+    "message": "The list changed and needs to be reloaded."
+  },
+  "errorInternal": {
+    "message": "Something went wrong."
+  },
+  "errorNotImplemented": {
+    "message": "This command is not available yet."
+  }
+}

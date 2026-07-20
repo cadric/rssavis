@@ -1,0 +1,372 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .article-list-root {
+    display: grid;
+    container: article-list / inline-size;
+    gap: 1.25rem;
+  }
+
+  .article-date-group {
+    display: grid;
+    gap: 0.4375rem;
+  }
+
+  .article-date-group h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.375rem 0.375rem 0;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-caption);
+    font-weight: 700;
+    letter-spacing: 0.0125rem;
+    white-space: nowrap;
+  }
+
+  .article-date-group h2::after {
+    content: '';
+    flex: 1;
+    block-size: 1px;
+    background: var(--rs-color-separator);
+  }
+
+  .article-stack {
+    display: grid;
+    gap: 0.125rem;
+  }
+
+  .article-row {
+    --rs-article-title-size: 0.9375rem;
+    --rs-article-title-line-height: 1.35;
+    --rs-article-line-h: calc(var(--rs-article-title-size) * var(--rs-article-title-line-height));
+    --rs-article-header-block-size: max(var(--rs-article-line-h), 1.375rem);
+    --rs-article-padding-block: 0.25rem;
+    --rs-article-preview-gap: 0.25rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.4375rem 1.375rem 2.75rem minmax(0, 1fr) 2rem;
+    align-items: start;
+    column-gap: 0.8125rem;
+    row-gap: 0.125rem;
+    min-block-size: 2.375rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.625rem;
+  }
+
+  .article-row[data-has-thumbnail='true'] {
+    grid-template-columns: 0.4375rem 1.375rem 2.75rem minmax(0, 1fr) 4.75rem 2rem;
+  }
+
+  .article-row.is-expanded {
+    grid-template-rows: auto auto;
+    border-radius: var(--rs-radius-card);
+    background: var(--rs-color-card-bg);
+    box-shadow: inset 0 0 0 1px var(--rs-color-card-shade);
+  }
+
+  .article-row[data-article-view='normal'],
+  .article-row[data-article-view='large'] {
+    grid-template-rows: auto auto;
+  }
+
+  .article-row[data-article-view='compact'] {
+    --rs-article-title-size: 0.875rem;
+
+    /* Matches the collapsed 40 CSS px rhythm (2.5rem minus the block
+       padding), so the expanded header keeps the same height and the
+       content does not jump when a compact row opens. */
+    --rs-article-header-block-size: 2rem;
+    align-items: center;
+    min-block-size: 2.5rem;
+  }
+
+  .article-row[data-article-view='compact'] :is(.article-unread-dot, .feed-icon, .article-row-star) {
+    margin-block-start: 0;
+  }
+
+  .article-row[data-article-view='compact'] .article-row-titleline {
+    align-items: center;
+  }
+
+  .article-row[data-article-view='normal'] {
+    --rs-article-padding-block: 0.4375rem;
+    padding: 0.4375rem 0.5rem;
+  }
+
+  .article-row[data-article-view='large'] {
+    --rs-article-title-size: 1.0625rem;
+    --rs-article-padding-block: 0.625rem;
+    padding: 0.625rem 0.5rem;
+  }
+
+  .article-unread-dot {
+    margin-block-start: calc((var(--rs-article-line-h) - 0.4375rem) / 2);
+    inline-size: 0.4375rem;
+    block-size: 0.4375rem;
+    border-radius: 999rem;
+  }
+
+  .article-row.is-unread .article-unread-dot {
+    background: var(--rs-color-accent-bg);
+  }
+
+  .article-row .feed-icon,
+  .article-row .feed-icon img,
+  .article-row .feed-initials {
+    inline-size: 1.375rem;
+    block-size: 1.375rem;
+  }
+
+  .article-row .feed-icon {
+    margin-block-start: calc((var(--rs-article-line-h) - 1.375rem) / 2);
+  }
+
+  .feed-icon {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1.625rem;
+    block-size: 1.625rem;
+    overflow: hidden;
+    border-radius: 0.375rem;
+  }
+
+  .feed-icon img,
+  .feed-initials {
+    inline-size: 1.625rem;
+    block-size: 1.625rem;
+  }
+
+  .feed-icon img {
+    display: block;
+    object-fit: cover;
+  }
+
+  .feed-icon img[hidden] {
+    display: none;
+  }
+
+  .feed-initials {
+    display: inline-grid;
+    place-items: center;
+    border-radius: 0.375rem;
+    background: color-mix(in oklch, var(--rs-color-accent-bg) 18%, var(--rs-color-view-bg));
+    color: var(--rs-color-accent-text);
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+
+  /* The `hidden` attribute alone cannot hide the initials: the `.feed-initials`
+     display rule outranks the UA `[hidden]` style, so a built-in icon glyph would
+     otherwise render on top of the still-visible identity badge (an image source
+     hides it behind the opaque <img>, but the built-in source has none). Mirror
+     the `.feed-icon img[hidden]` rule so a hidden initials badge is truly gone. */
+  .feed-initials[hidden] {
+    display: none;
+  }
+
+  .article-row > time {
+    display: grid;
+    place-items: center;
+    block-size: var(--rs-article-line-h);
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-caption);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .article-row-main {
+    display: grid;
+    min-inline-size: 0;
+
+    /* The header track owns the button height; the base 2rem button minimum
+       would otherwise pad the title line and detach it from the summary.
+       The full row stays an easy target through the row-wide overlay. */
+    min-block-size: var(--rs-article-header-block-size);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--rs-color-text);
+    text-align: start;
+  }
+
+  .article-row-main[hidden] {
+    display: none;
+  }
+
+  .article-row-titleline {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    min-inline-size: 0;
+  }
+
+  .article-row-title {
+    overflow: hidden;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-article-title-size);
+    font-weight: 400;
+    line-height: var(--rs-article-title-line-height);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .article-row.is-unread .article-row-title {
+    color: var(--rs-color-text);
+    font-weight: 700;
+  }
+
+  .article-row-meta {
+    flex: 0 0 auto;
+    overflow: hidden;
+    max-inline-size: 40%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .article-row.is-expanded .article-row-title {
+    font-weight: 700;
+  }
+
+  .article-row-meta,
+  .article-row-summary {
+    color: var(--rs-color-dim);
+  }
+
+  .article-row[data-article-view='compact'] .article-row-meta,
+  .article-row[data-article-view='compact'] .article-row-summary {
+    font-size: var(--rs-font-size-caption);
+    line-height: 1.45;
+  }
+
+  .article-row[data-article-view='normal'] .article-row-meta,
+  .article-row[data-article-view='normal'] .article-row-summary {
+    font-size: var(--rs-font-size-small);
+    line-height: 1.45;
+  }
+
+  .article-row[data-article-view='large'] .article-row-meta,
+  .article-row[data-article-view='large'] .article-row-summary {
+    font-size: var(--rs-font-size-heading);
+    line-height: 1.45;
+  }
+
+  .article-row-summary {
+    grid-column: 4 / 5;
+    overflow: hidden;
+    margin: 0;
+    max-block-size: calc(2 * 1.5em);
+    line-height: 1.5;
+  }
+
+  @supports (line-clamp: 2) {
+    .article-row-summary {
+      max-block-size: none;
+      line-clamp: 2;
+    }
+
+    .article-row[data-article-view='large'] .article-row-summary {
+      line-clamp: 3;
+    }
+  }
+
+  .article-row[data-article-view='large'] .article-row-summary {
+    max-block-size: calc(3 * 1.5em);
+  }
+
+  .article-row-summary[hidden] {
+    display: none;
+  }
+
+  .article-row-image {
+    overflow: hidden;
+    inline-size: 4.75rem;
+    block-size: 3.375rem;
+    margin: 0;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 0.4375rem;
+    background: var(--rs-color-view-bg);
+  }
+
+  /* Span the title and excerpt rows so the excerpt sits directly under the
+     title; the explicit column keeps auto-placement of the other children
+     intact (a lone grid-row would pull the figure into column 1). */
+  .article-row[data-has-thumbnail='true'] .article-row-image {
+    grid-row: 1 / span 2;
+    grid-column: 5;
+  }
+
+  .article-row[data-article-view='large'] .article-row-image {
+    inline-size: 6rem;
+    block-size: 4.125rem;
+  }
+
+  .article-row-image[hidden] {
+    display: none;
+  }
+
+  .article-row-image img {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .article-row-star {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    min-block-size: 1.75rem;
+    margin-block-start: calc((var(--rs-article-line-h) - 1.75rem) / 2);
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: var(--rs-radius-control);
+    background: transparent;
+    color: var(--rs-color-dim);
+  }
+
+  .article-row-star[hidden] {
+    display: none;
+  }
+
+  .article-row-star[aria-pressed='true'] {
+    color: var(--rs-color-star);
+  }
+
+  .article-row-star svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+  }
+
+  .database-recovery {
+    display: grid;
+    gap: 0.75rem;
+    margin-block-end: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-card);
+    background: var(--rs-color-card-bg);
+  }
+
+  .database-recovery h2,
+  .database-recovery p {
+    margin: 0;
+  }
+
+  .database-recovery-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .load-more-button {
+    justify-self: center;
+    min-block-size: 2rem;
+    background: var(--rs-color-button-bg);
+    font-weight: 700;
+  }
+
+  .load-more-button:hover {
+    background: var(--rs-color-button-hover-bg);
+  }
+}

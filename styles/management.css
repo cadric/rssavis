@@ -1,0 +1,186 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .management-row-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .management-row-button {
+    border-color: var(--rs-color-border);
+    background: var(--rs-color-button-bg);
+  }
+
+  .management-row-button:hover {
+    background: var(--rs-color-button-hover-bg);
+  }
+
+  .management-row-button.destructive {
+    background: transparent;
+    color: var(--rs-color-destructive-text);
+    font-weight: 700;
+  }
+
+  .management-row-button.destructive:hover {
+    background: var(--rs-color-destructive-soft);
+  }
+
+  .management-action-row [data-opml-origin-list] {
+    margin: 0.25rem 0 0;
+    padding-inline-start: 1rem;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .management-action-row [data-opml-preview-counts] p {
+    margin: 0.125rem 0 0;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .management-item-row {
+    min-block-size: 3.5rem;
+    padding: 0.625rem 0.75rem 0.625rem 0.875rem;
+  }
+
+  .management-item-row:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .management-item-row .settings-row-title,
+  .management-item-row .settings-row-subtitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .management-feed-icon .feed-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+
+  .management-feed-icon .feed-initials:not([data-identity]) {
+    background: var(--rs-color-pill);
+    color: var(--rs-color-text);
+  }
+
+  .management-pill {
+    flex: 0 0 auto;
+    padding: 0.1875rem 0.5625rem;
+    border-radius: 0.5625rem;
+    background: var(--rs-color-pill);
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-caption);
+  }
+
+  .management-icon-button {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    inline-size: 1.875rem;
+    block-size: 1.875rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.4375rem;
+    background: transparent;
+    color: var(--rs-color-dim);
+    cursor: pointer;
+  }
+
+  .management-icon-button:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .management-icon-button:focus-visible {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.125rem;
+  }
+
+  .management-icon-button svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+  }
+
+  .management-icon-button.destructive {
+    color: var(--rs-color-destructive-text);
+  }
+
+  .management-icon-button.destructive:hover {
+    background: var(--rs-color-destructive-soft);
+  }
+
+  .management-row-status {
+    color: var(--rs-color-destructive-text);
+  }
+
+  /* A rate-limited feed is waiting politely, not failing: drop the destructive tone. */
+  .management-row-status--rate-limit {
+    color: var(--rs-color-accent-text);
+  }
+
+  .management-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin: 0 0.25rem 0.125rem;
+  }
+
+  .management-section-heading {
+    margin: 0;
+  }
+
+  .management-section-heading > h2 {
+    margin: 0;
+    font-size: var(--rs-font-size-heading);
+    font-weight: 700;
+  }
+
+  .management-dialog form {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .management-dialog p {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0;
+  }
+
+  .management-dialog label {
+    font-size: var(--rs-font-size-body);
+    font-weight: 700;
+  }
+
+  .management-dialog input:not([type='checkbox']),
+  .management-dialog select {
+    inline-size: 100%;
+    min-block-size: 2rem;
+    padding-inline: 0.5rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-view-bg);
+    color: var(--rs-color-text);
+  }
+
+  .management-item-row.is-dragging {
+    opacity: 0.6;
+  }
+
+  .management-item-row.is-drop-target {
+    background: var(--rs-color-selected-bg);
+  }
+
+  .management-grip {
+    cursor: grab;
+  }
+}

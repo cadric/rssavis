@@ -1,0 +1,158 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+@layer tokens {
+  :root {
+    --rs-accent-swatch-blue: oklch(61.367% 0.16434 255.343);
+    --rs-color-identity-0: oklch(61.367% 0.16434 255.343);
+    --rs-color-identity-fg-0: oklch(100% 0 89.876);
+    --rs-accent-swatch-teal: oklch(60.324% 0.0977 213.133);
+    --rs-color-identity-1: oklch(60.324% 0.0977 213.133);
+    --rs-color-identity-fg-1: oklch(100% 0 89.876);
+    --rs-accent-swatch-green: oklch(59.428% 0.139 147.011);
+    --rs-color-identity-2: oklch(59.428% 0.139 147.011);
+    --rs-color-identity-fg-2: oklch(100% 0 89.876);
+    --rs-accent-swatch-yellow: oklch(67.439% 0.14187 75.638);
+    --rs-color-identity-3: oklch(67.439% 0.14187 75.638);
+    --rs-color-identity-fg-3: oklch(100% 0 89.876);
+    --rs-accent-swatch-orange: oklch(65.421% 0.19579 42.439);
+    --rs-color-identity-4: oklch(65.421% 0.19579 42.439);
+    --rs-color-identity-fg-4: oklch(100% 0 89.876);
+    --rs-accent-swatch-red: oklch(60.272% 0.21728 21.579);
+    --rs-color-identity-5: oklch(60.272% 0.21728 21.579);
+    --rs-color-identity-fg-5: oklch(100% 0 89.876);
+    --rs-accent-swatch-pink: oklch(65.058% 0.15784 352.195);
+    --rs-color-identity-6: oklch(65.058% 0.15784 352.195);
+    --rs-color-identity-fg-6: oklch(100% 0 89.876);
+    --rs-accent-swatch-purple: oklch(52.537% 0.17518 316.651);
+    --rs-color-identity-7: oklch(52.537% 0.17518 316.651);
+    --rs-color-identity-fg-7: oklch(100% 0 89.876);
+    --rs-accent-swatch-slate: oklch(60.081% 0.03725 247.087);
+    --rs-color-identity-8: oklch(60.081% 0.03725 247.087);
+    --rs-color-identity-fg-8: oklch(100% 0 89.876);
+  }
+
+  :root[data-accent-color='blue'] {
+    --rs-color-accent-bg: oklch(61.367% 0.16434 255.343);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(61.367% 0.16434 255.343 / 22%);
+  }
+
+  :root[data-accent-color='teal'] {
+    --rs-color-accent-bg: oklch(60.324% 0.0977 213.133);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(60.324% 0.0977 213.133 / 22%);
+  }
+
+  :root[data-accent-color='green'] {
+    --rs-color-accent-bg: oklch(59.428% 0.139 147.011);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(59.428% 0.139 147.011 / 22%);
+  }
+
+  :root[data-accent-color='yellow'] {
+    --rs-color-accent-bg: oklch(67.439% 0.14187 75.638);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(67.439% 0.14187 75.638 / 22%);
+  }
+
+  :root[data-accent-color='orange'] {
+    --rs-color-accent-bg: oklch(65.421% 0.19579 42.439);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(65.421% 0.19579 42.439 / 22%);
+  }
+
+  :root[data-accent-color='red'] {
+    --rs-color-accent-bg: oklch(60.272% 0.21728 21.579);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(60.272% 0.21728 21.579 / 22%);
+  }
+
+  :root[data-accent-color='pink'] {
+    --rs-color-accent-bg: oklch(65.058% 0.15784 352.195);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(65.058% 0.15784 352.195 / 22%);
+  }
+
+  :root[data-accent-color='purple'] {
+    --rs-color-accent-bg: oklch(52.537% 0.17518 316.651);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(52.537% 0.17518 316.651 / 22%);
+  }
+
+  :root[data-accent-color='slate'] {
+    --rs-color-accent-bg: oklch(60.081% 0.03725 247.087);
+    --rs-color-accent-fg: oklch(100% 0 89.876);
+    --rs-color-selected-bg: oklch(60.081% 0.03725 247.087 / 22%);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='blue'] {
+    --rs-color-accent-text: oklch(56.608% 0.16458 255.531);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='blue'] {
+    --rs-color-accent-text: oklch(61.989% 0.16415 255.286);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='teal'] {
+    --rs-color-accent-text: oklch(55.442% 0.09722 213.485);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='teal'] {
+    --rs-color-accent-text: oklch(60.95% 0.0981 213.018);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='green'] {
+    --rs-color-accent-text: oklch(54.887% 0.13861 147.079);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='green'] {
+    --rs-color-accent-text: oklch(60.387% 0.13897 147.104);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='yellow'] {
+    --rs-color-accent-text: oklch(57.145% 0.12433 69.301);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='yellow'] {
+    --rs-color-accent-text: oklch(67.439% 0.14187 75.638);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='orange'] {
+    --rs-color-accent-text: oklch(58.56% 0.19091 38.189);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='orange'] {
+    --rs-color-accent-text: oklch(65.421% 0.19579 42.439);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='red'] {
+    --rs-color-accent-text: oklch(59.201% 0.2171 21.552);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='red'] {
+    --rs-color-accent-text: oklch(64.393% 0.21682 21.674);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='pink'] {
+    --rs-color-accent-text: oklch(58.465% 0.15677 352.189);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='pink'] {
+    --rs-color-accent-text: oklch(65.058% 0.15784 352.195);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='purple'] {
+    --rs-color-accent-text: oklch(52.537% 0.17518 316.651);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='purple'] {
+    --rs-color-accent-text: oklch(63.724% 0.17494 316.366);
+  }
+
+  :root[data-effective-scheme='light'][data-accent-color='slate'] {
+    --rs-color-accent-text: oklch(56.426% 0.03711 248.485);
+  }
+
+  :root[data-effective-scheme='dark'][data-accent-color='slate'] {
+    --rs-color-accent-text: oklch(61.758% 0.03701 247.063);
+  }
+}

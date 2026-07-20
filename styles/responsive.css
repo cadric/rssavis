@@ -1,0 +1,177 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer layout {
+  .static-view {
+    padding: 2rem;
+  }
+
+  .static-document {
+    display: grid;
+    inline-size: min(100%, var(--rs-content-width));
+    gap: 1rem;
+    margin-inline: auto;
+  }
+
+  .help-document {
+    display: grid;
+    inline-size: 100%;
+    max-inline-size: 44rem;
+    gap: 1.5rem;
+    margin-inline: auto;
+  }
+}
+
+@layer components {
+  .static-document h2 {
+    font-size: 1.5rem;
+  }
+
+  .static-document h3 {
+    font-size: var(--rs-font-size-document);
+  }
+
+  .static-copy {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .help-lead {
+    max-inline-size: 62ch;
+    margin: 0;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-document);
+    line-height: 1.6;
+  }
+
+  .help-groups {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .help-group {
+    display: grid;
+    gap: 0.375rem;
+    max-inline-size: 68ch;
+  }
+
+  .help-group h2,
+  .help-group p {
+    margin: 0;
+  }
+
+  .help-group h2 {
+    font-size: var(--rs-font-size-heading);
+  }
+
+  .help-group p {
+    line-height: 1.6;
+  }
+
+  .static-card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-card);
+    background: var(--rs-color-card-bg);
+    box-shadow: 0 0.25rem 0.75rem var(--rs-color-card-shade);
+  }
+
+  .about-header {
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .about-tagline {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-heading);
+  }
+
+  .about-version-pill {
+    padding: 0.1875rem 0.5625rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 999px;
+    background: var(--rs-color-pill);
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .about-icon {
+    inline-size: 5.5rem;
+    block-size: 5.5rem;
+    border-radius: 1.25rem;
+    filter: drop-shadow(0 0.125rem 0.375rem var(--rs-color-popover-shade));
+  }
+
+  .about-copyright {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-caption);
+    text-align: center;
+  }
+
+  .static-card .static-copy + .static-copy {
+    padding-block-start: 0.75rem;
+    border-block-start: 1px solid var(--rs-color-separator);
+  }
+}
+
+@media (max-width: 899px) {
+  @layer layout {
+    .static-view {
+      padding: 1.5rem;
+    }
+
+    .sidebar {
+      max-inline-size: min(var(--rs-sidebar-width), calc(100vw - 2rem));
+    }
+  }
+
+  @layer components {
+    .sidebar-close {
+      display: inline-grid;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  @layer base {
+    body:has([data-static-main]:not([hidden])) {
+      min-inline-size: 0;
+    }
+  }
+
+  @layer layout {
+    .static-view,
+    .reader-view,
+    .settings-view {
+      padding: 1rem;
+    }
+  }
+
+  @layer components {
+    .about-header {
+      justify-items: start;
+      text-align: start;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  @layer base {
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+  @layer components {
+    [data-static-main] .shortcut-list div {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    [data-static-main] .shortcut-list kbd {
+      min-inline-size: 0;
+    }
+  }
+}

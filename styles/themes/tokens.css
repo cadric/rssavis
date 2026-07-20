@@ -1,0 +1,48 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+    --rs-font-sans: 'Adwaita Sans', Cantarell, system-ui, sans-serif;
+    --rs-font-size-caption: 0.75rem;
+    --rs-line-height-caption: 1.35;
+    --rs-font-size-small: 0.8125rem;
+    --rs-line-height-small: 1.35;
+    --rs-font-size-body: 0.9375rem;
+    --rs-line-height-body: 1.4;
+    --rs-font-size-heading: 0.9375rem;
+    --rs-line-height-heading: 1.25;
+    --rs-font-size-title: 1.25rem;
+    --rs-line-height-title: 1.2;
+    --rs-font-size-document: 1rem;
+    --rs-line-height-document: 1.6;
+    --rs-opacity-disabled: 0.5;
+    --rs-opacity-disabled-high-contrast: 0.4;
+    --rs-opacity-dim: 0.55;
+    --rs-opacity-dim-high-contrast: 0.9;
+    --rs-radius-window: 0.75rem;
+    --rs-radius-control: 0.5rem;
+    --rs-radius-card: 0.5rem;
+    --rs-radius-dialog: 0.75rem;
+    --rs-sidebar-width: 278px;
+    --rs-content-width: 920px;
+    --rs-headerbar-height: 3rem;
+    --rs-menu-row-min-block-size: 32px;
+    --rs-menu-row-radius: 9px;
+    --rs-menu-row-padding-inline: 12px;
+    --rs-menu-outer-padding: 6px;
+    --rs-popover-radius: 15px;
+    --rs-toast-radius: 150px;
+    --rs-toast-outer-spacing: 6px;
+    --rs-toast-block-padding: 6px;
+    --rs-toast-inline-start-padding: 12px;
+    --rs-toast-shadow: 0 1px 3px 1px RGB(0 0 6 / 7%), 0 2px 6px 2px RGB(0 0 6 / 3%);
+    --rs-banner-horizontal-spacing: 6px;
+    --rs-banner-centered-spacing: 36px;
+    --rs-banner-vertical-spacing: 9px;
+    --rs-banner-padding: 6px;
+    --rs-banner-action-min-inline-size: 84px;
+    --rs-banner-action-stacked-min-inline-size: 160px;
+    --rs-transition-fast: 140ms ease;
+    --rs-transition-medium: 240ms ease;
+  }
+}

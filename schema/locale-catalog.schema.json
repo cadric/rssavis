@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "policy/locale-catalog.schema.v1.json",
+  "title": "RSSavis Locale Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "$meta",
+    "messages"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "$meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locale",
+        "direction",
+        "name"
+      ],
+      "properties": {
+        "locale": {
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "ltr",
+            "rtl"
+          ]
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "messages": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9]*(?:\\.[a-z][a-z0-9]*)+$"
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "message",
+              "placeholders"
+            ],
+            "properties": {
+              "kind": {
+                "const": "text"
+              },
+              "message": {
+                "type": "string"
+              },
+              "placeholders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "forms",
+              "placeholders"
+            ],
+            "properties": {
+              "kind": {
+                "const": "plural"
+              },
+              "forms": {
+                "type": "object",
+                "required": [
+                  "other"
+                ],
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "placeholders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "contains": {
+                  "const": "count"
+                },
+                "uniqueItems": true
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

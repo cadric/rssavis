@@ -1,0 +1,296 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .add-feed-dialog,
+  .shortcuts-dialog,
+  .secondary-dialog,
+  .management-dialog {
+    inline-size: min(28rem, calc(100vw - 2rem));
+    padding: 0;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-dialog);
+    background: var(--rs-color-dialog-bg);
+    color: var(--rs-color-dialog-fg);
+    box-shadow: 0 0.5rem 1.25rem var(--rs-color-popover-shade);
+  }
+
+  .shortcuts-dialog {
+    box-shadow: 0 0.75rem 2rem var(--rs-color-popover-shade);
+  }
+
+  .secondary-dialog {
+    box-shadow: 0 0.75rem 2rem var(--rs-color-popover-shade);
+  }
+
+  .add-feed-dialog::backdrop,
+  .shortcuts-dialog::backdrop,
+  .secondary-dialog::backdrop,
+  .management-dialog::backdrop {
+    background: var(--rs-color-scrim);
+  }
+
+  .shortcuts-dialog section,
+  .secondary-dialog section,
+  .adw-alert-dialog section {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .action-dialog form {
+    display: grid;
+    gap: 0;
+    padding: 0;
+  }
+
+  .action-dialog-header {
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) auto minmax(5rem, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-block-end: 1px solid var(--rs-color-separator);
+  }
+
+  .action-dialog-header > :first-child {
+    justify-self: start;
+  }
+
+  .action-dialog-header h2 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .action-dialog-header > :last-child {
+    justify-self: end;
+  }
+
+  .action-dialog-content {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .add-feed-dialog input {
+    inline-size: 100%;
+    min-block-size: 2rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-view-bg);
+  }
+
+  .management-dialog input:not([type='checkbox']) {
+    inline-size: 100%;
+    min-inline-size: 0;
+  }
+
+  .dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .dialog-close-icon {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 2rem;
+    block-size: 2rem;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: var(--rs-color-button-bg);
+    color: var(--rs-color-text);
+  }
+
+  .dialog-close-icon:hover {
+    background: var(--rs-color-button-hover-bg);
+  }
+
+  .dialog-close-icon:active {
+    background: var(--rs-color-active-bg);
+  }
+
+  .dialog-actions {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+
+  .alert-dialog-responses {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .alert-dialog-responses .text-button {
+    inline-size: 100%;
+  }
+
+  .action-dialog-header .suggested,
+  .dialog-actions .suggested {
+    font-weight: 700;
+  }
+
+  .dialog-actions .destructive {
+    background: var(--rs-color-destructive-bg);
+    color: var(--rs-color-destructive-fg);
+    font-weight: 700;
+  }
+
+  .about-dialog-rows {
+    display: grid;
+    gap: 0.375rem;
+  }
+
+  .about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-block-size: 2.75rem;
+    padding-inline: 0.875rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 0.625rem;
+    background: var(--rs-color-view-bg);
+    color: var(--rs-color-text);
+    font: inherit;
+    text-align: start;
+    text-decoration: none;
+  }
+
+  .about-row:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .about-row-glyph {
+    color: var(--rs-color-dim);
+  }
+
+  .about-resource-group {
+    display: grid;
+    gap: 0.375rem;
+  }
+
+  .about-resource-button {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-inline-size: 0;
+    min-block-size: 2.75rem;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 0.625rem;
+    background: var(--rs-color-view-bg);
+    color: var(--rs-color-text);
+    font: inherit;
+    text-align: start;
+  }
+
+  .about-resource-button:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .about-resource-button:active {
+    background: var(--rs-color-active-bg);
+  }
+
+  .about-resource-label {
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .about-resource-symbol {
+    inline-size: 1rem;
+    block-size: 1rem;
+    color: var(--rs-color-dim);
+  }
+
+  .about-subpage {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .about-subpage[hidden] {
+    display: none;
+  }
+
+  .about-subpage [data-about-subpage-body] {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .about-back {
+    justify-self: start;
+  }
+
+  .adw-alert-dialog section {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .adw-alert-dialog [data-adw-alert-typed] {
+    display: grid;
+    gap: 0.25rem;
+    text-align: start;
+  }
+
+  .adw-alert-dialog [data-adw-alert-typed][hidden] {
+    display: none;
+  }
+
+  .adw-alert-dialog [data-adw-alert-typed-input] {
+    inline-size: 100%;
+    min-block-size: 2rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-view-bg);
+    color: var(--rs-color-text);
+  }
+
+  .shortcut-keys {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    gap: 0.25rem;
+  }
+
+  .keycap {
+    display: inline-grid;
+    place-items: center;
+    min-inline-size: 1.5rem;
+    min-block-size: 1.625rem;
+    padding-inline: 0.5rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 0.3125rem;
+    background: var(--rs-color-hover-bg);
+    color: var(--rs-color-text);
+    font-family: inherit;
+    font-size: var(--rs-font-size-caption);
+  }
+
+  .keycap-separator {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-caption);
+  }
+
+  .shortcut-section-title {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 30rem) {
+  @layer components {
+    .action-dialog-header {
+      grid-template-columns: minmax(4.5rem, 1fr) minmax(0, auto) minmax(4.5rem, 1fr);
+      gap: 0.375rem;
+    }
+
+    .alert-dialog-responses {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

@@ -1,0 +1,1852 @@
+{
+  "$schema": "../schema/locale-catalog.schema.json",
+  "$meta": {
+    "locale": "en",
+    "direction": "ltr"
+  },
+  "messages": {
+    "app.foundation.loaded": {
+      "kind": "text",
+      "message": "Foundation loaded",
+      "placeholders": []
+    },
+    "app.database.blocked": {
+      "kind": "text",
+      "message": "A database update is waiting. Close other RSSavis windows to continue.",
+      "placeholders": []
+    },
+    "app.database.reload.required": {
+      "kind": "text",
+      "message": "The database changed. Reload RSSavis to continue.",
+      "placeholders": []
+    },
+    "app.database.recovery.heading": {
+      "kind": "text",
+      "message": "Database recovery",
+      "placeholders": []
+    },
+    "app.database.recovery.code.label": {
+      "kind": "text",
+      "message": "Error code",
+      "placeholders": []
+    },
+    "app.database.recovery.retry": {
+      "kind": "text",
+      "message": "Try again",
+      "placeholders": []
+    },
+    "app.database.recovery.reload": {
+      "kind": "text",
+      "message": "Reload RSSavis",
+      "placeholders": []
+    },
+    "app.database.recovery.close": {
+      "kind": "text",
+      "message": "Close",
+      "placeholders": []
+    },
+    "app.addfeed.heading": {
+      "kind": "text",
+      "message": "Add feed",
+      "placeholders": []
+    },
+    "app.addfeed.help": {
+      "kind": "text",
+      "message": "Firefox asks for access to this feed site only. RSSavis uses that access to fetch the selected feed, not to read browser history.",
+      "placeholders": []
+    },
+    "app.addfeed.url.label": {
+      "kind": "text",
+      "message": "Feed URL",
+      "placeholders": []
+    },
+    "app.addfeed.title.label": {
+      "kind": "text",
+      "message": "Feed title",
+      "placeholders": []
+    },
+    "app.addfeed.submit": {
+      "kind": "text",
+      "message": "Add feed",
+      "placeholders": []
+    },
+    "app.addfeed.toast": {
+      "kind": "text",
+      "message": "Feed added",
+      "placeholders": []
+    },
+    "app.addfeed.error.summary": {
+      "kind": "text",
+      "message": "Fix the highlighted fields.",
+      "placeholders": []
+    },
+    "app.addfeed.url.required": {
+      "kind": "text",
+      "message": "Enter a feed URL.",
+      "placeholders": []
+    },
+    "app.addfeed.url.invalid": {
+      "kind": "text",
+      "message": "Enter an HTTP or HTTPS feed URL.",
+      "placeholders": []
+    },
+    "app.addfeed.title.required": {
+      "kind": "text",
+      "message": "Enter a feed title.",
+      "placeholders": []
+    },
+    "app.dialog.cancel": {
+      "kind": "text",
+      "message": "Cancel",
+      "placeholders": []
+    },
+    "app.dialog.back": {
+      "kind": "text",
+      "message": "Back",
+      "placeholders": []
+    },
+    "app.dialog.confirmation": {
+      "kind": "text",
+      "message": "Confirmation",
+      "placeholders": []
+    },
+    "app.shell.reader.sidebar.title": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    },
+    "app.shell.reader.nav.title": {
+      "kind": "text",
+      "message": "Library",
+      "placeholders": []
+    },
+    "app.shell.feed.nav.title": {
+      "kind": "text",
+      "message": "Feeds",
+      "placeholders": []
+    },
+    "app.shell.feed.nav.empty": {
+      "kind": "text",
+      "message": "No feeds yet",
+      "placeholders": []
+    },
+    "app.shell.scope.all": {
+      "kind": "text",
+      "message": "All articles",
+      "placeholders": []
+    },
+    "app.shell.scope.unread": {
+      "kind": "text",
+      "message": "Unread",
+      "placeholders": []
+    },
+    "app.shell.scope.starred": {
+      "kind": "text",
+      "message": "Starred",
+      "placeholders": []
+    },
+    "app.shell.scope.main": {
+      "kind": "text",
+      "message": "Main Stream",
+      "placeholders": []
+    },
+    "app.shell.reader.title": {
+      "kind": "text",
+      "message": "Unread",
+      "placeholders": []
+    },
+    "app.shell.reader.subtitle": {
+      "kind": "text",
+      "message": "No articles loaded",
+      "placeholders": []
+    },
+    "app.shell.reader.empty.title": {
+      "kind": "text",
+      "message": "No unread articles",
+      "placeholders": []
+    },
+    "app.shell.reader.empty.body": {
+      "kind": "text",
+      "message": "Add a feed to start reading in RSSavis.",
+      "placeholders": []
+    },
+    "app.shell.reader.scope.empty.title": {
+      "kind": "text",
+      "message": "No articles",
+      "placeholders": []
+    },
+    "app.shell.reader.scope.empty.body": {
+      "kind": "text",
+      "message": "There are no articles in this view.",
+      "placeholders": []
+    },
+    "app.shell.settings.title": {
+      "kind": "text",
+      "message": "Preferences",
+      "placeholders": []
+    },
+    "app.shell.tab.unread.title": {
+      "kind": "text",
+      "message": "({count}) · RSSavis",
+      "placeholders": ["count"]
+    },
+    "app.shell.settings.subtitle": {
+      "kind": "text",
+      "message": "Appearance",
+      "placeholders": []
+    },
+    "app.shell.settings.nav.title": {
+      "kind": "text",
+      "message": "Sections",
+      "placeholders": []
+    },
+    "app.shell.settings.back.reader": {
+      "kind": "text",
+      "message": "Back to feeds",
+      "placeholders": []
+    },
+    "app.shell.static.subtitle": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    },
+    "app.settings.general": {
+      "kind": "text",
+      "message": "General",
+      "placeholders": []
+    },
+    "app.settings.appearance": {
+      "kind": "text",
+      "message": "Appearance",
+      "placeholders": []
+    },
+    "app.settings.reading": {
+      "kind": "text",
+      "message": "Reading",
+      "placeholders": []
+    },
+    "app.settings.feeds": {
+      "kind": "text",
+      "message": "Feeds",
+      "placeholders": []
+    },
+    "app.settings.feeds.subtitle": {
+      "kind": "text",
+      "message": "Manage your subscriptions",
+      "placeholders": []
+    },
+    "app.settings.categories": {
+      "kind": "text",
+      "message": "Categories",
+      "placeholders": []
+    },
+    "app.settings.categories.subtitle": {
+      "kind": "text",
+      "message": "Group feeds and reorder them",
+      "placeholders": []
+    },
+    "app.settings.storage": {
+      "kind": "text",
+      "message": "Storage & Cleanup",
+      "placeholders": []
+    },
+    "app.settings.import": {
+      "kind": "text",
+      "message": "Import & Export",
+      "placeholders": []
+    },
+    "app.settings.saved": {
+      "kind": "text",
+      "message": "Preferences saved.",
+      "placeholders": []
+    },
+    "app.settings.reset": {
+      "kind": "text",
+      "message": "Reset preferences",
+      "placeholders": []
+    },
+    "app.settings.reset.row.title": {
+      "kind": "text",
+      "message": "Reset all preferences",
+      "placeholders": []
+    },
+    "app.settings.reset.row.subtitle": {
+      "kind": "text",
+      "message": "Restore every option to its default value",
+      "placeholders": []
+    },
+    "app.settings.form.error.summary": {
+      "kind": "text",
+      "message": "Fix the highlighted preferences fields.",
+      "placeholders": []
+    },
+    "app.settings.range.error": {
+      "kind": "text",
+      "message": "Enter a whole number from {min} to {max}.",
+      "placeholders": ["min", "max"]
+    },
+    "app.settings.spin.decrease": {
+      "kind": "text",
+      "message": "Decrease value",
+      "placeholders": []
+    },
+    "app.settings.spin.increase": {
+      "kind": "text",
+      "message": "Increase value",
+      "placeholders": []
+    },
+    "app.settings.language": {
+      "kind": "text",
+      "message": "Language",
+      "placeholders": []
+    },
+    "app.settings.language.auto": {
+      "kind": "text",
+      "message": "Automatic",
+      "placeholders": []
+    },
+    "app.settings.language.english": {
+      "kind": "text",
+      "message": "English",
+      "placeholders": []
+    },
+    "app.settings.language.danish": {
+      "kind": "text",
+      "message": "Danish",
+      "placeholders": []
+    },
+    "app.settings.refresh.interval": {
+      "kind": "text",
+      "message": "Refresh interval",
+      "placeholders": []
+    },
+    "app.settings.feed.timeout": {
+      "kind": "text",
+      "message": "Feed timeout",
+      "placeholders": []
+    },
+    "app.settings.accent.color": {
+      "kind": "text",
+      "message": "Accent color",
+      "placeholders": []
+    },
+    "app.settings.accent.blue": {
+      "kind": "text",
+      "message": "Blue",
+      "placeholders": []
+    },
+    "app.settings.accent.teal": {
+      "kind": "text",
+      "message": "Teal",
+      "placeholders": []
+    },
+    "app.settings.accent.green": {
+      "kind": "text",
+      "message": "Green",
+      "placeholders": []
+    },
+    "app.settings.accent.yellow": {
+      "kind": "text",
+      "message": "Yellow",
+      "placeholders": []
+    },
+    "app.settings.accent.orange": {
+      "kind": "text",
+      "message": "Orange",
+      "placeholders": []
+    },
+    "app.settings.accent.red": {
+      "kind": "text",
+      "message": "Red",
+      "placeholders": []
+    },
+    "app.settings.accent.pink": {
+      "kind": "text",
+      "message": "Pink",
+      "placeholders": []
+    },
+    "app.settings.accent.purple": {
+      "kind": "text",
+      "message": "Purple",
+      "placeholders": []
+    },
+    "app.settings.accent.slate": {
+      "kind": "text",
+      "message": "Slate",
+      "placeholders": []
+    },
+    "app.settings.image.loading": {
+      "kind": "text",
+      "message": "Remote images",
+      "placeholders": []
+    },
+    "app.settings.image.onexpand": {
+      "kind": "text",
+      "message": "Load when article expands",
+      "placeholders": []
+    },
+    "app.settings.image.always": {
+      "kind": "text",
+      "message": "Always load",
+      "placeholders": []
+    },
+    "app.settings.image.never": {
+      "kind": "text",
+      "message": "Never load",
+      "placeholders": []
+    },
+    "app.settings.image.lazy": {
+      "kind": "text",
+      "message": "Lazy-load images",
+      "placeholders": []
+    },
+    "app.settings.image.privacy": {
+      "kind": "text",
+      "message": "Remote images can contact third-party servers and reveal your IP address.",
+      "placeholders": []
+    },
+    "app.settings.articles.per.page": {
+      "kind": "text",
+      "message": "Articles per page",
+      "placeholders": []
+    },
+    "app.settings.default.article.view": {
+      "kind": "text",
+      "message": "Default article view",
+      "placeholders": []
+    },
+    "app.settings.open.links": {
+      "kind": "text",
+      "message": "Open original links",
+      "placeholders": []
+    },
+    "app.settings.open.background": {
+      "kind": "text",
+      "message": "Background tab",
+      "placeholders": []
+    },
+    "app.settings.open.foreground": {
+      "kind": "text",
+      "message": "Foreground tab",
+      "placeholders": []
+    },
+    "app.settings.open.current": {
+      "kind": "text",
+      "message": "Current tab",
+      "placeholders": []
+    },
+    "app.settings.mark.read.expand": {
+      "kind": "text",
+      "message": "Mark read on expand",
+      "placeholders": []
+    },
+    "app.settings.mark.read.open": {
+      "kind": "text",
+      "message": "Mark read when opening original",
+      "placeholders": []
+    },
+    "app.settings.mark.read.scroll": {
+      "kind": "text",
+      "message": "Mark read on scroll",
+      "placeholders": []
+    },
+    "app.settings.purge.max.articles": {
+      "kind": "text",
+      "message": "Maximum articles",
+      "placeholders": []
+    },
+    "app.settings.purge.max.age": {
+      "kind": "text",
+      "message": "Maximum age in days",
+      "placeholders": []
+    },
+    "app.settings.purge.keep.unread": {
+      "kind": "text",
+      "message": "Keep unread articles",
+      "placeholders": []
+    },
+    "app.settings.purge.keep.starred": {
+      "kind": "text",
+      "message": "Keep starred articles",
+      "placeholders": []
+    },
+    "app.storage.estimate.loading": {
+      "kind": "text",
+      "message": "Estimated storage usage is loading.",
+      "placeholders": []
+    },
+    "app.storage.estimate.summary": {
+      "kind": "text",
+      "message": "Estimated {usage} of {quota} used for {articles} articles across {feeds} feeds.",
+      "placeholders": ["usage", "quota", "articles", "feeds"]
+    },
+    "app.storage.purge.now": {
+      "kind": "text",
+      "message": "Purge now",
+      "placeholders": []
+    },
+    "app.storage.purge.confirm": {
+      "kind": "text",
+      "message": "Purge eligible articles now? Current article count: {count}.",
+      "placeholders": ["count"]
+    },
+    "app.storage.cleanup.complete": {
+      "kind": "text",
+      "message": "Cleanup complete.",
+      "placeholders": []
+    },
+    "app.storage.rebuild.stats": {
+      "kind": "text",
+      "message": "Rebuild stats",
+      "placeholders": []
+    },
+    "app.storage.rebuild.complete": {
+      "kind": "text",
+      "message": "Stats rebuild complete.",
+      "placeholders": []
+    },
+    "app.storage.repair.integrity": {
+      "kind": "text",
+      "message": "Repair integrity",
+      "placeholders": []
+    },
+    "app.storage.repair.complete": {
+      "kind": "text",
+      "message": "Integrity repair complete.",
+      "placeholders": []
+    },
+    "app.storage.reset.data": {
+      "kind": "text",
+      "message": "Reset all data",
+      "placeholders": []
+    },
+    "app.storage.reset.data.confirm": {
+      "kind": "text",
+      "message": "Type {phrase} to delete all local RSSavis data.",
+      "placeholders": ["phrase"]
+    },
+    "app.storage.reset.data.complete": {
+      "kind": "text",
+      "message": "All local data was reset.",
+      "placeholders": []
+    },
+    "app.theme.scheme.legend": {
+      "kind": "text",
+      "message": "Color scheme",
+      "placeholders": []
+    },
+    "app.theme.system": {
+      "kind": "text",
+      "message": "System",
+      "placeholders": []
+    },
+    "app.theme.light": {
+      "kind": "text",
+      "message": "Light",
+      "placeholders": []
+    },
+    "app.theme.dark": {
+      "kind": "text",
+      "message": "Dark",
+      "placeholders": []
+    },
+    "app.theme.family.readonly": {
+      "kind": "text",
+      "message": "Theme family: Adwaita",
+      "placeholders": []
+    },
+    "app.filter.label": {
+      "kind": "text",
+      "message": "Articles shown",
+      "placeholders": []
+    },
+    "app.filter.all": { "kind": "text", "message": "All", "placeholders": [] },
+    "app.filter.unread": { "kind": "text", "message": "Unread", "placeholders": [] },
+    "app.filter.read": { "kind": "text", "message": "Read", "placeholders": [] },
+    "app.filter.applied.all": {
+      "kind": "text",
+      "message": "Showing all articles.",
+      "placeholders": []
+    },
+    "app.filter.applied.unread": {
+      "kind": "text",
+      "message": "Showing unread articles.",
+      "placeholders": []
+    },
+    "app.filter.applied.read": {
+      "kind": "text",
+      "message": "Showing read articles.",
+      "placeholders": []
+    },
+    "app.filter.empty.unread.title": {
+      "kind": "text",
+      "message": "No unread articles",
+      "placeholders": []
+    },
+    "app.filter.empty.unread.body": {
+      "kind": "text",
+      "message": "There are no unread articles in this view.",
+      "placeholders": []
+    },
+    "app.filter.empty.read.title": {
+      "kind": "text",
+      "message": "No read articles",
+      "placeholders": []
+    },
+    "app.filter.empty.read.body": {
+      "kind": "text",
+      "message": "There are no read articles in this view.",
+      "placeholders": []
+    },
+    "app.filter.show.all": { "kind": "text", "message": "Show all", "placeholders": [] },
+    "app.view.label": {
+      "kind": "text",
+      "message": "Article view",
+      "placeholders": []
+    },
+    "app.view.compact": {
+      "kind": "text",
+      "message": "Compact",
+      "placeholders": []
+    },
+    "app.view.normal": {
+      "kind": "text",
+      "message": "Normal",
+      "placeholders": []
+    },
+    "app.view.large": {
+      "kind": "text",
+      "message": "Large",
+      "placeholders": []
+    },
+    "app.view.options": {
+      "kind": "text",
+      "message": "View options",
+      "placeholders": []
+    },
+    "app.article.count.label": {
+      "kind": "text",
+      "message": "articles",
+      "placeholders": []
+    },
+    "app.article.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} article",
+        "other": "{count} articles"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} article",
+        "other": "{count} articles"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.unread.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} unread article",
+        "other": "{count} unread articles"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.unread.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} unread",
+        "other": "{count} unread"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.starred.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} starred article",
+        "other": "{count} starred articles"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.starred.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} starred",
+        "other": "{count} starred"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.load.more": {
+      "kind": "text",
+      "message": "Load more",
+      "placeholders": []
+    },
+    "app.article.loading": {
+      "kind": "text",
+      "message": "Please wait while articles are loaded.",
+      "placeholders": []
+    },
+    "app.article.loading.title": {
+      "kind": "text",
+      "message": "Loading articles",
+      "placeholders": []
+    },
+    "app.article.load.failed": {
+      "kind": "text",
+      "message": "Could not load articles.",
+      "placeholders": []
+    },
+    "app.article.load.failed.title": {
+      "kind": "text",
+      "message": "Articles could not be loaded",
+      "placeholders": []
+    },
+    "app.article.refreshed": {
+      "kind": "text",
+      "message": "Articles refreshed.",
+      "placeholders": []
+    },
+    "app.article.new.available": {
+      "kind": "text",
+      "message": "New articles are available.",
+      "placeholders": []
+    },
+    "app.article.new.show": {
+      "kind": "text",
+      "message": "Show",
+      "placeholders": []
+    },
+    "app.reader.retry": {
+      "kind": "text",
+      "message": "Try again",
+      "placeholders": []
+    },
+    "app.reader.scope.fallback.unread": {
+      "kind": "text",
+      "message": "Showing unread articles.",
+      "placeholders": []
+    },
+    "app.search.label": {
+      "kind": "text",
+      "message": "Search articles",
+      "placeholders": []
+    },
+    "app.search.placeholder": {
+      "kind": "text",
+      "message": "Search title, author, summary, or feed",
+      "placeholders": []
+    },
+    "app.search.help": {
+      "kind": "text",
+      "message": "Enter at least two characters to search this scope.",
+      "placeholders": []
+    },
+    "app.search.empty": {
+      "kind": "text",
+      "message": "No search results found.",
+      "placeholders": []
+    },
+    "app.search.empty.title": {
+      "kind": "text",
+      "message": "No results",
+      "placeholders": []
+    },
+    "app.search.results.count": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} search result.",
+        "other": "{count} search results."
+      },
+      "placeholders": ["count"]
+    },
+    "app.search.close": {
+      "kind": "text",
+      "message": "Close search",
+      "placeholders": []
+    },
+    "app.status.page.title": {
+      "kind": "text",
+      "message": "Status",
+      "placeholders": []
+    },
+    "app.mark.scope.read.menu": {
+      "kind": "text",
+      "message": "Mark scope read",
+      "placeholders": []
+    },
+    "app.mark.scope.read.none": {
+      "kind": "text",
+      "message": "No unread articles matched the current scope.",
+      "placeholders": []
+    },
+    "app.mark.scope.read.confirm": {
+      "kind": "text",
+      "message": "Mark {count} articles in {scope} as read?",
+      "placeholders": ["count", "scope"]
+    },
+    "app.mark.scope.read.progress": {
+      "kind": "text",
+      "message": "Marked {done} of {count} articles as read.",
+      "placeholders": ["done", "count"]
+    },
+    "app.mark.scope.read.complete": {
+      "kind": "text",
+      "message": "Marked {count} articles as read.",
+      "placeholders": ["count"]
+    },
+    "app.shortcuts.open": {
+      "kind": "text",
+      "message": "Keyboard shortcuts",
+      "placeholders": []
+    },
+    "app.shortcuts.title": {
+      "kind": "text",
+      "message": "Keyboard shortcuts",
+      "placeholders": []
+    },
+    "app.shortcuts.search": {
+      "kind": "text",
+      "message": "Search articles",
+      "placeholders": []
+    },
+    "app.shortcuts.mark.read": {
+      "kind": "text",
+      "message": "Mark current scope as read",
+      "placeholders": []
+    },
+    "app.shortcuts.settings": {
+      "kind": "text",
+      "message": "Open preferences",
+      "placeholders": []
+    },
+    "app.shortcuts.menu": {
+      "kind": "text",
+      "message": "Open primary menu",
+      "placeholders": []
+    },
+    "app.shortcuts.shortcuts": {
+      "kind": "text",
+      "message": "Show keyboard shortcuts",
+      "placeholders": []
+    },
+    "app.shortcuts.help": {
+      "kind": "text",
+      "message": "Open Help",
+      "placeholders": []
+    },
+    "app.shortcuts.section.general": {
+      "kind": "text",
+      "message": "General",
+      "placeholders": []
+    },
+    "app.dialog.close": {
+      "kind": "text",
+      "message": "Close",
+      "placeholders": []
+    },
+    "app.toast.dismiss": {
+      "kind": "text",
+      "message": "Dismiss toast",
+      "placeholders": []
+    },
+    "app.help.open": {
+      "kind": "text",
+      "message": "Help",
+      "placeholders": []
+    },
+    "app.help.title": {
+      "kind": "text",
+      "message": "Help",
+      "placeholders": []
+    },
+    "app.help.intro": {
+      "kind": "text",
+      "message": "RSSavis is a local Firefox reader for unauthenticated RSS and Atom feeds.",
+      "placeholders": []
+    },
+    "app.help.feeds.title": {
+      "kind": "text",
+      "message": "Feeds and reading",
+      "placeholders": []
+    },
+    "app.help.feeds": {
+      "kind": "text",
+      "message": "Add feeds from the sidebar, then use Library scopes, feed rows, search, and article actions to read and organise items.",
+      "placeholders": []
+    },
+    "app.help.permissions.title": {
+      "kind": "text",
+      "message": "Permissions",
+      "placeholders": []
+    },
+    "app.help.permissions": {
+      "kind": "text",
+      "message": "When you add a feed, Firefox asks for optional host permission for that origin so RSSavis can fetch that feed.",
+      "placeholders": []
+    },
+    "app.help.keyboard.title": {
+      "kind": "text",
+      "message": "Keyboard shortcuts",
+      "placeholders": []
+    },
+    "app.help.keyboard": {
+      "kind": "text",
+      "message": "Press F1 for Help or ? for Keyboard shortcuts.",
+      "placeholders": []
+    },
+    "app.about.open": {
+      "kind": "text",
+      "message": "About RSSavis",
+      "placeholders": []
+    },
+    "app.about.title": {
+      "kind": "text",
+      "message": "About RSSavis",
+      "placeholders": []
+    },
+    "app.about.version": {
+      "kind": "text",
+      "message": "Version {version}",
+      "placeholders": ["version"]
+    },
+    "app.about.details.row": {
+      "kind": "text",
+      "message": "Details",
+      "placeholders": []
+    },
+    "app.about.privacy.title": {
+      "kind": "text",
+      "message": "Privacy",
+      "placeholders": []
+    },
+    "app.about.privacy.body": {
+      "kind": "text",
+      "message": "RSSavis stores feeds, categories, articles, settings, and UI state locally in Firefox extension storage. It has no telemetry, analytics, remote logging, or remote configuration.",
+      "placeholders": []
+    },
+    "app.about.permissions.title": {
+      "kind": "text",
+      "message": "Permissions",
+      "placeholders": []
+    },
+    "app.about.permissions.body": {
+      "kind": "text",
+      "message": "RSSavis uses storage, alarms, unlimited storage, and optional host permissions for feed origins you add.",
+      "placeholders": []
+    },
+    "app.about.credits.title": {
+      "kind": "text",
+      "message": "Credits",
+      "placeholders": []
+    },
+    "app.about.credits.body": {
+      "kind": "text",
+      "message": "Built by the RSSavis contributors. Adwaita color values derive from the libadwaita 1.9.2 sources (GNOME Project).",
+      "placeholders": []
+    },
+    "app.about.legal.title": {
+      "kind": "text",
+      "message": "Legal",
+      "placeholders": []
+    },
+    "app.about.legal.body": {
+      "kind": "text",
+      "message": "RSSavis is free software released under the Mozilla Public License 2.0. The full license text ships with the extension.",
+      "placeholders": []
+    },
+    "app.about.resource.source": {
+      "kind": "text",
+      "message": "Source code",
+      "placeholders": []
+    },
+    "app.about.resource.security": {
+      "kind": "text",
+      "message": "Report a security issue",
+      "placeholders": []
+    },
+    "app.about.resource.license": {
+      "kind": "text",
+      "message": "View full license",
+      "placeholders": []
+    },
+    "app.about.resource.open.failed": {
+      "kind": "text",
+      "message": "Could not open this resource.",
+      "placeholders": []
+    },
+    "app.about.copyright": {
+      "kind": "text",
+      "message": "© 2026 RSSavis contributors",
+      "placeholders": []
+    },
+    "app.article.star": {
+      "kind": "text",
+      "message": "Star article",
+      "placeholders": []
+    },
+    "app.article.unstar": {
+      "kind": "text",
+      "message": "Unstar article",
+      "placeholders": []
+    },
+    "app.article.untitled": {
+      "kind": "text",
+      "message": "Untitled article",
+      "placeholders": []
+    },
+    "app.article.read.state.read": {
+      "kind": "text",
+      "message": "Read article",
+      "placeholders": []
+    },
+    "app.article.read.state.unread": {
+      "kind": "text",
+      "message": "Unread article",
+      "placeholders": []
+    },
+    "app.article.actions.label": {
+      "kind": "text",
+      "message": "Article actions",
+      "placeholders": []
+    },
+    "app.article.detail.loading": {
+      "kind": "text",
+      "message": "Loading article preview",
+      "placeholders": []
+    },
+    "app.article.detail.failed": {
+      "kind": "text",
+      "message": "Could not load article preview.",
+      "placeholders": []
+    },
+    "app.article.open.original": {
+      "kind": "text",
+      "message": "Open original",
+      "placeholders": []
+    },
+    "app.article.link.destination.label": {
+      "kind": "text",
+      "message": "Destination",
+      "placeholders": []
+    },
+    "app.article.opened.original": {
+      "kind": "text",
+      "message": "Opened original article.",
+      "placeholders": []
+    },
+    "app.article.open.failed": {
+      "kind": "text",
+      "message": "Could not open article.",
+      "placeholders": []
+    },
+    "app.open.original.heading": {
+      "kind": "text",
+      "message": "Opening original article",
+      "placeholders": []
+    },
+    "app.open.original.status": {
+      "kind": "text",
+      "message": "RSSavis is opening the original article.",
+      "placeholders": []
+    },
+    "app.open.original.recovery.heading": {
+      "kind": "text",
+      "message": "Original article could not be opened",
+      "placeholders": []
+    },
+    "app.open.original.invalid": {
+      "kind": "text",
+      "message": "The article link is not available from this packaged page.",
+      "placeholders": []
+    },
+    "app.open.original.failed": {
+      "kind": "text",
+      "message": "Could not open the original article.",
+      "placeholders": []
+    },
+    "app.open.original.reader": {
+      "kind": "text",
+      "message": "Return to RSSavis",
+      "placeholders": []
+    },
+    "app.open.content.link.heading": {
+      "kind": "text",
+      "message": "Opening linked page",
+      "placeholders": []
+    },
+    "app.open.content.link.status": {
+      "kind": "text",
+      "message": "RSSavis is opening the linked page.",
+      "placeholders": []
+    },
+    "app.open.content.link.recovery.heading": {
+      "kind": "text",
+      "message": "Linked page could not be opened",
+      "placeholders": []
+    },
+    "app.open.content.link.invalid": {
+      "kind": "text",
+      "message": "The link is not available from this packaged page.",
+      "placeholders": []
+    },
+    "app.open.content.link.failed": {
+      "kind": "text",
+      "message": "Could not open the linked page.",
+      "placeholders": []
+    },
+    "app.open.content.link.reader": {
+      "kind": "text",
+      "message": "Return to RSSavis",
+      "placeholders": []
+    },
+    "app.article.mark.read": {
+      "kind": "text",
+      "message": "Mark read",
+      "placeholders": []
+    },
+    "app.article.mark.unread": {
+      "kind": "text",
+      "message": "Mark unread",
+      "placeholders": []
+    },
+    "app.article.copy.link": {
+      "kind": "text",
+      "message": "Copy link",
+      "placeholders": []
+    },
+    "app.article.link.copied": {
+      "kind": "text",
+      "message": "Link copied.",
+      "placeholders": []
+    },
+    "app.article.copy.failed": {
+      "kind": "text",
+      "message": "Could not copy link.",
+      "placeholders": []
+    },
+    "app.article.update.failed": {
+      "kind": "text",
+      "message": "Could not update article.",
+      "placeholders": []
+    },
+    "app.article.image.privacy": {
+      "kind": "text",
+      "message": "Remote images can contact the image server.",
+      "placeholders": []
+    },
+    "app.article.image.never": {
+      "kind": "text",
+      "message": "Images are disabled for previews.",
+      "placeholders": []
+    },
+    "app.action.close.sidebar": {
+      "kind": "text",
+      "message": "Close sidebar",
+      "placeholders": []
+    },
+    "app.action.open.sidebar": {
+      "kind": "text",
+      "message": "Open sidebar",
+      "placeholders": []
+    },
+    "app.action.resize.sidebar": {
+      "kind": "text",
+      "message": "Resize sidebar",
+      "placeholders": []
+    },
+    "app.action.toggle.category": {
+      "kind": "text",
+      "message": "Toggle category",
+      "placeholders": []
+    },
+    "app.action.toggle.category.named": {
+      "kind": "text",
+      "message": "Show or hide {category}",
+      "placeholders": ["category"]
+    },
+    "app.action.primary.menu": {
+      "kind": "text",
+      "message": "Main Menu",
+      "placeholders": []
+    },
+    "app.action.refresh.all": {
+      "kind": "text",
+      "message": "Refresh all feeds",
+      "placeholders": []
+    },
+    "app.action.refresh.started": {
+      "kind": "text",
+      "message": "Refreshing feeds",
+      "placeholders": []
+    },
+    "app.action.refresh.summary": {
+      "kind": "text",
+      "message": "{checked} feeds checked, {updated} updated, {unchanged} unchanged, {failed} failed, {articles} new articles.",
+      "placeholders": ["checked", "updated", "unchanged", "failed", "articles"]
+    },
+    "app.management.saved": {
+      "kind": "text",
+      "message": "Changes saved.",
+      "placeholders": []
+    },
+    "app.management.form.error.summary": {
+      "kind": "text",
+      "message": "Fix the highlighted management fields.",
+      "placeholders": []
+    },
+    "app.opml.help": {
+      "kind": "text",
+      "message": "Preview the OPML file before granting access. RSSavis imports subscriptions only after Firefox grants every listed origin.",
+      "placeholders": []
+    },
+    "app.opml.file.label": {
+      "kind": "text",
+      "message": "OPML file",
+      "placeholders": []
+    },
+    "app.opml.preview": {
+      "kind": "text",
+      "message": "Preview OPML",
+      "placeholders": []
+    },
+    "app.opml.commit": {
+      "kind": "text",
+      "message": "Grant access and import",
+      "placeholders": []
+    },
+    "app.opml.export": {
+      "kind": "text",
+      "message": "Export OPML",
+      "placeholders": []
+    },
+    "app.opml.export.subtitle": {
+      "kind": "text",
+      "message": "Save all feeds and categories to a file",
+      "placeholders": []
+    },
+    "app.opml.preview.ready": {
+      "kind": "text",
+      "message": "OPML preview is ready.",
+      "placeholders": []
+    },
+    "app.opml.preview.issues": {
+      "kind": "text",
+      "message": "Some OPML entries need attention.",
+      "placeholders": []
+    },
+    "app.opml.preview.required": {
+      "kind": "text",
+      "message": "Preview an OPML file before importing.",
+      "placeholders": []
+    },
+    "app.opml.preview.invalid": {
+      "kind": "text",
+      "message": "The OPML preview response was invalid.",
+      "placeholders": []
+    },
+    "app.opml.file.missing": {
+      "kind": "text",
+      "message": "Choose an OPML file before previewing.",
+      "placeholders": []
+    },
+    "app.opml.count.valid": {
+      "kind": "text",
+      "message": "Valid subscriptions",
+      "placeholders": []
+    },
+    "app.opml.count.duplicate.in.file": {
+      "kind": "text",
+      "message": "Duplicates in file",
+      "placeholders": []
+    },
+    "app.opml.count.already.subscribed": {
+      "kind": "text",
+      "message": "Already subscribed",
+      "placeholders": []
+    },
+    "app.opml.count.invalid": {
+      "kind": "text",
+      "message": "Invalid entries",
+      "placeholders": []
+    },
+    "app.opml.count.category": {
+      "kind": "text",
+      "message": "Categories",
+      "placeholders": []
+    },
+    "app.opml.count.unique.origin": {
+      "kind": "text",
+      "message": "Unique origins",
+      "placeholders": []
+    },
+    "app.opml.import.complete": {
+      "kind": "text",
+      "message": "OPML import completed.",
+      "placeholders": []
+    },
+    "app.opml.export.complete": {
+      "kind": "text",
+      "message": "OPML export downloaded.",
+      "placeholders": []
+    },
+    "app.feed.title.label": {
+      "kind": "text",
+      "message": "Feed title",
+      "placeholders": []
+    },
+    "app.feed.customtitle.help": {
+      "kind": "text",
+      "message": "Leave blank to use the feed's own title.",
+      "placeholders": []
+    },
+    "app.feed.title.required": {
+      "kind": "text",
+      "message": "Enter a feed title.",
+      "placeholders": []
+    },
+    "app.feed.url.label": {
+      "kind": "text",
+      "message": "Feed URL",
+      "placeholders": []
+    },
+    "app.feed.url.required": {
+      "kind": "text",
+      "message": "Enter a feed URL.",
+      "placeholders": []
+    },
+    "app.feed.url.invalid": {
+      "kind": "text",
+      "message": "Enter an HTTP or HTTPS feed URL.",
+      "placeholders": []
+    },
+    "app.feed.options": {
+      "kind": "text",
+      "message": "Feed options",
+      "placeholders": []
+    },
+    "app.feed.options.for": {
+      "kind": "text",
+      "message": "Feed options for {title}",
+      "placeholders": ["title"]
+    },
+    "app.feed.edit": {
+      "kind": "text",
+      "message": "Edit",
+      "placeholders": []
+    },
+    "app.feed.edit.title": {
+      "kind": "text",
+      "message": "Edit feed",
+      "placeholders": []
+    },
+    "app.feed.mainstream": {
+      "kind": "text",
+      "message": "Include in Main Stream",
+      "placeholders": []
+    },
+    "app.feed.keepreadonpurge.label": {
+      "kind": "text",
+      "message": "Keep read articles when purging",
+      "placeholders": []
+    },
+    "app.feed.iconsource.label": {
+      "kind": "text",
+      "message": "Icon",
+      "placeholders": []
+    },
+    "app.feed.iconsource.auto": {
+      "kind": "text",
+      "message": "Automatic",
+      "placeholders": []
+    },
+    "app.feed.iconsource.favicon": {
+      "kind": "text",
+      "message": "Site favicon",
+      "placeholders": []
+    },
+    "app.feed.icon.color.label": {
+      "kind": "text",
+      "message": "Icon color",
+      "placeholders": []
+    },
+    "app.feed.icon.color.auto": {
+      "kind": "text",
+      "message": "Automatic",
+      "placeholders": []
+    },
+    "app.feed.icon.color.blue": {
+      "kind": "text",
+      "message": "Blue",
+      "placeholders": []
+    },
+    "app.feed.icon.color.teal": {
+      "kind": "text",
+      "message": "Teal",
+      "placeholders": []
+    },
+    "app.feed.icon.color.green": {
+      "kind": "text",
+      "message": "Green",
+      "placeholders": []
+    },
+    "app.feed.icon.color.yellow": {
+      "kind": "text",
+      "message": "Yellow",
+      "placeholders": []
+    },
+    "app.feed.icon.color.orange": {
+      "kind": "text",
+      "message": "Orange",
+      "placeholders": []
+    },
+    "app.feed.icon.color.red": {
+      "kind": "text",
+      "message": "Red",
+      "placeholders": []
+    },
+    "app.feed.icon.color.pink": {
+      "kind": "text",
+      "message": "Pink",
+      "placeholders": []
+    },
+    "app.feed.icon.color.purple": {
+      "kind": "text",
+      "message": "Purple",
+      "placeholders": []
+    },
+    "app.feed.icon.color.slate": {
+      "kind": "text",
+      "message": "Slate",
+      "placeholders": []
+    },
+    "app.feed.save": {
+      "kind": "text",
+      "message": "Save feed",
+      "placeholders": []
+    },
+    "app.feed.reload": {
+      "kind": "text",
+      "message": "Reload feed",
+      "placeholders": []
+    },
+    "app.feed.menu.mark.read": {
+      "kind": "text",
+      "message": "Mark as Read",
+      "placeholders": []
+    },
+    "app.feed.delete": {
+      "kind": "text",
+      "message": "Delete feed",
+      "placeholders": []
+    },
+    "app.feed.delete.confirm": {
+      "kind": "text",
+      "message": "Delete feed {title}?",
+      "placeholders": ["title"]
+    },
+    "app.feed.deleting": {
+      "kind": "text",
+      "message": "is being deleted",
+      "placeholders": []
+    },
+    "app.feed.deleting.status": {
+      "kind": "text",
+      "message": "{title} is being deleted.",
+      "placeholders": ["title"]
+    },
+    "app.feed.move.category": {
+      "kind": "text",
+      "message": "Move to category",
+      "placeholders": []
+    },
+    "app.feed.move.category.title": {
+      "kind": "text",
+      "message": "Move to category",
+      "placeholders": []
+    },
+    "app.feed.move.current.category": {
+      "kind": "text",
+      "message": "Current category: {category}",
+      "placeholders": ["category"]
+    },
+    "app.feed.move.target.category": {
+      "kind": "text",
+      "message": "Category",
+      "placeholders": []
+    },
+    "app.feed.move.submit": {
+      "kind": "text",
+      "message": "Move feed",
+      "placeholders": []
+    },
+    "app.feed.move.confirm": {
+      "kind": "text",
+      "message": "Move {title} to {category}?",
+      "placeholders": ["title", "category"]
+    },
+    "app.feed.last.error": {
+      "kind": "text",
+      "message": "Last error",
+      "placeholders": []
+    },
+    "app.feed.last.error.status": {
+      "kind": "text",
+      "message": "Last error: {error}",
+      "placeholders": ["error"]
+    },
+    "app.feed.http.status": {
+      "kind": "text",
+      "message": "HTTP status",
+      "placeholders": []
+    },
+    "app.feed.http.status.value": {
+      "kind": "text",
+      "message": "HTTP status: {status}",
+      "placeholders": ["status"]
+    },
+    "app.feed.last.checked": {
+      "kind": "text",
+      "message": "Last checked",
+      "placeholders": []
+    },
+    "app.feed.last.checked.value": {
+      "kind": "text",
+      "message": "Last checked: {datetime}",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.next.retry": {
+      "kind": "text",
+      "message": "Next retry",
+      "placeholders": []
+    },
+    "app.feed.next.retry.value": {
+      "kind": "text",
+      "message": "Next retry: {datetime}",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.ratelimited": {
+      "kind": "text",
+      "message": "Waiting for rate limit (next try {datetime})",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.permission.granted": {
+      "kind": "text",
+      "message": "Permission granted",
+      "placeholders": []
+    },
+    "app.feed.permission.missing": {
+      "kind": "text",
+      "message": "Permission missing",
+      "placeholders": []
+    },
+    "app.feed.permission.banner.missing": {
+      "kind": "text",
+      "message": "RSSavis needs permission to fetch this feed from {host}",
+      "placeholders": ["host"]
+    },
+    "app.feed.permission.banner.redirect": {
+      "kind": "text",
+      "message": "This feed redirects to {host}",
+      "placeholders": ["host"]
+    },
+    "app.feed.permission.banner.grant": {
+      "kind": "text",
+      "message": "Grant Access",
+      "placeholders": []
+    },
+    "app.feed.permission.banner.allow": {
+      "kind": "text",
+      "message": "Allow Redirect",
+      "placeholders": []
+    },
+    "app.feed.redirect.permission.required": {
+      "kind": "text",
+      "message": "Redirect needs permission",
+      "placeholders": []
+    },
+    "app.feed.reorder.grip": {
+      "kind": "text",
+      "message": "Reorder feed",
+      "placeholders": []
+    },
+    "app.feed.reorder.grip.for": {
+      "kind": "text",
+      "message": "Reorder {title}",
+      "placeholders": ["title"]
+    },
+    "app.feed.reorder.moved": {
+      "kind": "text",
+      "message": "{title} moved to position {position} of {total}",
+      "placeholders": ["title", "position", "total"]
+    },
+    "app.category.default.title": {
+      "kind": "text",
+      "message": "Uncategorized",
+      "placeholders": []
+    },
+    "app.category.name.label": {
+      "kind": "text",
+      "message": "Category name",
+      "placeholders": []
+    },
+    "app.category.name.required": {
+      "kind": "text",
+      "message": "Enter a category name.",
+      "placeholders": []
+    },
+    "app.category.add": {
+      "kind": "text",
+      "message": "Add category",
+      "placeholders": []
+    },
+    "app.category.create": {
+      "kind": "text",
+      "message": "Create category",
+      "placeholders": []
+    },
+    "app.category.rename": {
+      "kind": "text",
+      "message": "Rename category",
+      "placeholders": []
+    },
+    "app.category.rename.title": {
+      "kind": "text",
+      "message": "Rename category",
+      "placeholders": []
+    },
+    "app.category.grip": {
+      "kind": "text",
+      "message": "Reorder {title}",
+      "placeholders": ["title"]
+    },
+    "app.category.reorder.moved": {
+      "kind": "text",
+      "message": "{title} moved to position {position} of {total}",
+      "placeholders": ["title", "position", "total"]
+    },
+    "app.category.delete": {
+      "kind": "text",
+      "message": "Delete category",
+      "placeholders": []
+    },
+    "app.category.delete.confirm": {
+      "kind": "text",
+      "message": "Delete category {title}?",
+      "placeholders": ["title"]
+    },
+    "app.category.feed.count": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} feed",
+        "other": "{count} feeds"
+      },
+      "placeholders": ["count"]
+    },
+    "app.category.move.up": {
+      "kind": "text",
+      "message": "Move category up",
+      "placeholders": []
+    },
+    "app.category.move.down": {
+      "kind": "text",
+      "message": "Move category down",
+      "placeholders": []
+    },
+    "error.internal": {
+      "kind": "text",
+      "message": "Something went wrong.",
+      "placeholders": []
+    },
+    "error.invalidmessage": {
+      "kind": "text",
+      "message": "The extension received an invalid internal message.",
+      "placeholders": []
+    },
+    "error.validationerror": {
+      "kind": "text",
+      "message": "The saved data did not match the expected format.",
+      "placeholders": []
+    },
+    "error.unsupportedurlscheme": {
+      "kind": "text",
+      "message": "Only HTTP and HTTPS URLs are supported.",
+      "placeholders": []
+    },
+    "error.hostpermissiondenied": {
+      "kind": "text",
+      "message": "Firefox did not grant permission for this site.",
+      "placeholders": []
+    },
+    "error.hostpermissionrevoked": {
+      "kind": "text",
+      "message": "The site permission was removed.",
+      "placeholders": []
+    },
+    "error.feedalreadyexists": {
+      "kind": "text",
+      "message": "This feed is already subscribed.",
+      "placeholders": []
+    },
+    "error.feednotfound": {
+      "kind": "text",
+      "message": "The feed could not be found.",
+      "placeholders": []
+    },
+    "error.categorynotfound": {
+      "kind": "text",
+      "message": "The category could not be found.",
+      "placeholders": []
+    },
+    "error.articlenotfound": {
+      "kind": "text",
+      "message": "The article could not be found.",
+      "placeholders": []
+    },
+    "error.fetchtimeout": {
+      "kind": "text",
+      "message": "The feed request timed out.",
+      "placeholders": []
+    },
+    "error.fetchresponsetoolarge": {
+      "kind": "text",
+      "message": "The feed response is too large.",
+      "placeholders": []
+    },
+    "error.httperror": {
+      "kind": "text",
+      "message": "The feed server returned an HTTP error.",
+      "placeholders": []
+    },
+    "error.authoraccessdenied": {
+      "kind": "text",
+      "message": "The feed requires authentication or access was denied.",
+      "placeholders": []
+    },
+    "error.feedparseerror": {
+      "kind": "text",
+      "message": "The feed could not be parsed.",
+      "placeholders": []
+    },
+    "error.unsupportedfeedformat": {
+      "kind": "text",
+      "message": "This feed format is not supported.",
+      "placeholders": []
+    },
+    "error.opmlparseerror": {
+      "kind": "text",
+      "message": "The OPML file could not be parsed.",
+      "placeholders": []
+    },
+    "error.opmltoolarge": {
+      "kind": "text",
+      "message": "The OPML file is too large.",
+      "placeholders": []
+    },
+    "error.dbopenfailed": {
+      "kind": "text",
+      "message": "The local database could not be opened.",
+      "placeholders": []
+    },
+    "error.dbschemamismatch": {
+      "kind": "text",
+      "message": "The local database schema is not compatible.",
+      "placeholders": []
+    },
+    "error.dbversionerror": {
+      "kind": "text",
+      "message": "The local database version is not compatible.",
+      "placeholders": []
+    },
+    "error.dbtransactionaborted": {
+      "kind": "text",
+      "message": "The database transaction was aborted.",
+      "placeholders": []
+    },
+    "error.dbtransactioninactive": {
+      "kind": "text",
+      "message": "The database transaction ended too early.",
+      "placeholders": []
+    },
+    "error.dbconstraint": {
+      "kind": "text",
+      "message": "The database rejected a duplicate or conflicting record.",
+      "placeholders": []
+    },
+    "error.dbquotaexceeded": {
+      "kind": "text",
+      "message": "Firefox storage is full.",
+      "placeholders": []
+    },
+    "error.dbinvalidstate": {
+      "kind": "text",
+      "message": "The database is in an invalid state.",
+      "placeholders": []
+    },
+    "error.dbunknown": {
+      "kind": "text",
+      "message": "An unknown database error occurred.",
+      "placeholders": []
+    },
+    "error.dedupecollision": {
+      "kind": "text",
+      "message": "Two feed entries produced the same identity.",
+      "placeholders": []
+    },
+    "error.dedupeambiguous": {
+      "kind": "text",
+      "message": "A feed entry matched multiple existing articles.",
+      "placeholders": []
+    },
+    "error.redirectpermissionrequired": {
+      "kind": "text",
+      "message": "The feed redirected to a site that needs permission.",
+      "placeholders": []
+    },
+    "error.dbupgradeblocked": {
+      "kind": "text",
+      "message": "The database upgrade is blocked by another open tab.",
+      "placeholders": []
+    },
+    "error.invalidcursor": {
+      "kind": "text",
+      "message": "The list cursor is invalid.",
+      "placeholders": []
+    },
+    "error.cursorstale": {
+      "kind": "text",
+      "message": "The list changed and needs to be reloaded.",
+      "placeholders": []
+    },
+    "error.notimplemented": {
+      "kind": "text",
+      "message": "This command is not available yet.",
+      "placeholders": []
+    },
+    "manifest.action.openreader": {
+      "kind": "text",
+      "message": "Open RSSavis",
+      "placeholders": []
+    },
+    "manifest.action.openreader.main.unread.one": {
+      "kind": "text",
+      "message": "Open RSSavis — {count} unread article in Main Stream",
+      "placeholders": ["count"]
+    },
+    "manifest.action.openreader.main.unread.other": {
+      "kind": "text",
+      "message": "Open RSSavis — {count} unread articles in Main Stream",
+      "placeholders": ["count"]
+    },
+    "manifest.extension.description": {
+      "kind": "text",
+      "message": "Local RSS and Atom reader for Firefox.",
+      "placeholders": []
+    },
+    "manifest.extension.name": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer layout {
+  .app-shell {
+    display: grid;
+    position: relative;
+    grid-template-columns: var(--rs-sidebar-width) minmax(0, 1fr);
+    block-size: 100dvh;
+    min-block-size: 0;
+    overflow: hidden;
+    background: var(--rs-color-window-bg);
+  }
+
+  .app-shell[data-sidebar-open='false'] {
+    grid-template-columns: 0 minmax(0, 1fr);
+  }
+
+  .workspace {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--rs-headerbar-height) auto auto minmax(0, 1fr);
+    block-size: 100%;
+    min-inline-size: 0;
+    min-block-size: 0;
+    overflow: hidden;
+  }
+
+  .app-shell[data-popover-open] .sidebar,
+  .app-shell[data-popover-open] .workspace {
+    pointer-events: none;
+  }
+
+  .sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+    inline-size: var(--rs-sidebar-width);
+    block-size: 100%;
+    min-inline-size: 0;
+    min-block-size: 0;
+    max-block-size: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    border-inline-end: 1px solid var(--rs-color-border);
+    border-block: 0;
+    border-inline-start: 0;
+    background: var(--rs-color-sidebar-bg);
+    color: var(--rs-color-text);
+  }
+
+  .sidebar-content {
+    min-block-size: 100%;
+  }
+
+  .sidebar[hidden] {
+    display: none;
+  }
+
+  .sidebar-drawer {
+    inline-size: min(var(--rs-sidebar-width), 86vw);
+    max-block-size: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    border: 0;
+    border-inline-end: 1px solid var(--rs-color-border);
+    background: var(--rs-color-sidebar-bg);
+    color: var(--rs-color-text);
+    box-shadow: 0 1rem 3rem var(--rs-color-popover-shade);
+  }
+
+  .sidebar-drawer[hidden] {
+    display: none;
+  }
+
+  .sidebar-drawer::backdrop {
+    background: color-mix(in oklch, var(--rs-color-window-bg) 62%, transparent);
+  }
+
+  .sidebar-resizer-region {
+    position: absolute;
+    z-index: 4;
+    inset-block: 0;
+    inset-inline-start: calc(var(--rs-sidebar-width) - 0.3125rem);
+    inline-size: 0.625rem;
+  }
+
+  .sidebar-resizer {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    cursor: col-resize;
+  }
+
+  .sidebar-resizer:hover,
+  .sidebar-resizer:focus-visible {
+    background: linear-gradient(
+      to right,
+      transparent 0.25rem,
+      var(--rs-color-accent-bg) 0.25rem 0.375rem,
+      transparent 0.375rem
+    );
+  }
+
+  .app-shell[data-sidebar-open='false'] .sidebar-resizer-region {
+    display: none;
+  }
+
+  .sidebar[data-open='false'] {
+    inline-size: 0;
+    min-inline-size: 0;
+    overflow: hidden;
+    border-inline-end: 0;
+  }
+
+  .view {
+    grid-row: 4;
+    min-inline-size: 0;
+    min-block-size: 0;
+    overflow: auto;
+    background: var(--rs-color-view-bg);
+  }
+
+  .view[hidden] {
+    display: none;
+  }
+
+  .reader-view {
+    display: block;
+    padding: 2rem;
+  }
+
+  .reader-empty,
+  .settings-section,
+  .article-list-root {
+    inline-size: min(100%, var(--rs-content-width));
+    margin-inline: auto;
+  }
+
+  .settings-view {
+    block-size: 100%;
+    min-block-size: 0;
+    padding: 2rem;
+    background: var(--rs-color-window-bg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @layer layout {
+    .app-shell {
+      transition: grid-template-columns var(--rs-transition-medium);
+    }
+
+    /* During a live resizer drag the grid must track the pointer instantly; the A4
+       collapse/expand transition still applies whenever this flag is absent. */
+    [data-app-shell][data-sidebar-resizing] {
+      transition: none;
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  @layer layout {
+    .app-shell {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .app-shell[data-sidebar-open='false'] {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .workspace {
+      grid-column: 1;
+    }
+
+    .sidebar-drawer {
+      position: fixed;
+      z-index: 3;
+      inset-block: 0;
+      inset-inline-start: 0;
+    }
+
+    .sidebar-drawer[data-open='false'] {
+      transform: translateX(-100%);
+    }
+
+    .sidebar-resizer-region {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  @layer layout {
+    .reader-view,
+    .settings-view {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  @layer layout {
+    .workspace {
+      min-inline-size: 0;
+    }
+
+    .headerbar-title p {
+      display: none;
+    }
+  }
+}

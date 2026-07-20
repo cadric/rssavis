@@ -1,0 +1,1852 @@
+{
+  "$schema": "../schema/locale-catalog.schema.json",
+  "$meta": {
+    "locale": "da",
+    "direction": "ltr"
+  },
+  "messages": {
+    "app.foundation.loaded": {
+      "kind": "text",
+      "message": "Foundation indlæst",
+      "placeholders": []
+    },
+    "app.database.blocked": {
+      "kind": "text",
+      "message": "En databaseopdatering venter. Luk andre RSSavis-vinduer for at fortsætte.",
+      "placeholders": []
+    },
+    "app.database.reload.required": {
+      "kind": "text",
+      "message": "Databasen er ændret. Genindlæs RSSavis for at fortsætte.",
+      "placeholders": []
+    },
+    "app.database.recovery.heading": {
+      "kind": "text",
+      "message": "Databasegendannelse",
+      "placeholders": []
+    },
+    "app.database.recovery.code.label": {
+      "kind": "text",
+      "message": "Fejlkode",
+      "placeholders": []
+    },
+    "app.database.recovery.retry": {
+      "kind": "text",
+      "message": "Prøv igen",
+      "placeholders": []
+    },
+    "app.database.recovery.reload": {
+      "kind": "text",
+      "message": "Genindlæs RSSavis",
+      "placeholders": []
+    },
+    "app.database.recovery.close": {
+      "kind": "text",
+      "message": "Luk",
+      "placeholders": []
+    },
+    "app.addfeed.heading": {
+      "kind": "text",
+      "message": "Tilføj feed",
+      "placeholders": []
+    },
+    "app.addfeed.help": {
+      "kind": "text",
+      "message": "Firefox beder kun om adgang til dette feed-websted. RSSavis bruger adgangen til at hente det valgte feed, ikke til at læse browserhistorik.",
+      "placeholders": []
+    },
+    "app.addfeed.url.label": {
+      "kind": "text",
+      "message": "Feed-URL",
+      "placeholders": []
+    },
+    "app.addfeed.title.label": {
+      "kind": "text",
+      "message": "Feed-titel",
+      "placeholders": []
+    },
+    "app.addfeed.submit": {
+      "kind": "text",
+      "message": "Tilføj feed",
+      "placeholders": []
+    },
+    "app.addfeed.toast": {
+      "kind": "text",
+      "message": "Feed tilføjet",
+      "placeholders": []
+    },
+    "app.addfeed.error.summary": {
+      "kind": "text",
+      "message": "Ret de markerede felter.",
+      "placeholders": []
+    },
+    "app.addfeed.url.required": {
+      "kind": "text",
+      "message": "Indtast en feed-URL.",
+      "placeholders": []
+    },
+    "app.addfeed.url.invalid": {
+      "kind": "text",
+      "message": "Indtast en HTTP- eller HTTPS-feed-URL.",
+      "placeholders": []
+    },
+    "app.addfeed.title.required": {
+      "kind": "text",
+      "message": "Indtast en feed-titel.",
+      "placeholders": []
+    },
+    "app.dialog.cancel": {
+      "kind": "text",
+      "message": "Annuller",
+      "placeholders": []
+    },
+    "app.dialog.back": {
+      "kind": "text",
+      "message": "Tilbage",
+      "placeholders": []
+    },
+    "app.dialog.confirmation": {
+      "kind": "text",
+      "message": "Bekræftelse",
+      "placeholders": []
+    },
+    "app.shell.reader.sidebar.title": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    },
+    "app.shell.reader.nav.title": {
+      "kind": "text",
+      "message": "Bibliotek",
+      "placeholders": []
+    },
+    "app.shell.feed.nav.title": {
+      "kind": "text",
+      "message": "Feeds",
+      "placeholders": []
+    },
+    "app.shell.feed.nav.empty": {
+      "kind": "text",
+      "message": "Ingen feeds endnu",
+      "placeholders": []
+    },
+    "app.shell.scope.all": {
+      "kind": "text",
+      "message": "Alle artikler",
+      "placeholders": []
+    },
+    "app.shell.scope.unread": {
+      "kind": "text",
+      "message": "Ulæste",
+      "placeholders": []
+    },
+    "app.shell.scope.starred": {
+      "kind": "text",
+      "message": "Stjernemarkerede",
+      "placeholders": []
+    },
+    "app.shell.scope.main": {
+      "kind": "text",
+      "message": "Hovedstrøm",
+      "placeholders": []
+    },
+    "app.shell.reader.title": {
+      "kind": "text",
+      "message": "Ulæste",
+      "placeholders": []
+    },
+    "app.shell.reader.subtitle": {
+      "kind": "text",
+      "message": "Ingen artikler indlæst",
+      "placeholders": []
+    },
+    "app.shell.reader.empty.title": {
+      "kind": "text",
+      "message": "Ingen ulæste artikler",
+      "placeholders": []
+    },
+    "app.shell.reader.empty.body": {
+      "kind": "text",
+      "message": "Tilføj et feed for at begynde at læse i RSSavis.",
+      "placeholders": []
+    },
+    "app.shell.reader.scope.empty.title": {
+      "kind": "text",
+      "message": "Ingen artikler",
+      "placeholders": []
+    },
+    "app.shell.reader.scope.empty.body": {
+      "kind": "text",
+      "message": "Der er ingen artikler i denne visning.",
+      "placeholders": []
+    },
+    "app.shell.settings.title": {
+      "kind": "text",
+      "message": "Indstillinger",
+      "placeholders": []
+    },
+    "app.shell.tab.unread.title": {
+      "kind": "text",
+      "message": "({count}) · RSSavis",
+      "placeholders": ["count"]
+    },
+    "app.shell.settings.subtitle": {
+      "kind": "text",
+      "message": "Udseende",
+      "placeholders": []
+    },
+    "app.shell.settings.nav.title": {
+      "kind": "text",
+      "message": "Sektioner",
+      "placeholders": []
+    },
+    "app.shell.settings.back.reader": {
+      "kind": "text",
+      "message": "Tilbage til feeds",
+      "placeholders": []
+    },
+    "app.shell.static.subtitle": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    },
+    "app.settings.general": {
+      "kind": "text",
+      "message": "Generelt",
+      "placeholders": []
+    },
+    "app.settings.appearance": {
+      "kind": "text",
+      "message": "Udseende",
+      "placeholders": []
+    },
+    "app.settings.reading": {
+      "kind": "text",
+      "message": "Læsning",
+      "placeholders": []
+    },
+    "app.settings.feeds": {
+      "kind": "text",
+      "message": "Feeds",
+      "placeholders": []
+    },
+    "app.settings.feeds.subtitle": {
+      "kind": "text",
+      "message": "Administrér dine abonnementer",
+      "placeholders": []
+    },
+    "app.settings.categories": {
+      "kind": "text",
+      "message": "Kategorier",
+      "placeholders": []
+    },
+    "app.settings.categories.subtitle": {
+      "kind": "text",
+      "message": "Gruppér feeds og ændr rækkefølgen",
+      "placeholders": []
+    },
+    "app.settings.storage": {
+      "kind": "text",
+      "message": "Lager og oprydning",
+      "placeholders": []
+    },
+    "app.settings.import": {
+      "kind": "text",
+      "message": "Import og eksport",
+      "placeholders": []
+    },
+    "app.settings.saved": {
+      "kind": "text",
+      "message": "Indstillinger gemt.",
+      "placeholders": []
+    },
+    "app.settings.reset": {
+      "kind": "text",
+      "message": "Nulstil indstillinger",
+      "placeholders": []
+    },
+    "app.settings.reset.row.title": {
+      "kind": "text",
+      "message": "Nulstil alle indstillinger",
+      "placeholders": []
+    },
+    "app.settings.reset.row.subtitle": {
+      "kind": "text",
+      "message": "Gendan alle valg til deres standardværdi",
+      "placeholders": []
+    },
+    "app.settings.form.error.summary": {
+      "kind": "text",
+      "message": "Ret de markerede indstillingsfelter.",
+      "placeholders": []
+    },
+    "app.settings.range.error": {
+      "kind": "text",
+      "message": "Indtast et heltal fra {min} til {max}.",
+      "placeholders": ["min", "max"]
+    },
+    "app.settings.spin.decrease": {
+      "kind": "text",
+      "message": "Sænk værdi",
+      "placeholders": []
+    },
+    "app.settings.spin.increase": {
+      "kind": "text",
+      "message": "Øg værdi",
+      "placeholders": []
+    },
+    "app.settings.language": {
+      "kind": "text",
+      "message": "Sprog",
+      "placeholders": []
+    },
+    "app.settings.language.auto": {
+      "kind": "text",
+      "message": "Automatisk",
+      "placeholders": []
+    },
+    "app.settings.language.english": {
+      "kind": "text",
+      "message": "Engelsk",
+      "placeholders": []
+    },
+    "app.settings.language.danish": {
+      "kind": "text",
+      "message": "Dansk",
+      "placeholders": []
+    },
+    "app.settings.refresh.interval": {
+      "kind": "text",
+      "message": "Opdateringsinterval",
+      "placeholders": []
+    },
+    "app.settings.feed.timeout": {
+      "kind": "text",
+      "message": "Feed-timeout",
+      "placeholders": []
+    },
+    "app.settings.accent.color": {
+      "kind": "text",
+      "message": "Accentfarve",
+      "placeholders": []
+    },
+    "app.settings.accent.blue": {
+      "kind": "text",
+      "message": "Blå",
+      "placeholders": []
+    },
+    "app.settings.accent.teal": {
+      "kind": "text",
+      "message": "Petroleum",
+      "placeholders": []
+    },
+    "app.settings.accent.green": {
+      "kind": "text",
+      "message": "Grøn",
+      "placeholders": []
+    },
+    "app.settings.accent.yellow": {
+      "kind": "text",
+      "message": "Gul",
+      "placeholders": []
+    },
+    "app.settings.accent.orange": {
+      "kind": "text",
+      "message": "Orange",
+      "placeholders": []
+    },
+    "app.settings.accent.red": {
+      "kind": "text",
+      "message": "Rød",
+      "placeholders": []
+    },
+    "app.settings.accent.pink": {
+      "kind": "text",
+      "message": "Pink",
+      "placeholders": []
+    },
+    "app.settings.accent.purple": {
+      "kind": "text",
+      "message": "Lilla",
+      "placeholders": []
+    },
+    "app.settings.accent.slate": {
+      "kind": "text",
+      "message": "Skifer",
+      "placeholders": []
+    },
+    "app.settings.image.loading": {
+      "kind": "text",
+      "message": "Eksterne billeder",
+      "placeholders": []
+    },
+    "app.settings.image.onexpand": {
+      "kind": "text",
+      "message": "Indlæs når artiklen foldes ud",
+      "placeholders": []
+    },
+    "app.settings.image.always": {
+      "kind": "text",
+      "message": "Indlæs altid",
+      "placeholders": []
+    },
+    "app.settings.image.never": {
+      "kind": "text",
+      "message": "Indlæs aldrig",
+      "placeholders": []
+    },
+    "app.settings.image.lazy": {
+      "kind": "text",
+      "message": "Lazy-load billeder",
+      "placeholders": []
+    },
+    "app.settings.image.privacy": {
+      "kind": "text",
+      "message": "Eksterne billeder kan kontakte tredjepartsservere og afslore din IP-adresse.",
+      "placeholders": []
+    },
+    "app.settings.articles.per.page": {
+      "kind": "text",
+      "message": "Artikler pr. side",
+      "placeholders": []
+    },
+    "app.settings.default.article.view": {
+      "kind": "text",
+      "message": "Standard artikelvisning",
+      "placeholders": []
+    },
+    "app.settings.open.links": {
+      "kind": "text",
+      "message": "Åbn original-links",
+      "placeholders": []
+    },
+    "app.settings.open.background": {
+      "kind": "text",
+      "message": "Baggrundsfane",
+      "placeholders": []
+    },
+    "app.settings.open.foreground": {
+      "kind": "text",
+      "message": "Forgrundsfane",
+      "placeholders": []
+    },
+    "app.settings.open.current": {
+      "kind": "text",
+      "message": "Aktuel fane",
+      "placeholders": []
+    },
+    "app.settings.mark.read.expand": {
+      "kind": "text",
+      "message": "Marker læst ved udfoldning",
+      "placeholders": []
+    },
+    "app.settings.mark.read.open": {
+      "kind": "text",
+      "message": "Marker læst når originalen åbnes",
+      "placeholders": []
+    },
+    "app.settings.mark.read.scroll": {
+      "kind": "text",
+      "message": "Marker læst ved scroll",
+      "placeholders": []
+    },
+    "app.settings.purge.max.articles": {
+      "kind": "text",
+      "message": "Maksimalt antal artikler",
+      "placeholders": []
+    },
+    "app.settings.purge.max.age": {
+      "kind": "text",
+      "message": "Maksimal alder i dage",
+      "placeholders": []
+    },
+    "app.settings.purge.keep.unread": {
+      "kind": "text",
+      "message": "Behold ulæste artikler",
+      "placeholders": []
+    },
+    "app.settings.purge.keep.starred": {
+      "kind": "text",
+      "message": "Behold stjernemarkerede artikler",
+      "placeholders": []
+    },
+    "app.storage.estimate.loading": {
+      "kind": "text",
+      "message": "Estimeret lagerforbrug indlæses.",
+      "placeholders": []
+    },
+    "app.storage.estimate.summary": {
+      "kind": "text",
+      "message": "Estimeret {usage} af {quota} bruges til {articles} artikler på {feeds} feeds.",
+      "placeholders": ["usage", "quota", "articles", "feeds"]
+    },
+    "app.storage.purge.now": {
+      "kind": "text",
+      "message": "Ryd op nu",
+      "placeholders": []
+    },
+    "app.storage.purge.confirm": {
+      "kind": "text",
+      "message": "Ryd op i egnede artikler nu? Aktuelt artikelantal: {count}.",
+      "placeholders": ["count"]
+    },
+    "app.storage.cleanup.complete": {
+      "kind": "text",
+      "message": "Oprydning fuldfort.",
+      "placeholders": []
+    },
+    "app.storage.rebuild.stats": {
+      "kind": "text",
+      "message": "Genopbyg statistik",
+      "placeholders": []
+    },
+    "app.storage.rebuild.complete": {
+      "kind": "text",
+      "message": "Statistik genopbygget.",
+      "placeholders": []
+    },
+    "app.storage.repair.integrity": {
+      "kind": "text",
+      "message": "Reparer integritet",
+      "placeholders": []
+    },
+    "app.storage.repair.complete": {
+      "kind": "text",
+      "message": "Integritetsreparation fuldfort.",
+      "placeholders": []
+    },
+    "app.storage.reset.data": {
+      "kind": "text",
+      "message": "Nulstil alle data",
+      "placeholders": []
+    },
+    "app.storage.reset.data.confirm": {
+      "kind": "text",
+      "message": "Skriv {phrase} for at slette alle lokale RSSavis-data.",
+      "placeholders": ["phrase"]
+    },
+    "app.storage.reset.data.complete": {
+      "kind": "text",
+      "message": "Alle lokale data blev nulstillet.",
+      "placeholders": []
+    },
+    "app.theme.scheme.legend": {
+      "kind": "text",
+      "message": "Farveskema",
+      "placeholders": []
+    },
+    "app.theme.system": {
+      "kind": "text",
+      "message": "System",
+      "placeholders": []
+    },
+    "app.theme.light": {
+      "kind": "text",
+      "message": "Lys",
+      "placeholders": []
+    },
+    "app.theme.dark": {
+      "kind": "text",
+      "message": "Mørk",
+      "placeholders": []
+    },
+    "app.theme.family.readonly": {
+      "kind": "text",
+      "message": "Tema-familie: Adwaita",
+      "placeholders": []
+    },
+    "app.filter.label": {
+      "kind": "text",
+      "message": "Viste artikler",
+      "placeholders": []
+    },
+    "app.filter.all": { "kind": "text", "message": "Alle", "placeholders": [] },
+    "app.filter.unread": { "kind": "text", "message": "Ulæste", "placeholders": [] },
+    "app.filter.read": { "kind": "text", "message": "Læste", "placeholders": [] },
+    "app.filter.applied.all": {
+      "kind": "text",
+      "message": "Viser alle artikler.",
+      "placeholders": []
+    },
+    "app.filter.applied.unread": {
+      "kind": "text",
+      "message": "Viser ulæste artikler.",
+      "placeholders": []
+    },
+    "app.filter.applied.read": {
+      "kind": "text",
+      "message": "Viser læste artikler.",
+      "placeholders": []
+    },
+    "app.filter.empty.unread.title": {
+      "kind": "text",
+      "message": "Ingen ulæste artikler",
+      "placeholders": []
+    },
+    "app.filter.empty.unread.body": {
+      "kind": "text",
+      "message": "Der er ingen ulæste artikler i denne visning.",
+      "placeholders": []
+    },
+    "app.filter.empty.read.title": {
+      "kind": "text",
+      "message": "Ingen læste artikler",
+      "placeholders": []
+    },
+    "app.filter.empty.read.body": {
+      "kind": "text",
+      "message": "Der er ingen læste artikler i denne visning.",
+      "placeholders": []
+    },
+    "app.filter.show.all": { "kind": "text", "message": "Vis alle", "placeholders": [] },
+    "app.view.label": {
+      "kind": "text",
+      "message": "Artikelvisning",
+      "placeholders": []
+    },
+    "app.view.compact": {
+      "kind": "text",
+      "message": "Kompakt",
+      "placeholders": []
+    },
+    "app.view.normal": {
+      "kind": "text",
+      "message": "Normal",
+      "placeholders": []
+    },
+    "app.view.large": {
+      "kind": "text",
+      "message": "Stor",
+      "placeholders": []
+    },
+    "app.view.options": {
+      "kind": "text",
+      "message": "Visningsindstillinger",
+      "placeholders": []
+    },
+    "app.article.count.label": {
+      "kind": "text",
+      "message": "artikler",
+      "placeholders": []
+    },
+    "app.article.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} artikel",
+        "other": "{count} artikler"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} artikel",
+        "other": "{count} artikler"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.unread.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} ulæst artikel",
+        "other": "{count} ulæste artikler"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.unread.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} ulæst",
+        "other": "{count} ulæste"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.starred.count.phrase": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} stjernemarkeret artikel",
+        "other": "{count} stjernemarkerede artikler"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.starred.count.short": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} stjernemarkeret",
+        "other": "{count} stjernemarkerede"
+      },
+      "placeholders": ["count"]
+    },
+    "app.article.load.more": {
+      "kind": "text",
+      "message": "Indlæs flere",
+      "placeholders": []
+    },
+    "app.article.loading": {
+      "kind": "text",
+      "message": "Vent, mens artiklerne indlæses.",
+      "placeholders": []
+    },
+    "app.article.loading.title": {
+      "kind": "text",
+      "message": "Indlæser artikler",
+      "placeholders": []
+    },
+    "app.article.load.failed": {
+      "kind": "text",
+      "message": "Kunne ikke indlæse artikler.",
+      "placeholders": []
+    },
+    "app.article.load.failed.title": {
+      "kind": "text",
+      "message": "Artiklerne kunne ikke indlæses",
+      "placeholders": []
+    },
+    "app.article.refreshed": {
+      "kind": "text",
+      "message": "Artikler opdateret.",
+      "placeholders": []
+    },
+    "app.article.new.available": {
+      "kind": "text",
+      "message": "Nye artikler er tilgængelige.",
+      "placeholders": []
+    },
+    "app.article.new.show": {
+      "kind": "text",
+      "message": "Vis",
+      "placeholders": []
+    },
+    "app.reader.retry": {
+      "kind": "text",
+      "message": "Prøv igen",
+      "placeholders": []
+    },
+    "app.reader.scope.fallback.unread": {
+      "kind": "text",
+      "message": "Viser ulæste artikler.",
+      "placeholders": []
+    },
+    "app.search.label": {
+      "kind": "text",
+      "message": "Søg i artikler",
+      "placeholders": []
+    },
+    "app.search.placeholder": {
+      "kind": "text",
+      "message": "Søg titel, forfatter, resume eller feed",
+      "placeholders": []
+    },
+    "app.search.help": {
+      "kind": "text",
+      "message": "Indtast mindst to tegn for at søge i dette scope.",
+      "placeholders": []
+    },
+    "app.search.empty": {
+      "kind": "text",
+      "message": "Ingen søgeresultater fundet.",
+      "placeholders": []
+    },
+    "app.search.empty.title": {
+      "kind": "text",
+      "message": "Ingen resultater",
+      "placeholders": []
+    },
+    "app.search.results.count": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} søgeresultat.",
+        "other": "{count} søgeresultater."
+      },
+      "placeholders": ["count"]
+    },
+    "app.search.close": {
+      "kind": "text",
+      "message": "Luk søgning",
+      "placeholders": []
+    },
+    "app.status.page.title": {
+      "kind": "text",
+      "message": "Status",
+      "placeholders": []
+    },
+    "app.mark.scope.read.menu": {
+      "kind": "text",
+      "message": "Marker visning som læst",
+      "placeholders": []
+    },
+    "app.mark.scope.read.none": {
+      "kind": "text",
+      "message": "Ingen ulæste artikler matchede det nuværende scope.",
+      "placeholders": []
+    },
+    "app.mark.scope.read.confirm": {
+      "kind": "text",
+      "message": "Marker {count} artikler i {scope} som læst?",
+      "placeholders": ["count", "scope"]
+    },
+    "app.mark.scope.read.progress": {
+      "kind": "text",
+      "message": "Markerede {done} af {count} artikler som læst.",
+      "placeholders": ["done", "count"]
+    },
+    "app.mark.scope.read.complete": {
+      "kind": "text",
+      "message": "Markerede {count} artikler som læst.",
+      "placeholders": ["count"]
+    },
+    "app.shortcuts.open": {
+      "kind": "text",
+      "message": "Tastaturgenveje",
+      "placeholders": []
+    },
+    "app.shortcuts.title": {
+      "kind": "text",
+      "message": "Tastaturgenveje",
+      "placeholders": []
+    },
+    "app.shortcuts.search": {
+      "kind": "text",
+      "message": "Søg i artikler",
+      "placeholders": []
+    },
+    "app.shortcuts.mark.read": {
+      "kind": "text",
+      "message": "Marker aktuel visning som læst",
+      "placeholders": []
+    },
+    "app.shortcuts.settings": {
+      "kind": "text",
+      "message": "Åbn indstillinger",
+      "placeholders": []
+    },
+    "app.shortcuts.menu": {
+      "kind": "text",
+      "message": "Åbn hovedmenu",
+      "placeholders": []
+    },
+    "app.shortcuts.shortcuts": {
+      "kind": "text",
+      "message": "Vis tastaturgenveje",
+      "placeholders": []
+    },
+    "app.shortcuts.help": {
+      "kind": "text",
+      "message": "Åbn hjælp",
+      "placeholders": []
+    },
+    "app.shortcuts.section.general": {
+      "kind": "text",
+      "message": "Generelt",
+      "placeholders": []
+    },
+    "app.dialog.close": {
+      "kind": "text",
+      "message": "Luk",
+      "placeholders": []
+    },
+    "app.toast.dismiss": {
+      "kind": "text",
+      "message": "Luk besked",
+      "placeholders": []
+    },
+    "app.help.open": {
+      "kind": "text",
+      "message": "Hjælp",
+      "placeholders": []
+    },
+    "app.help.title": {
+      "kind": "text",
+      "message": "Hjælp",
+      "placeholders": []
+    },
+    "app.help.intro": {
+      "kind": "text",
+      "message": "RSSavis er en lokal Firefox-læser til RSS- og Atom-feeds uden login.",
+      "placeholders": []
+    },
+    "app.help.feeds.title": {
+      "kind": "text",
+      "message": "Feeds og læsning",
+      "placeholders": []
+    },
+    "app.help.feeds": {
+      "kind": "text",
+      "message": "Tilføj feeds fra sidepanelet, og brug bibliotek, feedrækker, søgning og artikelhandlinger til at læse og organisere indhold.",
+      "placeholders": []
+    },
+    "app.help.permissions.title": {
+      "kind": "text",
+      "message": "Tilladelser",
+      "placeholders": []
+    },
+    "app.help.permissions": {
+      "kind": "text",
+      "message": "Når du tilføjer et feed, beder Firefox om valgfri host-tilladelse til den origin, så RSSavis kan hente feedet.",
+      "placeholders": []
+    },
+    "app.help.keyboard.title": {
+      "kind": "text",
+      "message": "Tastaturgenveje",
+      "placeholders": []
+    },
+    "app.help.keyboard": {
+      "kind": "text",
+      "message": "Tryk F1 for Hjælp eller ? for Tastaturgenveje.",
+      "placeholders": []
+    },
+    "app.about.open": {
+      "kind": "text",
+      "message": "Om RSSavis",
+      "placeholders": []
+    },
+    "app.about.title": {
+      "kind": "text",
+      "message": "Om RSSavis",
+      "placeholders": []
+    },
+    "app.about.version": {
+      "kind": "text",
+      "message": "Version {version}",
+      "placeholders": ["version"]
+    },
+    "app.about.details.row": {
+      "kind": "text",
+      "message": "Detaljer",
+      "placeholders": []
+    },
+    "app.about.privacy.title": {
+      "kind": "text",
+      "message": "Privatliv",
+      "placeholders": []
+    },
+    "app.about.privacy.body": {
+      "kind": "text",
+      "message": "RSSavis gemmer feeds, kategorier, artikler, indstillinger og UI-tilstand lokalt i Firefox extension storage. Appen har ingen telemetri, analytics, fjernlogning eller fjernkonfiguration.",
+      "placeholders": []
+    },
+    "app.about.permissions.title": {
+      "kind": "text",
+      "message": "Tilladelser",
+      "placeholders": []
+    },
+    "app.about.permissions.body": {
+      "kind": "text",
+      "message": "RSSavis bruger storage, alarms, unlimited storage og optional host permissions for feed-origins, du tilføjer.",
+      "placeholders": []
+    },
+    "app.about.credits.title": {
+      "kind": "text",
+      "message": "Bidragydere",
+      "placeholders": []
+    },
+    "app.about.credits.body": {
+      "kind": "text",
+      "message": "Bygget af RSSavis' bidragydere. Adwaita-farveværdierne stammer fra libadwaita 1.9.2-kilderne (GNOME-projektet).",
+      "placeholders": []
+    },
+    "app.about.legal.title": {
+      "kind": "text",
+      "message": "Licens",
+      "placeholders": []
+    },
+    "app.about.legal.body": {
+      "kind": "text",
+      "message": "RSSavis er fri software udgivet under Mozilla Public License 2.0. Den fulde licenstekst følger med udvidelsen.",
+      "placeholders": []
+    },
+    "app.about.resource.source": {
+      "kind": "text",
+      "message": "Kildekode",
+      "placeholders": []
+    },
+    "app.about.resource.security": {
+      "kind": "text",
+      "message": "Rapportér et sikkerhedsproblem",
+      "placeholders": []
+    },
+    "app.about.resource.license": {
+      "kind": "text",
+      "message": "Se hele licensen",
+      "placeholders": []
+    },
+    "app.about.resource.open.failed": {
+      "kind": "text",
+      "message": "Ressourcen kunne ikke åbnes.",
+      "placeholders": []
+    },
+    "app.about.copyright": {
+      "kind": "text",
+      "message": "© 2026 RSSavis' bidragydere",
+      "placeholders": []
+    },
+    "app.article.star": {
+      "kind": "text",
+      "message": "Stjernemarker artikel",
+      "placeholders": []
+    },
+    "app.article.unstar": {
+      "kind": "text",
+      "message": "Fjern stjerne fra artikel",
+      "placeholders": []
+    },
+    "app.article.untitled": {
+      "kind": "text",
+      "message": "Artikel uden titel",
+      "placeholders": []
+    },
+    "app.article.read.state.read": {
+      "kind": "text",
+      "message": "Læst artikel",
+      "placeholders": []
+    },
+    "app.article.read.state.unread": {
+      "kind": "text",
+      "message": "Ulæst artikel",
+      "placeholders": []
+    },
+    "app.article.actions.label": {
+      "kind": "text",
+      "message": "Artikelhandlinger",
+      "placeholders": []
+    },
+    "app.article.detail.loading": {
+      "kind": "text",
+      "message": "Indlæser artikelvisning",
+      "placeholders": []
+    },
+    "app.article.detail.failed": {
+      "kind": "text",
+      "message": "Kunne ikke indlæse artikelvisning.",
+      "placeholders": []
+    },
+    "app.article.open.original": {
+      "kind": "text",
+      "message": "Åbn original",
+      "placeholders": []
+    },
+    "app.article.link.destination.label": {
+      "kind": "text",
+      "message": "Destination",
+      "placeholders": []
+    },
+    "app.article.opened.original": {
+      "kind": "text",
+      "message": "Original artikel åbnet.",
+      "placeholders": []
+    },
+    "app.article.open.failed": {
+      "kind": "text",
+      "message": "Kunne ikke åbne artikel.",
+      "placeholders": []
+    },
+    "app.open.original.heading": {
+      "kind": "text",
+      "message": "Åbner original artikel",
+      "placeholders": []
+    },
+    "app.open.original.status": {
+      "kind": "text",
+      "message": "RSSavis åbner den originale artikel.",
+      "placeholders": []
+    },
+    "app.open.original.recovery.heading": {
+      "kind": "text",
+      "message": "Original artikel kunne ikke åbnes",
+      "placeholders": []
+    },
+    "app.open.original.invalid": {
+      "kind": "text",
+      "message": "Artikellinket er ikke tilgængeligt fra denne pakkede side.",
+      "placeholders": []
+    },
+    "app.open.original.failed": {
+      "kind": "text",
+      "message": "Kunne ikke åbne den originale artikel.",
+      "placeholders": []
+    },
+    "app.open.original.reader": {
+      "kind": "text",
+      "message": "Tilbage til RSSavis",
+      "placeholders": []
+    },
+    "app.open.content.link.heading": {
+      "kind": "text",
+      "message": "Åbner linksiden",
+      "placeholders": []
+    },
+    "app.open.content.link.status": {
+      "kind": "text",
+      "message": "RSSavis åbner linksiden.",
+      "placeholders": []
+    },
+    "app.open.content.link.recovery.heading": {
+      "kind": "text",
+      "message": "Linksiden kunne ikke åbnes",
+      "placeholders": []
+    },
+    "app.open.content.link.invalid": {
+      "kind": "text",
+      "message": "Linket er ikke tilgængeligt fra denne pakkede side.",
+      "placeholders": []
+    },
+    "app.open.content.link.failed": {
+      "kind": "text",
+      "message": "Kunne ikke åbne linksiden.",
+      "placeholders": []
+    },
+    "app.open.content.link.reader": {
+      "kind": "text",
+      "message": "Tilbage til RSSavis",
+      "placeholders": []
+    },
+    "app.article.mark.read": {
+      "kind": "text",
+      "message": "Marker som læst",
+      "placeholders": []
+    },
+    "app.article.mark.unread": {
+      "kind": "text",
+      "message": "Marker som ulæst",
+      "placeholders": []
+    },
+    "app.article.copy.link": {
+      "kind": "text",
+      "message": "Kopier link",
+      "placeholders": []
+    },
+    "app.article.link.copied": {
+      "kind": "text",
+      "message": "Link kopieret.",
+      "placeholders": []
+    },
+    "app.article.copy.failed": {
+      "kind": "text",
+      "message": "Kunne ikke kopiere link.",
+      "placeholders": []
+    },
+    "app.article.update.failed": {
+      "kind": "text",
+      "message": "Kunne ikke opdatere artikel.",
+      "placeholders": []
+    },
+    "app.article.image.privacy": {
+      "kind": "text",
+      "message": "Fjernbilleder kan kontakte billedserveren.",
+      "placeholders": []
+    },
+    "app.article.image.never": {
+      "kind": "text",
+      "message": "Billeder er slået fra i artikelvisninger.",
+      "placeholders": []
+    },
+    "app.action.close.sidebar": {
+      "kind": "text",
+      "message": "Luk sidepanel",
+      "placeholders": []
+    },
+    "app.action.open.sidebar": {
+      "kind": "text",
+      "message": "Åbn sidepanel",
+      "placeholders": []
+    },
+    "app.action.resize.sidebar": {
+      "kind": "text",
+      "message": "Tilpas sidebjælkens bredde",
+      "placeholders": []
+    },
+    "app.action.toggle.category": {
+      "kind": "text",
+      "message": "Fold kategori ud eller sammen",
+      "placeholders": []
+    },
+    "app.action.toggle.category.named": {
+      "kind": "text",
+      "message": "Vis eller skjul {category}",
+      "placeholders": ["category"]
+    },
+    "app.action.primary.menu": {
+      "kind": "text",
+      "message": "Hovedmenu",
+      "placeholders": []
+    },
+    "app.action.refresh.all": {
+      "kind": "text",
+      "message": "Opdater alle feeds",
+      "placeholders": []
+    },
+    "app.action.refresh.started": {
+      "kind": "text",
+      "message": "Opdaterer feeds",
+      "placeholders": []
+    },
+    "app.action.refresh.summary": {
+      "kind": "text",
+      "message": "{checked} feeds kontrolleret, {updated} opdateret, {unchanged} uændret, {failed} fejlede, {articles} nye artikler.",
+      "placeholders": ["checked", "updated", "unchanged", "failed", "articles"]
+    },
+    "app.management.saved": {
+      "kind": "text",
+      "message": "Ændringer gemt.",
+      "placeholders": []
+    },
+    "app.management.form.error.summary": {
+      "kind": "text",
+      "message": "Ret de markerede administrationsfelter.",
+      "placeholders": []
+    },
+    "app.opml.help": {
+      "kind": "text",
+      "message": "Forhåndsvis OPML-filen før du giver adgang. RSSavis importerer kun abonnementer efter Firefox har givet adgang til alle viste origins.",
+      "placeholders": []
+    },
+    "app.opml.file.label": {
+      "kind": "text",
+      "message": "OPML-fil",
+      "placeholders": []
+    },
+    "app.opml.preview": {
+      "kind": "text",
+      "message": "Forhåndsvis OPML",
+      "placeholders": []
+    },
+    "app.opml.commit": {
+      "kind": "text",
+      "message": "Godkend adgang og importer",
+      "placeholders": []
+    },
+    "app.opml.export": {
+      "kind": "text",
+      "message": "Eksporter OPML",
+      "placeholders": []
+    },
+    "app.opml.export.subtitle": {
+      "kind": "text",
+      "message": "Gem alle feeds og kategorier i en fil",
+      "placeholders": []
+    },
+    "app.opml.preview.ready": {
+      "kind": "text",
+      "message": "OPML-forhåndsvisning er klar.",
+      "placeholders": []
+    },
+    "app.opml.preview.issues": {
+      "kind": "text",
+      "message": "Nogle OPML-poster kræver opmærksomhed.",
+      "placeholders": []
+    },
+    "app.opml.preview.required": {
+      "kind": "text",
+      "message": "Forhåndsvis en OPML-fil før import.",
+      "placeholders": []
+    },
+    "app.opml.preview.invalid": {
+      "kind": "text",
+      "message": "OPML-forhåndsvisningens svar var ugyldigt.",
+      "placeholders": []
+    },
+    "app.opml.file.missing": {
+      "kind": "text",
+      "message": "Vælg en OPML-fil før forhåndsvisning.",
+      "placeholders": []
+    },
+    "app.opml.count.valid": {
+      "kind": "text",
+      "message": "Gyldige abonnementer",
+      "placeholders": []
+    },
+    "app.opml.count.duplicate.in.file": {
+      "kind": "text",
+      "message": "Dubletter i filen",
+      "placeholders": []
+    },
+    "app.opml.count.already.subscribed": {
+      "kind": "text",
+      "message": "Allerede abonneret",
+      "placeholders": []
+    },
+    "app.opml.count.invalid": {
+      "kind": "text",
+      "message": "Ugyldige poster",
+      "placeholders": []
+    },
+    "app.opml.count.category": {
+      "kind": "text",
+      "message": "Kategorier",
+      "placeholders": []
+    },
+    "app.opml.count.unique.origin": {
+      "kind": "text",
+      "message": "Unikke origins",
+      "placeholders": []
+    },
+    "app.opml.import.complete": {
+      "kind": "text",
+      "message": "OPML-import fuldført.",
+      "placeholders": []
+    },
+    "app.opml.export.complete": {
+      "kind": "text",
+      "message": "OPML-eksport hentet.",
+      "placeholders": []
+    },
+    "app.feed.title.label": {
+      "kind": "text",
+      "message": "Feed-titel",
+      "placeholders": []
+    },
+    "app.feed.customtitle.help": {
+      "kind": "text",
+      "message": "Lad feltet stå tomt for at bruge feedets egen titel.",
+      "placeholders": []
+    },
+    "app.feed.title.required": {
+      "kind": "text",
+      "message": "Indtast en feed-titel.",
+      "placeholders": []
+    },
+    "app.feed.url.label": {
+      "kind": "text",
+      "message": "Feed-URL",
+      "placeholders": []
+    },
+    "app.feed.url.required": {
+      "kind": "text",
+      "message": "Indtast en feed-URL.",
+      "placeholders": []
+    },
+    "app.feed.url.invalid": {
+      "kind": "text",
+      "message": "Indtast en HTTP- eller HTTPS-feed-URL.",
+      "placeholders": []
+    },
+    "app.feed.options": {
+      "kind": "text",
+      "message": "Feedhandlinger",
+      "placeholders": []
+    },
+    "app.feed.options.for": {
+      "kind": "text",
+      "message": "Feedhandlinger for {title}",
+      "placeholders": ["title"]
+    },
+    "app.feed.edit": {
+      "kind": "text",
+      "message": "Redigér",
+      "placeholders": []
+    },
+    "app.feed.edit.title": {
+      "kind": "text",
+      "message": "Redigér feed",
+      "placeholders": []
+    },
+    "app.feed.mainstream": {
+      "kind": "text",
+      "message": "Medtag i hovedstrøm",
+      "placeholders": []
+    },
+    "app.feed.keepreadonpurge.label": {
+      "kind": "text",
+      "message": "Behold læste artikler ved oprydning",
+      "placeholders": []
+    },
+    "app.feed.iconsource.label": {
+      "kind": "text",
+      "message": "Ikon",
+      "placeholders": []
+    },
+    "app.feed.iconsource.auto": {
+      "kind": "text",
+      "message": "Automatisk",
+      "placeholders": []
+    },
+    "app.feed.iconsource.favicon": {
+      "kind": "text",
+      "message": "Webstedets favicon",
+      "placeholders": []
+    },
+    "app.feed.icon.color.label": {
+      "kind": "text",
+      "message": "Ikonfarve",
+      "placeholders": []
+    },
+    "app.feed.icon.color.auto": {
+      "kind": "text",
+      "message": "Automatisk",
+      "placeholders": []
+    },
+    "app.feed.icon.color.blue": {
+      "kind": "text",
+      "message": "Blå",
+      "placeholders": []
+    },
+    "app.feed.icon.color.teal": {
+      "kind": "text",
+      "message": "Petroleum",
+      "placeholders": []
+    },
+    "app.feed.icon.color.green": {
+      "kind": "text",
+      "message": "Grøn",
+      "placeholders": []
+    },
+    "app.feed.icon.color.yellow": {
+      "kind": "text",
+      "message": "Gul",
+      "placeholders": []
+    },
+    "app.feed.icon.color.orange": {
+      "kind": "text",
+      "message": "Orange",
+      "placeholders": []
+    },
+    "app.feed.icon.color.red": {
+      "kind": "text",
+      "message": "Rød",
+      "placeholders": []
+    },
+    "app.feed.icon.color.pink": {
+      "kind": "text",
+      "message": "Pink",
+      "placeholders": []
+    },
+    "app.feed.icon.color.purple": {
+      "kind": "text",
+      "message": "Lilla",
+      "placeholders": []
+    },
+    "app.feed.icon.color.slate": {
+      "kind": "text",
+      "message": "Skifer",
+      "placeholders": []
+    },
+    "app.feed.save": {
+      "kind": "text",
+      "message": "Gem feed",
+      "placeholders": []
+    },
+    "app.feed.reload": {
+      "kind": "text",
+      "message": "Genindlæs feed",
+      "placeholders": []
+    },
+    "app.feed.menu.mark.read": {
+      "kind": "text",
+      "message": "Markér som læst",
+      "placeholders": []
+    },
+    "app.feed.delete": {
+      "kind": "text",
+      "message": "Slet feed",
+      "placeholders": []
+    },
+    "app.feed.delete.confirm": {
+      "kind": "text",
+      "message": "Slet feedet {title}?",
+      "placeholders": ["title"]
+    },
+    "app.feed.deleting": {
+      "kind": "text",
+      "message": "slettes",
+      "placeholders": []
+    },
+    "app.feed.deleting.status": {
+      "kind": "text",
+      "message": "{title} slettes.",
+      "placeholders": ["title"]
+    },
+    "app.feed.move.category": {
+      "kind": "text",
+      "message": "Flyt til kategori",
+      "placeholders": []
+    },
+    "app.feed.move.category.title": {
+      "kind": "text",
+      "message": "Flyt til kategori",
+      "placeholders": []
+    },
+    "app.feed.move.current.category": {
+      "kind": "text",
+      "message": "Aktuel kategori: {category}",
+      "placeholders": ["category"]
+    },
+    "app.feed.move.target.category": {
+      "kind": "text",
+      "message": "Kategori",
+      "placeholders": []
+    },
+    "app.feed.move.submit": {
+      "kind": "text",
+      "message": "Flyt feed",
+      "placeholders": []
+    },
+    "app.feed.move.confirm": {
+      "kind": "text",
+      "message": "Flyt {title} til {category}?",
+      "placeholders": ["title", "category"]
+    },
+    "app.feed.last.error": {
+      "kind": "text",
+      "message": "Seneste fejl",
+      "placeholders": []
+    },
+    "app.feed.last.error.status": {
+      "kind": "text",
+      "message": "Seneste fejl: {error}",
+      "placeholders": ["error"]
+    },
+    "app.feed.http.status": {
+      "kind": "text",
+      "message": "HTTP-status",
+      "placeholders": []
+    },
+    "app.feed.http.status.value": {
+      "kind": "text",
+      "message": "HTTP-status: {status}",
+      "placeholders": ["status"]
+    },
+    "app.feed.last.checked": {
+      "kind": "text",
+      "message": "Sidst tjekket",
+      "placeholders": []
+    },
+    "app.feed.last.checked.value": {
+      "kind": "text",
+      "message": "Sidst tjekket: {datetime}",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.next.retry": {
+      "kind": "text",
+      "message": "Næste forsøg",
+      "placeholders": []
+    },
+    "app.feed.next.retry.value": {
+      "kind": "text",
+      "message": "Næste forsøg: {datetime}",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.ratelimited": {
+      "kind": "text",
+      "message": "Venter pga. rate limit (næste forsøg {datetime})",
+      "placeholders": ["datetime"]
+    },
+    "app.feed.permission.granted": {
+      "kind": "text",
+      "message": "Tilladelse givet",
+      "placeholders": []
+    },
+    "app.feed.permission.missing": {
+      "kind": "text",
+      "message": "Tilladelse mangler",
+      "placeholders": []
+    },
+    "app.feed.permission.banner.missing": {
+      "kind": "text",
+      "message": "RSSavis mangler tilladelse til at hente dette feed fra {host}",
+      "placeholders": ["host"]
+    },
+    "app.feed.permission.banner.redirect": {
+      "kind": "text",
+      "message": "Feedet omdirigerer til {host}",
+      "placeholders": ["host"]
+    },
+    "app.feed.permission.banner.grant": {
+      "kind": "text",
+      "message": "Giv adgang",
+      "placeholders": []
+    },
+    "app.feed.permission.banner.allow": {
+      "kind": "text",
+      "message": "Tillad omdirigering",
+      "placeholders": []
+    },
+    "app.feed.redirect.permission.required": {
+      "kind": "text",
+      "message": "Omdirigering kræver tilladelse",
+      "placeholders": []
+    },
+    "app.feed.reorder.grip": {
+      "kind": "text",
+      "message": "Omarrangér feed",
+      "placeholders": []
+    },
+    "app.feed.reorder.grip.for": {
+      "kind": "text",
+      "message": "Omarrangér {title}",
+      "placeholders": ["title"]
+    },
+    "app.feed.reorder.moved": {
+      "kind": "text",
+      "message": "{title} flyttet til plads {position} af {total}",
+      "placeholders": ["title", "position", "total"]
+    },
+    "app.category.default.title": {
+      "kind": "text",
+      "message": "Ikke kategoriseret",
+      "placeholders": []
+    },
+    "app.category.name.label": {
+      "kind": "text",
+      "message": "Kategorinavn",
+      "placeholders": []
+    },
+    "app.category.name.required": {
+      "kind": "text",
+      "message": "Indtast et kategorinavn.",
+      "placeholders": []
+    },
+    "app.category.add": {
+      "kind": "text",
+      "message": "Tilføj kategori",
+      "placeholders": []
+    },
+    "app.category.create": {
+      "kind": "text",
+      "message": "Opret kategori",
+      "placeholders": []
+    },
+    "app.category.rename": {
+      "kind": "text",
+      "message": "Omdøb kategori",
+      "placeholders": []
+    },
+    "app.category.rename.title": {
+      "kind": "text",
+      "message": "Omdøb kategori",
+      "placeholders": []
+    },
+    "app.category.grip": {
+      "kind": "text",
+      "message": "Flyt {title}",
+      "placeholders": ["title"]
+    },
+    "app.category.reorder.moved": {
+      "kind": "text",
+      "message": "{title} flyttet til plads {position} af {total}",
+      "placeholders": ["title", "position", "total"]
+    },
+    "app.category.delete": {
+      "kind": "text",
+      "message": "Slet kategori",
+      "placeholders": []
+    },
+    "app.category.delete.confirm": {
+      "kind": "text",
+      "message": "Slet kategorien {title}?",
+      "placeholders": ["title"]
+    },
+    "app.category.feed.count": {
+      "kind": "plural",
+      "forms": {
+        "one": "{count} feed",
+        "other": "{count} feeds"
+      },
+      "placeholders": ["count"]
+    },
+    "app.category.move.up": {
+      "kind": "text",
+      "message": "Flyt kategori op",
+      "placeholders": []
+    },
+    "app.category.move.down": {
+      "kind": "text",
+      "message": "Flyt kategori ned",
+      "placeholders": []
+    },
+    "error.internal": {
+      "kind": "text",
+      "message": "Noget gik galt.",
+      "placeholders": []
+    },
+    "error.invalidmessage": {
+      "kind": "text",
+      "message": "Udvidelsen modtog en ugyldig intern besked.",
+      "placeholders": []
+    },
+    "error.validationerror": {
+      "kind": "text",
+      "message": "De gemte data matcher ikke det forventede format.",
+      "placeholders": []
+    },
+    "error.unsupportedurlscheme": {
+      "kind": "text",
+      "message": "Kun HTTP- og HTTPS-URL'er understottes.",
+      "placeholders": []
+    },
+    "error.hostpermissiondenied": {
+      "kind": "text",
+      "message": "Firefox gav ikke tilladelse til dette websted.",
+      "placeholders": []
+    },
+    "error.hostpermissionrevoked": {
+      "kind": "text",
+      "message": "Tilladelsen til webstedet blev fjernet.",
+      "placeholders": []
+    },
+    "error.feedalreadyexists": {
+      "kind": "text",
+      "message": "Dette feed er allerede tilfojet.",
+      "placeholders": []
+    },
+    "error.feednotfound": {
+      "kind": "text",
+      "message": "Feedet blev ikke fundet.",
+      "placeholders": []
+    },
+    "error.categorynotfound": {
+      "kind": "text",
+      "message": "Kategorien blev ikke fundet.",
+      "placeholders": []
+    },
+    "error.articlenotfound": {
+      "kind": "text",
+      "message": "Artiklen blev ikke fundet.",
+      "placeholders": []
+    },
+    "error.fetchtimeout": {
+      "kind": "text",
+      "message": "Feed-forespørgslen fik timeout.",
+      "placeholders": []
+    },
+    "error.fetchresponsetoolarge": {
+      "kind": "text",
+      "message": "Feed-svaret er for stort.",
+      "placeholders": []
+    },
+    "error.httperror": {
+      "kind": "text",
+      "message": "Feed-serveren returnerede en HTTP-fejl.",
+      "placeholders": []
+    },
+    "error.authoraccessdenied": {
+      "kind": "text",
+      "message": "Feedet kræver login, eller adgang blev afvist.",
+      "placeholders": []
+    },
+    "error.feedparseerror": {
+      "kind": "text",
+      "message": "Feedet kunne ikke parses.",
+      "placeholders": []
+    },
+    "error.unsupportedfeedformat": {
+      "kind": "text",
+      "message": "Dette feed-format understottes ikke.",
+      "placeholders": []
+    },
+    "error.opmlparseerror": {
+      "kind": "text",
+      "message": "OPML-filen kunne ikke parses.",
+      "placeholders": []
+    },
+    "error.opmltoolarge": {
+      "kind": "text",
+      "message": "OPML-filen er for stor.",
+      "placeholders": []
+    },
+    "error.dbopenfailed": {
+      "kind": "text",
+      "message": "Den lokale database kunne ikke åbnes.",
+      "placeholders": []
+    },
+    "error.dbschemamismatch": {
+      "kind": "text",
+      "message": "Det lokale databaseskema er ikke kompatibelt.",
+      "placeholders": []
+    },
+    "error.dbversionerror": {
+      "kind": "text",
+      "message": "Den lokale databaseversion er ikke kompatibel.",
+      "placeholders": []
+    },
+    "error.dbtransactionaborted": {
+      "kind": "text",
+      "message": "Databasetransaktionen blev afbrudt.",
+      "placeholders": []
+    },
+    "error.dbtransactioninactive": {
+      "kind": "text",
+      "message": "Databasetransaktionen sluttede for tidligt.",
+      "placeholders": []
+    },
+    "error.dbconstraint": {
+      "kind": "text",
+      "message": "Databasen afviste en dublet eller konflikt.",
+      "placeholders": []
+    },
+    "error.dbquotaexceeded": {
+      "kind": "text",
+      "message": "Firefox-lageret er fyldt.",
+      "placeholders": []
+    },
+    "error.dbinvalidstate": {
+      "kind": "text",
+      "message": "Databasen er i en ugyldig tilstand.",
+      "placeholders": []
+    },
+    "error.dbunknown": {
+      "kind": "text",
+      "message": "Der opstod en ukendt databasefejl.",
+      "placeholders": []
+    },
+    "error.dedupecollision": {
+      "kind": "text",
+      "message": "To feed-poster gav samme identitet.",
+      "placeholders": []
+    },
+    "error.dedupeambiguous": {
+      "kind": "text",
+      "message": "En feed-post matchede flere eksisterende artikler.",
+      "placeholders": []
+    },
+    "error.redirectpermissionrequired": {
+      "kind": "text",
+      "message": "Feedet viderestillede til et websted, der kræver tilladelse.",
+      "placeholders": []
+    },
+    "error.dbupgradeblocked": {
+      "kind": "text",
+      "message": "Databaseopgraderingen blokeres af en anden åben fane.",
+      "placeholders": []
+    },
+    "error.invalidcursor": {
+      "kind": "text",
+      "message": "Listecursoren er ugyldig.",
+      "placeholders": []
+    },
+    "error.cursorstale": {
+      "kind": "text",
+      "message": "Listen er ændret og skal genindlæses.",
+      "placeholders": []
+    },
+    "error.notimplemented": {
+      "kind": "text",
+      "message": "Denne kommando er ikke tilgængelig endnu.",
+      "placeholders": []
+    },
+    "manifest.action.openreader": {
+      "kind": "text",
+      "message": "Åbn RSSavis",
+      "placeholders": []
+    },
+    "manifest.action.openreader.main.unread.one": {
+      "kind": "text",
+      "message": "Åbn RSSavis — {count} ulæst artikel i Hovedstrøm",
+      "placeholders": ["count"]
+    },
+    "manifest.action.openreader.main.unread.other": {
+      "kind": "text",
+      "message": "Åbn RSSavis — {count} ulæste artikler i Hovedstrøm",
+      "placeholders": ["count"]
+    },
+    "manifest.extension.description": {
+      "kind": "text",
+      "message": "Lokal RSS- og Atom-læser til Firefox.",
+      "placeholders": []
+    },
+    "manifest.extension.name": {
+      "kind": "text",
+      "message": "RSSavis",
+      "placeholders": []
+    }
+  }
+}

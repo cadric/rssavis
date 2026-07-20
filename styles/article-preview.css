@@ -1,0 +1,316 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .article-preview {
+    --rs-preview-figure-inline: 13.125rem;
+    --rs-preview-figure-radius: 0.5625rem;
+    --rs-preview-figure-max-block: 8.75rem;
+
+    /* One centred reading column (AdwClamp): the measure keeps body text
+       readable while the card's remaining width becomes symmetric margins. */
+    --rs-preview-measure: 35rem;
+    grid-column: 1 / -1;
+    container: article-preview / inline-size;
+    min-inline-size: 0;
+    margin-block-start: var(--rs-article-preview-gap);
+    padding: 0.9375rem 0.375rem 0.5rem;
+  }
+
+  .article-preview [data-article-preview-content] {
+    display: grid;
+    gap: 0.625rem;
+  }
+
+  .article-preview [data-article-preview-content] > * {
+    inline-size: 100%;
+    max-inline-size: var(--rs-preview-measure);
+    margin-inline: auto;
+  }
+
+  .article-preview h3,
+  .article-preview p,
+  .article-preview figure {
+    margin: 0;
+  }
+
+  .article-preview-title {
+    display: inline;
+    max-inline-size: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--rs-color-accent-text);
+    font: inherit;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: start;
+    text-decoration: none;
+  }
+
+  .article-preview-title:hover {
+    text-decoration: underline;
+  }
+
+  .article-row[data-article-view='large'] .article-preview-title {
+    font-size: var(--rs-font-size-title);
+    line-height: 1.35;
+  }
+
+  .article-preview-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem 0.75rem;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .article-preview-meta > :not([hidden]) ~ :not([hidden])::before {
+    content: '·';
+    margin-inline-end: 0.75rem;
+    color: var(--rs-color-dim);
+  }
+
+  /* flow-root contains the floated side thumbnail, so a figure taller than
+     a short body can never spill past the card. */
+  .article-preview-columns {
+    display: flow-root;
+    min-inline-size: 0;
+  }
+
+  .article-preview-body {
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-body);
+    line-height: 1.62;
+  }
+
+  .article-row[data-article-view='large'] .article-preview-body {
+    font-size: var(--rs-font-size-document);
+    line-height: 1.65;
+  }
+
+  /* The side thumbnail floats at the reading column's inline end and the
+     article text wraps around and below it — no dead band under the image. */
+  .article-preview-image {
+    float: inline-end;
+    overflow: hidden;
+    inline-size: var(--rs-preview-figure-inline);
+    margin-inline-start: 1.125rem;
+    margin-block-end: 0.5rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-preview-figure-radius);
+    background: var(--rs-color-view-bg);
+  }
+
+  .article-preview-image img,
+  .article-preview-image svg {
+    display: block;
+    inline-size: 100%;
+    max-block-size: var(--rs-preview-figure-max-block);
+    object-fit: cover;
+  }
+
+  /* Narrow container: the figure is first in source order, so dropping the
+     float stacks it above the text at full width. */
+  @container article-preview (width < 30rem) {
+    .article-preview-image {
+      float: none;
+      inline-size: 100%;
+      margin-inline-start: 0;
+    }
+  }
+
+  .article-preview-image-note,
+  .article-preview-status {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .article-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .article-preview-actions .text-button {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 2rem;
+    padding-inline: 0.8125rem;
+    border-radius: 0.5rem;
+    background: var(--rs-color-button-bg);
+    font-size: var(--rs-font-size-small);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .article-preview-actions .text-button:hover {
+    background: var(--rs-color-button-hover-bg);
+  }
+
+  .article-preview-actions .suggested {
+    background: var(--rs-color-accent-bg);
+    color: var(--rs-color-accent-fg);
+  }
+
+  .article-preview-actions .suggested:hover {
+    background: color-mix(in oklch, var(--rs-color-accent-bg) 92%, var(--rs-color-text));
+  }
+
+  /* B35 rich content (Slice 2 Task 10) — styles article-content.js's render
+     output, mounted at .article-preview-rich (see app/index.html). This
+     container is mutually exclusive with .article-preview-body — exactly
+     one of the two is visible, see configureArticlePreviewContent in
+     app/article-preview-content.js — so it mirrors that class's type scale;
+     both share the centred reading measure through the content clamp. */
+  .article-preview-rich {
+    --rs-preview-code-bg: color-mix(in oklch, var(--rs-color-text) 6%, transparent);
+    min-inline-size: 0;
+    overflow-wrap: break-word;
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-body);
+    line-height: 1.62;
+  }
+
+  .article-row[data-article-view='large'] .article-preview-rich {
+    font-size: var(--rs-font-size-document);
+    line-height: 1.65;
+  }
+
+  /* Vertical rhythm: space between adjacent top-level blocks, none before
+     the first child. :not(:first-child) also lifts specificity past the
+     .article-preview h3/p/figure margin reset above so this reliably wins
+     regardless of source order. Mirrored one level deeper for blockquote
+     and figure, whose own children need the same no-margin-before-first
+     treatment (a blockquote's children are Block[] too — see
+     renderBlockquote in article-content.js). */
+  .article-preview-rich > *,
+  .article-preview-rich blockquote > *,
+  .article-preview-rich .article-content-figure > * {
+    margin: 0;
+  }
+
+  .article-preview-rich > *:not(:first-child),
+  .article-preview-rich blockquote > *:not(:first-child) {
+    margin-block-start: 1em;
+  }
+
+  .article-preview-rich .article-content-figure > *:not(:first-child) {
+    margin-block-start: 0.375em;
+  }
+
+  .article-preview-rich .article-content-p {
+    color: var(--rs-color-text);
+    line-height: 1.62;
+  }
+
+  .article-preview-rich h2,
+  .article-preview-rich h3,
+  .article-preview-rich h4 {
+    color: var(--rs-color-text);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .article-preview-rich h2 {
+    font-size: 1.375em;
+  }
+
+  .article-preview-rich h3 {
+    font-size: 1.1875em;
+  }
+
+  .article-preview-rich h4 {
+    font-size: 1.0625em;
+  }
+
+  /* Headings carry more space above than below: a heading that isn't the
+     very first block gets extra room pulling it away from what precedes
+     it, while its own trailing edge stays at the ordinary 1em rhythm. */
+  .article-preview-rich > :is(h2, h3, h4):not(:first-child) {
+    margin-block-start: 1.75em;
+  }
+
+  .article-preview-rich ul,
+  .article-preview-rich ol {
+    padding-inline-start: 1.5em;
+  }
+
+  .article-preview-rich li + li {
+    margin-block-start: 0.35em;
+  }
+
+  .article-preview-rich blockquote {
+    border-inline-start: 0.1875rem solid var(--rs-color-separator);
+    padding-inline-start: 1em;
+    color: var(--rs-color-dim);
+  }
+
+  .article-preview-rich blockquote .article-content-p {
+    color: inherit;
+  }
+
+  .article-preview-rich pre,
+  .article-preview-rich code {
+    font-family: 'Adwaita Mono', monospace;
+  }
+
+  .article-preview-rich pre {
+    overflow-x: auto;
+    padding: 0.75em 1em;
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-preview-code-bg);
+    line-height: 1.5;
+  }
+
+  .article-preview-rich :not(pre) > code {
+    padding: 0.125em 0.375em;
+    border-radius: 0.25rem;
+    background: var(--rs-preview-code-bg);
+    font-size: 0.875em;
+  }
+
+  .article-preview-rich hr {
+    border: 0;
+    border-block-start: 1px solid var(--rs-color-separator);
+  }
+
+  .article-preview-rich .article-content-link {
+    color: var(--rs-color-accent-text);
+    text-decoration: none;
+  }
+
+  .article-preview-rich a.article-content-link {
+    cursor: pointer;
+  }
+
+  .article-preview-rich .article-content-link:hover {
+    text-decoration: underline;
+  }
+
+  .article-preview-rich .article-content-figure {
+    margin-inline: 0;
+    text-align: center;
+  }
+
+  .article-preview-rich .article-content-figure-image {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin-inline: auto;
+    border-radius: var(--rs-preview-figure-radius);
+  }
+
+  @container article-preview (width < 30rem) {
+    .article-preview-rich .article-content-figure-image {
+      inline-size: 100%;
+    }
+  }
+
+  .article-preview-rich .article-content-figure-caption,
+  .article-preview-rich .article-content-figure-alt {
+    color: var(--rs-color-dim);
+    font-size: 0.8125em;
+    line-height: 1.4;
+  }
+}

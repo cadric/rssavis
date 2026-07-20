@@ -1,0 +1,120 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    block-size: 100%;
+    overflow: hidden;
+  }
+
+  :root {
+    accent-color: var(--rs-color-accent-bg);
+    background: var(--rs-color-window-bg);
+    color: var(--rs-color-text);
+    font-family: var(--rs-font-sans);
+    line-height: 1.35;
+    scrollbar-color: var(--rs-color-scrollbar-thumb) var(--rs-color-scrollbar-track);
+    scrollbar-width: thin;
+  }
+
+  body {
+    min-inline-size: 320px;
+    min-block-size: 0;
+    background: var(--rs-color-window-bg);
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-body);
+    line-height: var(--rs-line-height-body);
+  }
+
+  button,
+  input,
+  select {
+    color: inherit;
+  }
+
+  button {
+    min-inline-size: 2rem;
+    min-block-size: 2rem;
+  }
+
+  :focus-visible {
+    outline: 0.1875rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.125rem;
+  }
+
+  svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+  }
+
+  ::selection {
+    background: var(--rs-color-selected-bg);
+  }
+}
+
+@media (prefers-contrast: more) {
+  @layer base {
+    :root {
+      --rs-opacity-disabled: var(--rs-opacity-disabled-high-contrast);
+      --rs-opacity-dim: var(--rs-opacity-dim-high-contrast);
+    }
+
+    button,
+    input,
+    select {
+      border-color: CanvasText;
+    }
+  }
+
+  @layer overrides {
+    :root {
+      --rs-color-border: var(--rs-color-text);
+      --rs-color-separator: var(--rs-color-text);
+      --rs-color-swatch-border: var(--rs-color-text);
+      --rs-color-focus-ring: var(--rs-color-accent-text);
+    }
+
+    .primary-menu,
+    .static-card,
+    .add-feed-dialog,
+    .shortcuts-dialog,
+    .management-dialog {
+      border-width: 0.125rem;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  @layer base {
+    :root {
+      forced-color-adjust: none;
+    }
+
+    body {
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+}

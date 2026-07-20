@@ -1,0 +1,155 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer overrides {
+  :focus-visible {
+    outline-color: var(--rs-color-focus-ring);
+  }
+
+  main.view:focus-visible,
+  main.view:focus {
+    outline: 0;
+  }
+}
+
+@media (prefers-contrast: more) {
+  @layer overrides {
+    :where(
+      .text-button:not(.load-more-button),
+      .icon-button:not(.dialog-close-icon),
+      .menu-row,
+      .nav-row,
+      .article-row-star
+    ) {
+      border-color: transparent;
+    }
+
+    :where(.keycap, .dialog-close-icon) {
+      border-color: var(--rs-color-text);
+    }
+
+    :where(
+      .text-button:hover:not(.load-more-button),
+      .icon-button:hover:not(.dialog-close-icon),
+      .icon-button[aria-pressed='true']:not(.dialog-close-icon),
+      .menu-row:hover,
+      .nav-row:hover,
+      .nav-row[aria-current='page'],
+      .article-row:not(.is-expanded):hover,
+      .article-row.is-expanded,
+      .article-row-star:hover,
+      .feed-menu-item:hover,
+      .menu-radio:hover,
+      .menu-radio[aria-checked='true'],
+      .settings-listbox-option:hover,
+      .settings-listbox-option[aria-selected='true'],
+      .management-icon-button:hover
+    ) {
+      outline: 0.0625rem solid var(--rs-color-text);
+      outline-offset: -0.0625rem;
+    }
+
+    /* Pseudo-elements are invalid inside :where(), so the expanded header
+       strip's hover boundary lives in its own rule (B46). */
+    .article-row.is-expanded .article-row-main:hover::before,
+    .article-row.is-expanded .article-row-main:focus-visible::before {
+      outline: 0.0625rem solid var(--rs-color-text);
+      outline-offset: -0.0625rem;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  @layer overrides {
+    :root {
+      forced-color-adjust: auto;
+    }
+
+    :where(
+      .text-button:not(.load-more-button),
+      .icon-button:not(.dialog-close-icon),
+      .menu-row,
+      .nav-row,
+      .article-row-star
+    ) {
+      border-color: Canvas;
+    }
+
+    .keycap,
+    .dialog-close-icon,
+    .status-page-icon,
+    .toast,
+    input,
+    select,
+    dialog,
+    [popover] {
+      border-color: ButtonText;
+    }
+
+    .suggested,
+    .destructive,
+    .nav-row[aria-current='page'] {
+      background: Highlight;
+      color: HighlightText;
+    }
+
+    [data-color-scheme-radio]:checked + .scheme-swatch-circle {
+      box-shadow:
+        0 0 0 2px Canvas,
+        0 0 0 4px Highlight;
+    }
+
+    .scheme-swatch-check {
+      background: Highlight;
+      color: HighlightText;
+    }
+
+    :where(
+      .text-button:hover:not(.load-more-button),
+      .icon-button:hover:not(.dialog-close-icon),
+      .icon-button[aria-pressed='true']:not(.dialog-close-icon),
+      .menu-row:hover,
+      .nav-row:hover,
+      .nav-row[aria-current='page'],
+      .article-row:not(.is-expanded):hover,
+      .article-row.is-expanded,
+      .article-row-star:hover,
+      .feed-menu-item:hover,
+      .menu-radio:hover,
+      .menu-radio[aria-checked='true'],
+      .settings-listbox-option:hover,
+      .settings-listbox-option[aria-selected='true'],
+      .management-icon-button:hover
+    ) {
+      outline: 1px solid ButtonText;
+      outline-offset: -1px;
+    }
+
+    /* Pseudo-elements are invalid inside :where(), so the expanded header
+       strip's hover boundary lives in its own rule (B46). */
+    .article-row.is-expanded .article-row-main:hover::before,
+    .article-row.is-expanded .article-row-main:focus-visible::before {
+      outline: 1px solid ButtonText;
+      outline-offset: -1px;
+    }
+
+    :where(button, input, select, textarea):disabled,
+    [aria-disabled='true'] {
+      border-color: GrayText;
+      opacity: 1;
+      color: GrayText;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @layer overrides {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto;
+      transition-duration: 0.001ms;
+      animation-duration: 0.001ms;
+      animation-iteration-count: 1;
+    }
+  }
+}

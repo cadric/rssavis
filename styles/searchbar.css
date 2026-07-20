@@ -1,0 +1,86 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .reader-search {
+    padding: 0.625rem 1rem 0.75rem;
+    border-block-end: 1px solid var(--rs-color-separator);
+    background: var(--rs-color-view-bg);
+  }
+
+  .reader-search form {
+    display: grid;
+    grid-template-columns: minmax(12rem, 32rem) auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .reader-search input {
+    inline-size: min(100%, 32rem);
+    min-block-size: 2rem;
+    padding-inline: 0.625rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-view-bg);
+    color: var(--rs-color-text);
+  }
+
+  .reader-search p {
+    min-block-size: 1.25rem;
+    max-inline-size: 32rem;
+    margin-block-start: 0.25rem;
+    margin-inline: auto;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .reader-search .text-button {
+    min-block-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @layer components {
+    .reader-search {
+      transition:
+        opacity var(--rs-transition-fast),
+        transform var(--rs-transition-fast);
+    }
+
+    .reader-search:not([hidden]) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @starting-style {
+      .reader-search:not([hidden]) {
+        opacity: 0;
+        transform: translateY(-0.5rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  @layer components {
+    .reader-search form {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .reader-search input {
+      min-inline-size: 0;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  @layer components {
+    .reader-search form {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reader-search .text-button {
+      justify-self: start;
+    }
+  }
+}

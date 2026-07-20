@@ -1,0 +1,1215 @@
+{
+  "extensionName": {
+    "message": "RSSavis"
+  },
+  "extensionDescription": {
+    "message": "Lokal RSS- og Atom-læser til Firefox."
+  },
+  "openReader": {
+    "message": "Åbn RSSavis"
+  },
+  "openReaderMainUnreadOne": {
+    "message": "Åbn RSSavis — $count$ ulæst artikel i Hovedstrøm",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "openReaderMainUnreadOther": {
+    "message": "Åbn RSSavis — $count$ ulæste artikler i Hovedstrøm",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "foundationLoaded": {
+    "message": "Foundation indlæst"
+  },
+  "databaseBlocked": {
+    "message": "En databaseopdatering venter. Luk andre RSSavis-vinduer for at fortsætte."
+  },
+  "databaseReloadRequired": {
+    "message": "Databasen er ændret. Genindlæs RSSavis for at fortsætte."
+  },
+  "databaseRecoveryHeading": {
+    "message": "Databasegendannelse"
+  },
+  "databaseRecoveryCodeLabel": {
+    "message": "Fejlkode"
+  },
+  "databaseRecoveryRetry": {
+    "message": "Prøv igen"
+  },
+  "databaseRecoveryReload": {
+    "message": "Genindlæs RSSavis"
+  },
+  "databaseRecoveryClose": {
+    "message": "Luk"
+  },
+  "addFeedHeading": {
+    "message": "Tilføj feed"
+  },
+  "addFeedHelp": {
+    "message": "Firefox beder kun om adgang til dette feed-websted. RSSavis bruger adgangen til at hente det valgte feed, ikke til at læse browserhistorik."
+  },
+  "addFeedUrlLabel": {
+    "message": "Feed-URL"
+  },
+  "addFeedTitleLabel": {
+    "message": "Feed-titel"
+  },
+  "addFeedSubmit": {
+    "message": "Tilføj feed"
+  },
+  "addFeedToast": {
+    "message": "Feed tilføjet"
+  },
+  "addFeedErrorSummary": {
+    "message": "Ret de markerede felter."
+  },
+  "addFeedUrlRequired": {
+    "message": "Indtast en feed-URL."
+  },
+  "addFeedUrlInvalid": {
+    "message": "Indtast en HTTP- eller HTTPS-feed-URL."
+  },
+  "addFeedTitleRequired": {
+    "message": "Indtast en feed-titel."
+  },
+  "dialogCancel": {
+    "message": "Annuller"
+  },
+  "dialogBack": {
+    "message": "Tilbage"
+  },
+  "dialogConfirmation": {
+    "message": "Bekræftelse"
+  },
+  "readerSidebarTitle": {
+    "message": "RSSavis"
+  },
+  "readerNavTitle": {
+    "message": "Bibliotek"
+  },
+  "feedNavTitle": {
+    "message": "Feeds"
+  },
+  "feedNavEmpty": {
+    "message": "Ingen feeds endnu"
+  },
+  "scopeAll": {
+    "message": "Alle artikler"
+  },
+  "scopeUnread": {
+    "message": "Ulæste"
+  },
+  "scopeStarred": {
+    "message": "Stjernemarkerede"
+  },
+  "scopeMain": {
+    "message": "Hovedstrøm"
+  },
+  "readerTitle": {
+    "message": "Ulæste"
+  },
+  "readerSubtitle": {
+    "message": "Ingen artikler indlæst"
+  },
+  "readerEmptyTitle": {
+    "message": "Ingen ulæste artikler"
+  },
+  "readerEmptyBody": {
+    "message": "Tilføj et feed for at begynde at læse i RSSavis."
+  },
+  "readerScopeEmptyTitle": {
+    "message": "Ingen artikler"
+  },
+  "readerScopeEmptyBody": {
+    "message": "Der er ingen artikler i denne visning."
+  },
+  "settingsTitle": {
+    "message": "Indstillinger"
+  },
+  "tabUnreadTitle": {
+    "message": "($count$) · RSSavis",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settingsSubtitle": {
+    "message": "Udseende"
+  },
+  "settingsNavTitle": {
+    "message": "Sektioner"
+  },
+  "backToReader": {
+    "message": "Tilbage til feeds"
+  },
+  "staticSubtitle": {
+    "message": "RSSavis"
+  },
+  "settingsGeneral": {
+    "message": "Generelt"
+  },
+  "settingsAppearance": {
+    "message": "Udseende"
+  },
+  "settingsReading": {
+    "message": "Læsning"
+  },
+  "settingsFeeds": {
+    "message": "Feeds"
+  },
+  "settingsFeedsSubtitle": {
+    "message": "Administrér dine abonnementer"
+  },
+  "settingsCategories": {
+    "message": "Kategorier"
+  },
+  "settingsCategoriesSubtitle": {
+    "message": "Gruppér feeds og ændr rækkefølgen"
+  },
+  "settingsStorage": {
+    "message": "Lager og oprydning"
+  },
+  "settingsImport": {
+    "message": "Import og eksport"
+  },
+  "settingsSaved": {
+    "message": "Indstillinger gemt."
+  },
+  "settingsReset": {
+    "message": "Nulstil indstillinger"
+  },
+  "settingsResetRowTitle": {
+    "message": "Nulstil alle indstillinger"
+  },
+  "settingsResetRowSubtitle": {
+    "message": "Gendan alle valg til deres standardværdi"
+  },
+  "settingsFormErrorSummary": {
+    "message": "Ret de markerede indstillingsfelter."
+  },
+  "settingsRangeError": {
+    "message": "Indtast et heltal fra $min$ til $max$.",
+    "placeholders": {
+      "min": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "settingsSpinDecrease": {
+    "message": "Sænk værdi"
+  },
+  "settingsSpinIncrease": {
+    "message": "Øg værdi"
+  },
+  "settingsLanguage": {
+    "message": "Sprog"
+  },
+  "settingsLanguageAuto": {
+    "message": "Automatisk"
+  },
+  "settingsLanguageEnglish": {
+    "message": "Engelsk"
+  },
+  "settingsLanguageDanish": {
+    "message": "Dansk"
+  },
+  "settingsRefreshInterval": {
+    "message": "Opdateringsinterval"
+  },
+  "settingsFeedTimeout": {
+    "message": "Feed-timeout"
+  },
+  "settingsAccentColor": {
+    "message": "Accentfarve"
+  },
+  "settingsAccentBlue": {
+    "message": "Blå"
+  },
+  "settingsAccentTeal": {
+    "message": "Petroleum"
+  },
+  "settingsAccentGreen": {
+    "message": "Grøn"
+  },
+  "settingsAccentYellow": {
+    "message": "Gul"
+  },
+  "settingsAccentOrange": {
+    "message": "Orange"
+  },
+  "settingsAccentRed": {
+    "message": "Rød"
+  },
+  "settingsAccentPink": {
+    "message": "Pink"
+  },
+  "settingsAccentPurple": {
+    "message": "Lilla"
+  },
+  "settingsAccentSlate": {
+    "message": "Skifer"
+  },
+  "settingsImageLoading": {
+    "message": "Eksterne billeder"
+  },
+  "settingsImageOnExpand": {
+    "message": "Indlæs når artiklen foldes ud"
+  },
+  "settingsImageAlways": {
+    "message": "Indlæs altid"
+  },
+  "settingsImageNever": {
+    "message": "Indlæs aldrig"
+  },
+  "settingsLazyImages": {
+    "message": "Lazy-load billeder"
+  },
+  "settingsImagePrivacy": {
+    "message": "Eksterne billeder kan kontakte tredjepartsservere og afslore din IP-adresse."
+  },
+  "settingsArticlesPerPage": {
+    "message": "Artikler pr. side"
+  },
+  "settingsDefaultArticleView": {
+    "message": "Standard artikelvisning"
+  },
+  "settingsOpenLinks": {
+    "message": "Åbn original-links"
+  },
+  "settingsOpenBackground": {
+    "message": "Baggrundsfane"
+  },
+  "settingsOpenForeground": {
+    "message": "Forgrundsfane"
+  },
+  "settingsOpenCurrent": {
+    "message": "Aktuel fane"
+  },
+  "settingsMarkReadExpand": {
+    "message": "Marker læst ved udfoldning"
+  },
+  "settingsMarkReadOpen": {
+    "message": "Marker læst når originalen åbnes"
+  },
+  "settingsMarkReadScroll": {
+    "message": "Marker læst ved scroll"
+  },
+  "settingsPurgeMaxArticles": {
+    "message": "Maksimalt antal artikler"
+  },
+  "settingsPurgeMaxAge": {
+    "message": "Maksimal alder i dage"
+  },
+  "settingsKeepUnread": {
+    "message": "Behold ulæste artikler"
+  },
+  "settingsKeepStarred": {
+    "message": "Behold stjernemarkerede artikler"
+  },
+  "storageEstimateLoading": {
+    "message": "Estimeret lagerforbrug indlæses."
+  },
+  "storageEstimateSummary": {
+    "message": "Estimeret $usage$ af $quota$ bruges til $articles$ artikler på $feeds$ feeds.",
+    "placeholders": {
+      "usage": {
+        "content": "$1"
+      },
+      "quota": {
+        "content": "$2"
+      },
+      "articles": {
+        "content": "$3"
+      },
+      "feeds": {
+        "content": "$4"
+      }
+    }
+  },
+  "storagePurgeNow": {
+    "message": "Ryd op nu"
+  },
+  "storagePurgeConfirm": {
+    "message": "Ryd op i egnede artikler nu? Aktuelt artikelantal: $count$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "cleanupComplete": {
+    "message": "Oprydning fuldfort."
+  },
+  "storageRebuildStats": {
+    "message": "Genopbyg statistik"
+  },
+  "statsRebuildComplete": {
+    "message": "Statistik genopbygget."
+  },
+  "storageRepairIntegrity": {
+    "message": "Reparer integritet"
+  },
+  "integrityRepairComplete": {
+    "message": "Integritetsreparation fuldfort."
+  },
+  "storageResetData": {
+    "message": "Nulstil alle data"
+  },
+  "storageResetDataConfirm": {
+    "message": "Skriv $phrase$ for at slette alle lokale RSSavis-data.",
+    "placeholders": {
+      "phrase": {
+        "content": "$1"
+      }
+    }
+  },
+  "storageResetDataComplete": {
+    "message": "Alle lokale data blev nulstillet."
+  },
+  "colorSchemeLegend": {
+    "message": "Farveskema"
+  },
+  "themeSystem": {
+    "message": "System"
+  },
+  "themeLight": {
+    "message": "Lys"
+  },
+  "themeDark": {
+    "message": "Mørk"
+  },
+  "themeFamilyReadonly": {
+    "message": "Tema-familie: Adwaita"
+  },
+  "articleFilterLabel": {
+    "message": "Viste artikler"
+  },
+  "articleFilterAll": {
+    "message": "Alle"
+  },
+  "articleFilterUnread": {
+    "message": "Ulæste"
+  },
+  "articleFilterRead": {
+    "message": "Læste"
+  },
+  "articleFilterAppliedAll": {
+    "message": "Viser alle artikler."
+  },
+  "articleFilterAppliedUnread": {
+    "message": "Viser ulæste artikler."
+  },
+  "articleFilterAppliedRead": {
+    "message": "Viser læste artikler."
+  },
+  "articleFilterEmptyUnreadTitle": {
+    "message": "Ingen ulæste artikler"
+  },
+  "articleFilterEmptyUnreadBody": {
+    "message": "Der er ingen ulæste artikler i denne visning."
+  },
+  "articleFilterEmptyReadTitle": {
+    "message": "Ingen læste artikler"
+  },
+  "articleFilterEmptyReadBody": {
+    "message": "Der er ingen læste artikler i denne visning."
+  },
+  "articleFilterShowAll": {
+    "message": "Vis alle"
+  },
+  "articleViewLabel": {
+    "message": "Artikelvisning"
+  },
+  "viewCompact": {
+    "message": "Kompakt"
+  },
+  "viewNormal": {
+    "message": "Normal"
+  },
+  "viewLarge": {
+    "message": "Stor"
+  },
+  "viewOptionsTitle": {
+    "message": "Visningsindstillinger"
+  },
+  "articleCountLabel": {
+    "message": "artikler"
+  },
+  "articleLoadMore": {
+    "message": "Indlæs flere"
+  },
+  "articlesLoading": {
+    "message": "Vent, mens artiklerne indlæses."
+  },
+  "articlesLoadingTitle": {
+    "message": "Indlæser artikler"
+  },
+  "articlesLoadFailed": {
+    "message": "Kunne ikke indlæse artikler."
+  },
+  "articlesLoadFailedTitle": {
+    "message": "Artiklerne kunne ikke indlæses"
+  },
+  "articlesRefreshed": {
+    "message": "Artikler opdateret."
+  },
+  "newArticlesAvailable": {
+    "message": "Nye artikler er tilgængelige."
+  },
+  "newArticlesShow": {
+    "message": "Vis"
+  },
+  "readerRetry": {
+    "message": "Prøv igen"
+  },
+  "readerScopeFallbackUnread": {
+    "message": "Viser ulæste artikler."
+  },
+  "searchArticlesLabel": {
+    "message": "Søg i artikler"
+  },
+  "searchPlaceholder": {
+    "message": "Søg titel, forfatter, resume eller feed"
+  },
+  "searchHelp": {
+    "message": "Indtast mindst to tegn for at søge i dette scope."
+  },
+  "searchEmpty": {
+    "message": "Ingen søgeresultater fundet."
+  },
+  "searchEmptyTitle": {
+    "message": "Ingen resultater"
+  },
+  "searchClose": {
+    "message": "Luk søgning"
+  },
+  "markScopeReadMenu": {
+    "message": "Marker visning som læst"
+  },
+  "markScopeReadNone": {
+    "message": "Ingen ulæste artikler matchede det nuværende scope."
+  },
+  "markScopeReadConfirm": {
+    "message": "Marker $count$ artikler i $scope$ som læst?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "markScopeReadProgress": {
+    "message": "Markerede $done$ af $count$ artikler som læst.",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "count": {
+        "content": "$2"
+      }
+    }
+  },
+  "markScopeReadComplete": {
+    "message": "Markerede $count$ artikler som læst.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsOpen": {
+    "message": "Tastaturgenveje"
+  },
+  "shortcutsTitle": {
+    "message": "Tastaturgenveje"
+  },
+  "shortcutSearch": {
+    "message": "Søg i artikler"
+  },
+  "shortcutMarkRead": {
+    "message": "Marker aktuel visning som læst"
+  },
+  "shortcutSettings": {
+    "message": "Åbn indstillinger"
+  },
+  "shortcutMenu": {
+    "message": "Åbn hovedmenu"
+  },
+  "shortcutShortcuts": {
+    "message": "Vis tastaturgenveje"
+  },
+  "shortcutHelp": {
+    "message": "Åbn hjælp"
+  },
+  "shortcutsSectionGeneral": {
+    "message": "Generelt"
+  },
+  "dialogClose": {
+    "message": "Luk"
+  },
+  "toastDismissLabel": {
+    "message": "Luk besked"
+  },
+  "helpOpen": {
+    "message": "Hjælp"
+  },
+  "helpTitle": {
+    "message": "Hjælp"
+  },
+  "helpIntro": {
+    "message": "RSSavis er en lokal Firefox-læser til RSS- og Atom-feeds uden login."
+  },
+  "helpFeedsTitle": {
+    "message": "Feeds og læsning"
+  },
+  "helpFeeds": {
+    "message": "Tilføj feeds fra sidepanelet, og brug bibliotek, feedrækker, søgning og artikelhandlinger til at læse og organisere indhold."
+  },
+  "helpPermissionsTitle": {
+    "message": "Tilladelser"
+  },
+  "helpPermissions": {
+    "message": "Når du tilføjer et feed, beder Firefox om valgfri host-tilladelse til den origin, så RSSavis kan hente feedet."
+  },
+  "helpKeyboardTitle": {
+    "message": "Tastaturgenveje"
+  },
+  "helpKeyboard": {
+    "message": "Tryk F1 for Hjælp eller ? for Tastaturgenveje."
+  },
+  "aboutOpen": {
+    "message": "Om RSSavis"
+  },
+  "aboutTitle": {
+    "message": "Om RSSavis"
+  },
+  "aboutVersion": {
+    "message": "Version $version$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
+  },
+  "aboutDetails": {
+    "message": "Detaljer"
+  },
+  "aboutPrivacyTitle": {
+    "message": "Privatliv"
+  },
+  "aboutPrivacyBody": {
+    "message": "RSSavis gemmer feeds, kategorier, artikler, indstillinger og UI-tilstand lokalt i Firefox extension storage. Appen har ingen telemetri, analytics, fjernlogning eller fjernkonfiguration."
+  },
+  "aboutPermissionsTitle": {
+    "message": "Tilladelser"
+  },
+  "aboutPermissionsBody": {
+    "message": "RSSavis bruger storage, alarms, unlimited storage og optional host permissions for feed-origins, du tilføjer."
+  },
+  "aboutCreditsTitle": {
+    "message": "Bidragydere"
+  },
+  "aboutCreditsBody": {
+    "message": "Bygget af RSSavis' bidragydere. Adwaita-farveværdierne stammer fra libadwaita 1.9.2-kilderne (GNOME-projektet)."
+  },
+  "aboutLegalTitle": {
+    "message": "Licens"
+  },
+  "aboutLegalBody": {
+    "message": "RSSavis er fri software udgivet under Mozilla Public License 2.0. Den fulde licenstekst følger med udvidelsen."
+  },
+  "aboutSourceCode": {
+    "message": "Kildekode"
+  },
+  "aboutReportSecurityIssue": {
+    "message": "Rapportér et sikkerhedsproblem"
+  },
+  "aboutViewFullLicense": {
+    "message": "Se hele licensen"
+  },
+  "aboutResourceOpenFailed": {
+    "message": "Ressourcen kunne ikke åbnes."
+  },
+  "aboutCopyright": {
+    "message": "© 2026 RSSavis' bidragydere"
+  },
+  "articleStar": {
+    "message": "Stjernemarker artikel"
+  },
+  "articleUnstar": {
+    "message": "Fjern stjerne fra artikel"
+  },
+  "untitledArticle": {
+    "message": "Artikel uden titel"
+  },
+  "articleReadStateRead": {
+    "message": "Læst artikel"
+  },
+  "articleReadStateUnread": {
+    "message": "Ulæst artikel"
+  },
+  "articleActionsLabel": {
+    "message": "Artikelhandlinger"
+  },
+  "articleDetailLoading": {
+    "message": "Indlæser artikelvisning"
+  },
+  "articleDetailFailed": {
+    "message": "Kunne ikke indlæse artikelvisning."
+  },
+  "articleOpenOriginal": {
+    "message": "Åbn original"
+  },
+  "articleLinkDestinationLabel": {
+    "message": "Destination"
+  },
+  "articleOpenedOriginal": {
+    "message": "Original artikel åbnet."
+  },
+  "articleOpenFailed": {
+    "message": "Kunne ikke åbne artikel."
+  },
+  "openOriginalHeading": {
+    "message": "Åbner original artikel"
+  },
+  "openOriginalStatus": {
+    "message": "RSSavis åbner den originale artikel."
+  },
+  "openOriginalRecoveryHeading": {
+    "message": "Original artikel kunne ikke åbnes"
+  },
+  "openOriginalInvalid": {
+    "message": "Artikellinket er ikke tilgængeligt fra denne pakkede side."
+  },
+  "openOriginalFailed": {
+    "message": "Kunne ikke åbne den originale artikel."
+  },
+  "openOriginalReader": {
+    "message": "Tilbage til RSSavis"
+  },
+  "openContentLinkHeading": {
+    "message": "Åbner linksiden"
+  },
+  "openContentLinkStatus": {
+    "message": "RSSavis åbner linksiden."
+  },
+  "openContentLinkRecoveryHeading": {
+    "message": "Linksiden kunne ikke åbnes"
+  },
+  "openContentLinkInvalid": {
+    "message": "Linket er ikke tilgængeligt fra denne pakkede side."
+  },
+  "openContentLinkFailed": {
+    "message": "Kunne ikke åbne linksiden."
+  },
+  "openContentLinkReader": {
+    "message": "Tilbage til RSSavis"
+  },
+  "articleMarkRead": {
+    "message": "Marker som læst"
+  },
+  "articleMarkUnread": {
+    "message": "Marker som ulæst"
+  },
+  "articleCopyLink": {
+    "message": "Kopier link"
+  },
+  "articleLinkCopied": {
+    "message": "Link kopieret."
+  },
+  "articleCopyFailed": {
+    "message": "Kunne ikke kopiere link."
+  },
+  "articleUpdateFailed": {
+    "message": "Kunne ikke opdatere artikel."
+  },
+  "articleImagePrivacy": {
+    "message": "Fjernbilleder kan kontakte billedserveren."
+  },
+  "articleImageNever": {
+    "message": "Billeder er slået fra i artikelvisninger."
+  },
+  "closeSidebar": {
+    "message": "Luk sidepanel"
+  },
+  "openSidebar": {
+    "message": "Åbn sidepanel"
+  },
+  "sidebarResize": {
+    "message": "Tilpas sidebjælkens bredde"
+  },
+  "toggleCategory": {
+    "message": "Fold kategori ud eller sammen"
+  },
+  "primaryMenuTitle": {
+    "message": "Hovedmenu"
+  },
+  "refreshAllFeeds": {
+    "message": "Opdater alle feeds"
+  },
+  "refreshStarted": {
+    "message": "Opdaterer feeds"
+  },
+  "refreshAllSummary": {
+    "message": "$checked$ feeds kontrolleret, $updated$ opdateret, $unchanged$ uændret, $failed$ fejlede, $articles$ nye artikler.",
+    "placeholders": {
+      "checked": {
+        "content": "$1"
+      },
+      "updated": {
+        "content": "$2"
+      },
+      "unchanged": {
+        "content": "$3"
+      },
+      "failed": {
+        "content": "$4"
+      },
+      "articles": {
+        "content": "$5"
+      }
+    }
+  },
+  "managementSaved": {
+    "message": "Ændringer gemt."
+  },
+  "managementFormErrorSummary": {
+    "message": "Ret de markerede administrationsfelter."
+  },
+  "opmlHelp": {
+    "message": "Forhåndsvis OPML-filen før du giver adgang. RSSavis importerer kun abonnementer efter Firefox har givet adgang til alle viste origins."
+  },
+  "opmlFileLabel": {
+    "message": "OPML-fil"
+  },
+  "opmlPreview": {
+    "message": "Forhåndsvis OPML"
+  },
+  "opmlCommit": {
+    "message": "Godkend adgang og importer"
+  },
+  "opmlExport": {
+    "message": "Eksporter OPML"
+  },
+  "opmlExportSubtitle": {
+    "message": "Gem alle feeds og kategorier i en fil"
+  },
+  "opmlPreviewReady": {
+    "message": "OPML-forhåndsvisning er klar."
+  },
+  "opmlPreviewIssues": {
+    "message": "Nogle OPML-poster kræver opmærksomhed."
+  },
+  "opmlPreviewRequired": {
+    "message": "Forhåndsvis en OPML-fil før import."
+  },
+  "opmlPreviewInvalid": {
+    "message": "OPML-forhåndsvisningens svar var ugyldigt."
+  },
+  "opmlMissingFile": {
+    "message": "Vælg en OPML-fil før forhåndsvisning."
+  },
+  "opmlValidCount": {
+    "message": "Gyldige abonnementer"
+  },
+  "opmlDuplicateInFileCount": {
+    "message": "Dubletter i filen"
+  },
+  "opmlAlreadySubscribedCount": {
+    "message": "Allerede abonneret"
+  },
+  "opmlInvalidCount": {
+    "message": "Ugyldige poster"
+  },
+  "opmlCategoryCount": {
+    "message": "Kategorier"
+  },
+  "opmlUniqueOriginCount": {
+    "message": "Unikke origins"
+  },
+  "opmlImportComplete": {
+    "message": "OPML-import fuldført."
+  },
+  "opmlExportComplete": {
+    "message": "OPML-eksport hentet."
+  },
+  "feedTitleLabel": {
+    "message": "Feed-titel"
+  },
+  "feedCustomTitleHelp": {
+    "message": "Lad feltet stå tomt for at bruge feedets egen titel."
+  },
+  "feedTitleRequired": {
+    "message": "Indtast en feed-titel."
+  },
+  "feedUrlLabel": {
+    "message": "Feed-URL"
+  },
+  "feedUrlRequired": {
+    "message": "Indtast en feed-URL."
+  },
+  "feedUrlInvalid": {
+    "message": "Indtast en HTTP- eller HTTPS-feed-URL."
+  },
+  "feedOptions": {
+    "message": "Feedhandlinger"
+  },
+  "feedOptionsFor": {
+    "message": "Feedhandlinger for $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedEdit": {
+    "message": "Redigér"
+  },
+  "feedEditTitle": {
+    "message": "Redigér feed"
+  },
+  "feedMainStream": {
+    "message": "Medtag i hovedstrøm"
+  },
+  "feedKeepReadOnPurge": {
+    "message": "Behold læste artikler ved oprydning"
+  },
+  "feedIconSourceLabel": {
+    "message": "Ikon"
+  },
+  "feedIconSourceAuto": {
+    "message": "Automatisk"
+  },
+  "feedIconSourceFavicon": {
+    "message": "Webstedets favicon"
+  },
+  "feedIconColorLabel": {
+    "message": "Ikonfarve"
+  },
+  "feedIconColorAuto": {
+    "message": "Automatisk"
+  },
+  "feedIconColor0": {
+    "message": "Blå"
+  },
+  "feedIconColor1": {
+    "message": "Petroleum"
+  },
+  "feedIconColor2": {
+    "message": "Grøn"
+  },
+  "feedIconColor3": {
+    "message": "Gul"
+  },
+  "feedIconColor4": {
+    "message": "Orange"
+  },
+  "feedIconColor5": {
+    "message": "Rød"
+  },
+  "feedIconColor6": {
+    "message": "Pink"
+  },
+  "feedIconColor7": {
+    "message": "Lilla"
+  },
+  "feedIconColor8": {
+    "message": "Skifer"
+  },
+  "feedEditSubmit": {
+    "message": "Gem feed"
+  },
+  "feedRefresh": {
+    "message": "Genindlæs feed"
+  },
+  "feedMarkRead": {
+    "message": "Markér som læst"
+  },
+  "feedDelete": {
+    "message": "Slet feed"
+  },
+  "confirmDeleteFeed": {
+    "message": "Slet feedet $title$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedDeleting": {
+    "message": "slettes"
+  },
+  "feedMoveCategory": {
+    "message": "Flyt til kategori"
+  },
+  "feedMoveCategoryTitle": {
+    "message": "Flyt til kategori"
+  },
+  "feedMoveCurrentCategory": {
+    "message": "Aktuel kategori: $category$",
+    "placeholders": {
+      "category": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedMoveTargetCategory": {
+    "message": "Kategori"
+  },
+  "feedMoveSubmit": {
+    "message": "Flyt feed"
+  },
+  "confirmMoveFeed": {
+    "message": "Flyt $title$ til $category$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "category": {
+        "content": "$2"
+      }
+    }
+  },
+  "feedLastError": {
+    "message": "Seneste fejl"
+  },
+  "feedHttpStatus": {
+    "message": "HTTP-status"
+  },
+  "feedLastChecked": {
+    "message": "Sidst tjekket"
+  },
+  "feedNextRetry": {
+    "message": "Næste forsøg"
+  },
+  "feedPermissionGranted": {
+    "message": "Tilladelse givet"
+  },
+  "feedPermissionMissing": {
+    "message": "Tilladelse mangler"
+  },
+  "feedPermissionBannerMissing": {
+    "message": "RSSavis mangler tilladelse til at hente dette feed fra $host$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedPermissionBannerRedirect": {
+    "message": "Feedet omdirigerer til $host$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedPermissionBannerGrant": {
+    "message": "Giv adgang"
+  },
+  "feedPermissionBannerAllow": {
+    "message": "Tillad omdirigering"
+  },
+  "feedRedirectPermissionRequired": {
+    "message": "Omdirigering kræver tilladelse"
+  },
+  "feedReorderGrip": {
+    "message": "Omarrangér feed"
+  },
+  "feedReorderGripFor": {
+    "message": "Omarrangér $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "feedReorderMoved": {
+    "message": "$title$ flyttet til plads $position$ af $total$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "position": {
+        "content": "$2"
+      },
+      "total": {
+        "content": "$3"
+      }
+    }
+  },
+  "defaultCategoryTitle": {
+    "message": "Ikke kategoriseret"
+  },
+  "categoryNameLabel": {
+    "message": "Kategorinavn"
+  },
+  "categoryNameRequired": {
+    "message": "Indtast et kategorinavn."
+  },
+  "categoryAdd": {
+    "message": "Tilføj kategori"
+  },
+  "categoryCreate": {
+    "message": "Opret kategori"
+  },
+  "categoryRename": {
+    "message": "Omdøb kategori"
+  },
+  "categoryRenameTitle": {
+    "message": "Omdøb kategori"
+  },
+  "categoryGrip": {
+    "message": "Flyt $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryReorderMoved": {
+    "message": "$title$ flyttet til plads $position$ af $total$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      },
+      "position": {
+        "content": "$2"
+      },
+      "total": {
+        "content": "$3"
+      }
+    }
+  },
+  "categoryDelete": {
+    "message": "Slet kategori"
+  },
+  "confirmDeleteCategory": {
+    "message": "Slet kategorien $title$?",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryMoveUp": {
+    "message": "Flyt kategori op"
+  },
+  "categoryMoveDown": {
+    "message": "Flyt kategori ned"
+  },
+  "errorInvalidMessage": {
+    "message": "Udvidelsen modtog en ugyldig intern besked."
+  },
+  "errorValidationError": {
+    "message": "De gemte data matcher ikke det forventede format."
+  },
+  "errorUnsupportedUrlScheme": {
+    "message": "Kun HTTP- og HTTPS-URL'er understottes."
+  },
+  "errorHostPermissionDenied": {
+    "message": "Firefox gav ikke tilladelse til dette websted."
+  },
+  "errorHostPermissionRevoked": {
+    "message": "Tilladelsen til webstedet blev fjernet."
+  },
+  "errorFeedAlreadyExists": {
+    "message": "Dette feed er allerede tilfojet."
+  },
+  "errorFeedNotFound": {
+    "message": "Feedet blev ikke fundet."
+  },
+  "errorCategoryNotFound": {
+    "message": "Kategorien blev ikke fundet."
+  },
+  "errorArticleNotFound": {
+    "message": "Artiklen blev ikke fundet."
+  },
+  "errorFetchTimeout": {
+    "message": "Feed-forespørgslen fik timeout."
+  },
+  "errorFetchResponseTooLarge": {
+    "message": "Feed-svaret er for stort."
+  },
+  "errorHttpError": {
+    "message": "Feed-serveren returnerede en HTTP-fejl."
+  },
+  "errorAuthOrAccessDenied": {
+    "message": "Feedet kræver login, eller adgang blev afvist."
+  },
+  "errorFeedParseError": {
+    "message": "Feedet kunne ikke parses."
+  },
+  "errorUnsupportedFeedFormat": {
+    "message": "Dette feed-format understottes ikke."
+  },
+  "errorOpmlParseError": {
+    "message": "OPML-filen kunne ikke parses."
+  },
+  "errorOpmlTooLarge": {
+    "message": "OPML-filen er for stor."
+  },
+  "errorDbOpenFailed": {
+    "message": "Den lokale database kunne ikke åbnes."
+  },
+  "errorDbSchemaMismatch": {
+    "message": "Det lokale databaseskema er ikke kompatibelt."
+  },
+  "errorDbVersionError": {
+    "message": "Den lokale databaseversion er ikke kompatibel."
+  },
+  "errorDbTransactionAborted": {
+    "message": "Databasetransaktionen blev afbrudt."
+  },
+  "errorDbTransactionInactive": {
+    "message": "Databasetransaktionen sluttede for tidligt."
+  },
+  "errorDbConstraint": {
+    "message": "Databasen afviste en dublet eller konflikt."
+  },
+  "errorDbQuotaExceeded": {
+    "message": "Firefox-lageret er fyldt."
+  },
+  "errorDbInvalidState": {
+    "message": "Databasen er i en ugyldig tilstand."
+  },
+  "errorDbUnknown": {
+    "message": "Der opstod en ukendt databasefejl."
+  },
+  "errorDedupeCollision": {
+    "message": "To feed-poster gav samme identitet."
+  },
+  "errorDedupeAmbiguous": {
+    "message": "En feed-post matchede flere eksisterende artikler."
+  },
+  "errorRedirectPermissionRequired": {
+    "message": "Feedet viderestillede til et websted, der kræver tilladelse."
+  },
+  "errorDbUpgradeBlocked": {
+    "message": "Databaseopgraderingen blokeres af en anden åben fane."
+  },
+  "errorInvalidCursor": {
+    "message": "Listecursoren er ugyldig."
+  },
+  "errorCursorStale": {
+    "message": "Listen er ændret og skal genindlæses."
+  },
+  "errorInternal": {
+    "message": "Noget gik galt."
+  },
+  "errorNotImplemented": {
+    "message": "Denne kommando er ikke tilgængelig endnu."
+  }
+}

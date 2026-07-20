@@ -1,0 +1,270 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .settings-section {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+  }
+
+  .settings-section[hidden] {
+    display: none;
+  }
+
+  .settings-form {
+    inline-size: min(100%, var(--rs-content-width));
+  }
+
+  .settings-group {
+    display: grid;
+    min-inline-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .settings-group > legend {
+    margin: 0 0.25rem 0.625rem;
+    padding: 0;
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-heading);
+    font-weight: 700;
+  }
+
+  .settings-list {
+    overflow: hidden;
+    border: 1px solid var(--rs-color-border);
+    border-radius: 0.75rem;
+    background: var(--rs-color-card-bg);
+  }
+
+  .settings-list > :not(:last-child) {
+    border-block-end: 1px solid var(--rs-color-separator);
+  }
+
+  .settings-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-block-size: 3.375rem;
+    padding: 0.6875rem 1rem;
+  }
+
+  .settings-input-row:hover,
+  .settings-combo-row:hover,
+  .settings-accent-row:hover,
+  .settings-spin-row:hover,
+  .settings-toggle-row:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .settings-row-copy {
+    display: grid;
+    flex: 1 1 auto;
+    gap: 0.0625rem;
+    min-inline-size: 0;
+  }
+
+  .settings-row-title {
+    min-inline-size: 0;
+    color: var(--rs-color-text);
+    font-size: var(--rs-font-size-body);
+  }
+
+  .settings-row-subtitle {
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+    line-height: var(--rs-line-height-small);
+  }
+
+  .settings-row-value {
+    flex: 0 0 auto;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .settings-row-control {
+    display: grid;
+    justify-items: end;
+    gap: 0.25rem;
+    min-inline-size: max-content;
+  }
+
+  .settings-form input[type='number'],
+  .settings-form select {
+    min-block-size: 2rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-button-bg);
+    color: var(--rs-color-text);
+    font: inherit;
+  }
+
+  .settings-form input[type='number'] {
+    appearance: textfield;
+    inline-size: 7rem;
+    padding-inline: 0.625rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .settings-spin-control {
+    grid-template-columns: 2rem minmax(4.5rem, 7rem) 2rem;
+    align-items: center;
+    gap: 0;
+  }
+
+  .settings-spin-control input[type='number'] {
+    inline-size: 100%;
+    border-block: 1px solid var(--rs-color-border);
+    border-inline: 0;
+    border-radius: 0;
+    text-align: end;
+  }
+
+  .settings-spin-button {
+    box-sizing: border-box;
+    inline-size: 2rem;
+    block-size: 2rem;
+    border: 1px solid var(--rs-color-border);
+    background: var(--rs-color-button-bg);
+    color: var(--rs-color-text);
+    font: inherit;
+    font-weight: 700;
+  }
+
+  .settings-spin-button:hover:not(:disabled) {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .settings-spin-button:focus-visible {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.125rem;
+  }
+
+  .settings-spin-button[data-settings-spin-decrement] {
+    border-start-start-radius: var(--rs-radius-control);
+    border-end-start-radius: var(--rs-radius-control);
+  }
+
+  .settings-spin-button[data-settings-spin-increment] {
+    border-start-end-radius: var(--rs-radius-control);
+    border-end-end-radius: var(--rs-radius-control);
+  }
+
+  .settings-form select {
+    inline-size: min(100%, 13rem);
+    padding-inline: 0.625rem;
+  }
+
+  .settings-toggle-row {
+    cursor: pointer;
+  }
+
+  .settings-toggle-row {
+    min-block-size: 3.125rem;
+    padding-block: 0.5625rem;
+  }
+
+  .settings-toggle-row input[type='checkbox'] {
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    inline-size: 2.75rem;
+    block-size: 1.5625rem;
+    margin: 0;
+    border: 1px solid var(--rs-color-sidebar-border);
+    border-radius: 999rem;
+    appearance: none;
+    background: var(--rs-color-active-bg);
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  /* The 23 CSS px inner track holds a 19 CSS px thumb with a uniform
+     2 CSS px margin on every side in both states (GNOME switch geometry). */
+  .settings-toggle-row input[type='checkbox']::before {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0.125rem;
+    inline-size: 1.1875rem;
+    block-size: 1.1875rem;
+    border-radius: 50%;
+    background: var(--rs-color-dim);
+    box-shadow: 0 0.0625rem 0.125rem var(--rs-color-popover-shade);
+    content: '';
+    transform: translateY(-50%);
+    transition: inset-inline-start 0.15s ease;
+  }
+
+  .settings-toggle-row input[type='checkbox']:checked {
+    border-color: var(--rs-color-accent-bg);
+    background: var(--rs-color-accent-bg);
+  }
+
+  .settings-toggle-row input[type='checkbox']:checked::before {
+    inset-inline-start: calc(100% - 1.1875rem - 0.125rem);
+    background: var(--rs-color-accent-fg);
+  }
+
+  .settings-toggle-row input[type='checkbox']:focus-visible {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.125rem;
+  }
+
+  @media (width <= 34rem) {
+    .settings-input-row,
+    .settings-combo-row,
+    .settings-accent-row,
+    .settings-spin-row,
+    .settings-static-row {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .settings-row-control {
+      justify-items: start;
+      min-inline-size: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @layer overrides {
+    .settings-toggle-row input[type='checkbox'],
+    .settings-toggle-row input[type='checkbox']::before {
+      transition-duration: 0.001ms;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  @layer overrides {
+    .settings-list,
+    .settings-spin-button,
+    .settings-spin-control input[type='number'],
+    .settings-toggle-row input[type='checkbox'] {
+      border-color: ButtonText;
+    }
+
+    .settings-toggle-row input[type='checkbox'] {
+      background: Canvas;
+      forced-color-adjust: auto;
+    }
+
+    .settings-toggle-row input[type='checkbox']::before {
+      background: ButtonText;
+      box-shadow: none;
+    }
+
+    .settings-toggle-row input[type='checkbox']:checked {
+      border-color: Highlight;
+      background: Highlight;
+    }
+
+    .settings-toggle-row input[type='checkbox']:checked::before {
+      background: HighlightText;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .settings-combo-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    min-inline-size: 11rem;
+    min-block-size: 2rem;
+    padding-inline: 0.625rem 0.375rem;
+    border: 1px solid var(--rs-color-border);
+    border-radius: var(--rs-radius-control);
+    background: var(--rs-color-button-bg);
+    color: var(--rs-color-text);
+    font: inherit;
+  }
+
+  .settings-combo-trigger svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+  }
+
+  .settings-combo-trigger:focus-visible {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.125rem;
+  }
+
+  .settings-accent-row {
+    justify-content: space-between;
+    min-inline-size: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .settings-accent-row > legend {
+    display: contents;
+  }
+
+  .accent-swatch-options {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 0.375rem;
+  }
+
+  .accent-swatch-option {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+  }
+
+  .accent-swatch-circle {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    border: 1px solid var(--rs-color-swatch-border);
+    border-radius: 999rem;
+  }
+
+  .accent-swatch-radio:checked + .accent-swatch-circle,
+  [data-accent-swatch-radio]:checked + .accent-swatch-circle {
+    outline: 0.125rem solid var(--rs-color-accent-bg);
+    outline-offset: 0.125rem;
+  }
+
+  .accent-swatch-radio:focus-visible + .accent-swatch-circle,
+  [data-accent-swatch-radio]:focus-visible + .accent-swatch-circle {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.3125rem;
+  }
+
+  .accent-swatch-circle[data-accent='blue'] {
+    background: var(--rs-accent-swatch-blue);
+  }
+
+  .accent-swatch-circle[data-accent='teal'] {
+    background: var(--rs-accent-swatch-teal);
+  }
+
+  .accent-swatch-circle[data-accent='green'] {
+    background: var(--rs-accent-swatch-green);
+  }
+
+  .accent-swatch-circle[data-accent='yellow'] {
+    background: var(--rs-accent-swatch-yellow);
+  }
+
+  .accent-swatch-circle[data-accent='orange'] {
+    background: var(--rs-accent-swatch-orange);
+  }
+
+  .accent-swatch-circle[data-accent='red'] {
+    background: var(--rs-accent-swatch-red);
+  }
+
+  .accent-swatch-circle[data-accent='pink'] {
+    background: var(--rs-accent-swatch-pink);
+  }
+
+  .accent-swatch-circle[data-accent='purple'] {
+    background: var(--rs-accent-swatch-purple);
+  }
+
+  .accent-swatch-circle[data-accent='slate'] {
+    background: var(--rs-accent-swatch-slate);
+  }
+
+  .icon-color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin: 0.75rem 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .icon-color-options legend {
+    padding: 0;
+    color: var(--rs-color-dim);
+    font-size: var(--rs-font-size-small);
+  }
+
+  .icon-color-circle {
+    display: inline-grid;
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px var(--rs-color-swatch-border);
+  }
+
+  .icon-color-circle[data-icon-color='auto'] {
+    background: linear-gradient(135deg, var(--rs-color-identity-0) 0 50%, var(--rs-color-identity-4) 50% 100%);
+  }
+
+  .icon-color-circle[data-icon-color='0'] {
+    background: var(--rs-color-identity-0);
+  }
+
+  .icon-color-circle[data-icon-color='1'] {
+    background: var(--rs-color-identity-1);
+  }
+
+  .icon-color-circle[data-icon-color='2'] {
+    background: var(--rs-color-identity-2);
+  }
+
+  .icon-color-circle[data-icon-color='3'] {
+    background: var(--rs-color-identity-3);
+  }
+
+  .icon-color-circle[data-icon-color='4'] {
+    background: var(--rs-color-identity-4);
+  }
+
+  .icon-color-circle[data-icon-color='5'] {
+    background: var(--rs-color-identity-5);
+  }
+
+  .icon-color-circle[data-icon-color='6'] {
+    background: var(--rs-color-identity-6);
+  }
+
+  .icon-color-circle[data-icon-color='7'] {
+    background: var(--rs-color-identity-7);
+  }
+
+  .icon-color-circle[data-icon-color='8'] {
+    background: var(--rs-color-identity-8);
+  }
+
+  .icon-color-option input:checked + .icon-color-circle {
+    box-shadow:
+      0 0 0 2px var(--rs-color-dialog-bg),
+      0 0 0 4px var(--rs-color-accent-bg);
+  }
+
+  .icon-color-option input:focus-visible + .icon-color-circle {
+    outline: 0.125rem solid var(--rs-color-focus-ring);
+    outline-offset: 0.1875rem;
+  }
+}
+
+@media (forced-colors: active) {
+  @layer overrides {
+    .settings-combo-trigger,
+    .settings-listbox,
+    .accent-swatch-circle {
+      border-color: ButtonText;
+    }
+
+    .icon-color-circle {
+      border: 1px solid ButtonText;
+    }
+  }
+}

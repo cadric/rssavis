@@ -1,0 +1,102 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
+@layer components {
+  .article-row:not(.is-expanded):hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  /* A collapsed row is one activatable unit, like an activatable GTK list
+     row: this overlay stretches the main button's hit surface over the whole
+     row so the row-wide hover fill never promises more than a click
+     delivers. Interactive siblings (the star) sit above the overlay. */
+  .article-row:not(.is-expanded) .article-row-main::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    border-radius: 0.625rem;
+    content: '';
+  }
+
+  .article-row:not(.is-expanded) .article-row-main:focus-visible {
+    outline: 0;
+  }
+
+  .article-row:not(.is-expanded) .article-row-main:focus-visible::before {
+    outline: 0.1875rem solid var(--rs-color-focus-ring);
+    outline-offset: -0.1875rem;
+  }
+
+  /* The expanded header strip must end exactly where the preview begins:
+     row padding + the header track (the main button's own block-size) + the
+     row gap + the preview's block-start margin. */
+  .article-row.is-expanded .article-row-main::before,
+  .article-row.is-expanded .article-row-main::after {
+    position: absolute;
+    z-index: 1;
+    inset-block-start: 0;
+    inset-inline: 0;
+    block-size: calc(
+      var(--rs-article-padding-block) + var(--rs-article-header-block-size) + 0.125rem + var(--rs-article-preview-gap)
+    );
+    border-start-start-radius: var(--rs-radius-card);
+    border-start-end-radius: var(--rs-radius-card);
+    content: '';
+  }
+
+  /* The expanded header is the selected row of the list: it carries the
+     same neutral selected surface as the active sidebar scope instead of a
+     separator hairline (GTK row:selected). */
+  .article-row.is-expanded .article-row-main::before {
+    background: var(--rs-color-navigation-selected-bg);
+  }
+
+  .article-row.is-expanded .article-row-main:is(:hover, :focus-visible)::before {
+    background: var(--rs-color-navigation-selected-hover-bg);
+  }
+
+  .article-row.is-expanded .article-row-main:active::before {
+    background: var(--rs-color-navigation-selected-active-bg);
+  }
+
+  .article-row.is-expanded .article-row-main:focus-visible {
+    outline: 0;
+  }
+
+  .article-row.is-expanded .article-row-main:focus-visible::after {
+    z-index: 3;
+    outline: 0.1875rem solid var(--rs-color-focus-ring);
+    outline-offset: -0.1875rem;
+    pointer-events: none;
+  }
+
+  .article-row.is-expanded > :is(.article-unread-dot, .feed-icon, time),
+  .article-row.is-expanded .article-row-main > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .article-row.is-expanded > :is(.article-unread-dot, .feed-icon, time) {
+    pointer-events: none;
+  }
+
+  /* position/z-index keep the star clickable above the collapsed row's
+     full-row hit overlay; the star is hidden while the row is expanded. */
+  .article-row-star {
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+  }
+
+  .article-row-star:hover {
+    background: var(--rs-color-hover-bg);
+  }
+
+  .article-row-star:active {
+    background: var(--rs-color-active-bg);
+  }
+
+  .article-row-star[aria-pressed='false'] .article-star-pressed,
+  .article-row-star[aria-pressed='true'] .article-star-unpressed {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/app-16.png",
+    "32": "icons/app-32.png",
+    "48": "icons/app-48.png",
+    "64": "icons/app-64.png",
+    "96": "icons/app-96.png",
+    "128": "icons/app-128.png"
+  },
+  "action": {
+    "default_title": "__MSG_openReader__",
+    "default_icon": {
+      "16": "icons/app-16.png",
+      "32": "icons/app-32.png",
+      "64": "icons/app-64.png"
+    }
+  },
+  "background": {
+    "scripts": ["background/background.js"],
+    "type": "module"
+  },
+  "permissions": ["storage", "alarms", "unlimitedStorage"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "incognito": "not_allowed",
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src http: https:; img-src 'self' data: http: https:; object-src 'none'; base-uri 'none'; frame-src 'none'; frame-ancestors 'none'; form-action 'none'"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rssavis@pm.me",
+      "strict_min_version": "150.0",
+      "data_collection_permissions": {
+        "required": ["browsingActivity"]
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "upstreamName": "libadwaita",
+  "upstreamTag": "1.9.2",
+  "upstreamCommit": "282526c2c51d4b884cfdb69f3981311818195fce",
+  "upstreamUrl": "https://gitlab.gnome.org/GNOME/libadwaita/-/tree/282526c2c51d4b884cfdb69f3981311818195fce",
+  "gtkTag": "4.21.1",
+  "gtkCommit": "794e62d255957930160b0a0c6f1031824160b951",
+  "retrievedDate": "2026-07-17",
+  "sourcePaths": [
+    "src/stylesheet/_colors.scss",
+    "src/stylesheet/_common.scss",
+    "src/stylesheet/widgets/_buttons.scss",
+    "src/stylesheet/widgets/_menus.scss",
+    "src/stylesheet/widgets/_misc.scss",
+    "src/stylesheet/widgets/_toolbars.scss",
+    "src/adw-toast-widget.ui",
+    "src/adw-banner.c",
+    "src/adw-banner.ui",
+    "gtk/gtkmodelbutton.c",
+    "gtk/gtkpopovermenu.c"
+  ],
+  "sourceValues": {
+    "light": {
+      "windowBg": "#fafafb",
+      "windowFg": "RGB(0 0 6 / 80%)",
+      "viewBg": "#ffffff",
+      "viewFg": "RGB(0 0 6 / 80%)",
+      "headerbarBg": "#ffffff",
+      "headerbarFg": "RGB(0 0 6 / 80%)",
+      "headerbarBorder": "RGB(0 0 6 / 80%)",
+      "sidebarBg": "#ebebed",
+      "sidebarFg": "RGB(0 0 6 / 80%)",
+      "sidebarBorder": "RGB(0 0 6 / 7%)",
+      "cardBg": "#ffffff",
+      "cardFg": "RGB(0 0 6 / 80%)",
+      "cardShade": "RGB(0 0 6 / 7%)",
+      "dialogBg": "#fafafb",
+      "dialogFg": "RGB(0 0 6 / 80%)",
+      "popoverBg": "#ffffff",
+      "popoverFg": "RGB(0 0 6 / 80%)",
+      "popoverShade": "RGB(0 0 6 / 7%)",
+      "activeToggleBg": "#ffffff",
+      "activeToggleFg": "rgb(0 0 6 / 80%)",
+      "shade": "RGB(0 0 6 / 7%)",
+      "scrollbarOutline": "white"
+    },
+    "dark": {
+      "windowBg": "#222226",
+      "windowFg": "white",
+      "viewBg": "#1d1d20",
+      "viewFg": "white",
+      "headerbarBg": "#2e2e32",
+      "headerbarFg": "white",
+      "headerbarBorder": "white",
+      "sidebarBg": "#2e2e32",
+      "sidebarFg": "white",
+      "sidebarBorder": "RGB(0 0 6 / 36%)",
+      "cardBg": "RGB(255 255 255 / 8%)",
+      "cardFg": "white",
+      "cardShade": "RGB(0 0 6 / 36%)",
+      "dialogBg": "#36363a",
+      "dialogFg": "white",
+      "popoverBg": "#36363a",
+      "popoverFg": "white",
+      "popoverShade": "RGB(0 0 6 / 25%)",
+      "activeToggleBg": "rgb(255 255 255 / 20%)",
+      "activeToggleFg": "#ffffff",
+      "shade": "RGB(0 0 6 / 25%)",
+      "scrollbarOutline": "RGB(0 0 12 / 95%)"
+    },
+    "accents": {
+      "blue": "#3584e4",
+      "teal": "#2190a4",
+      "green": "#3a944a",
+      "yellow": "#c88800",
+      "orange": "#ed5b00",
+      "red": "#e62d42",
+      "pink": "#d56199",
+      "purple": "#9141ac",
+      "slate": "#6f8396"
+    },
+    "destructive": {
+      "lightBg": "#e01b24",
+      "darkBg": "#c01c28",
+      "fg": "white"
+    }
+  },
+  "stateOpacity": {
+    "dimHighContrast": 0.9,
+    "dimRegular": 0.55,
+    "disabledHighContrast": 0.4,
+    "disabledRegular": 0.5
+  },
+  "componentValues": {
+    "selectedAlpha": [0.1, 0.13, 0.19],
+    "raisedButtonAlpha": [0.1, 0.15, 0.3],
+    "flatButtonAlpha": [0, 0.07, 0.16],
+    "menuPx": {
+      "rowHeight": 32,
+      "inlinePadding": 12,
+      "rowRadius": 9,
+      "outerPadding": 6,
+      "popoverRadius": 15
+    },
+    "toast": {
+      "background": "#505053",
+      "foreground": "#ffffff",
+      "radiusPx": 150,
+      "outerSpacingPx": 6,
+      "blockPaddingPx": 6,
+      "inlineStartPaddingPx": 12,
+      "shadow": "0 1px 3px 1px RGB(0 0 6 / 7%), 0 2px 6px 2px RGB(0 0 6 / 3%)"
+    },
+    "banner": {
+      "background": "#7d7d83",
+      "mixAlpha": 0.3,
+      "backdropAlpha": 0.15,
+      "horizontalSpacingPx": 6,
+      "centeredSpacingPx": 36,
+      "verticalSpacingPx": 9,
+      "paddingPx": 6,
+      "actionMinimumPx": [84, 160]
+    }
+  }
+}

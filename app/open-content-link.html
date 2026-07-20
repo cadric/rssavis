@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system" data-effective-scheme="light" data-accent-color="blue">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSSavis</title>
+    <script src="./theme-bootstrap.js"></script>
+    <link rel="stylesheet" href="../styles/themes/tokens.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-light.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-dark.css" />
+    <link rel="stylesheet" href="../styles/themes/accents.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/article-list.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/accessibility.css" />
+    <script src="./open-content-link.js" type="module"></script>
+  </head>
+  <body>
+    <main
+      class="static-view open-content-link-view"
+      data-open-content-link-root
+      aria-labelledby="open-content-link-heading"
+    >
+      <h1 id="open-content-link-heading" tabindex="-1" data-i18n="openContentLinkHeading">Opening link</h1>
+      <p data-open-content-link-status data-i18n="openContentLinkStatus">Opening the linked page.</p>
+      <section data-open-content-link-recovery hidden aria-labelledby="open-content-link-recovery-heading">
+        <h2 id="open-content-link-recovery-heading" data-i18n="openContentLinkRecoveryHeading">Could not open link</h2>
+        <p data-open-content-link-error></p>
+        <div class="database-recovery-actions">
+          <button
+            type="button"
+            class="text-button suggested"
+            data-open-content-link-reader
+            data-i18n="openContentLinkReader"
+          >
+            Return to RSSavis
+          </button>
+          <button type="button" class="text-button" data-open-content-link-close data-i18n="databaseRecoveryClose">
+            Close
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

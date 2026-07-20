@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system" data-effective-scheme="light" data-accent-color="blue">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSSavis</title>
+    <link id="rssavis-favicon" rel="icon" type="image/png" sizes="16x16" href="../icons/app-16.png" />
+    <script src="./theme-bootstrap.js"></script>
+    <link rel="stylesheet" href="../styles/themes/tokens.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-light.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-dark.css" />
+    <link rel="stylesheet" href="../styles/themes/accents.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/headerbar.css" />
+    <link rel="stylesheet" href="../styles/searchbar.css" />
+    <link rel="stylesheet" href="../styles/feedback.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/menus.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
+    <link rel="stylesheet" href="../styles/pickers.css" />
+    <link rel="stylesheet" href="../styles/management.css" />
+    <link rel="stylesheet" href="../styles/dialogs.css" />
+    <link rel="stylesheet" href="../styles/article-list.css" />
+    <link rel="stylesheet" href="../styles/article-interactions.css" />
+    <link rel="stylesheet" href="../styles/article-list-responsive.css" />
+    <link rel="stylesheet" href="../styles/article-preview.css" />
+    <link rel="stylesheet" href="../styles/accessibility.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/utilities.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <div class="app-shell" data-app-shell>
+      <!-- prettier-ignore -->
+      <aside class="sidebar sidebar-reader" data-sidebar-region data-mode="reader" data-reader-sidebar data-open="true" aria-labelledby="reader-sidebar-title">
+        <div class="sidebar-content" data-sidebar-content data-mode="reader">
+        <div class="sidebar-header">
+          <div class="sidebar-header-start">
+            <button type="button" class="icon-button" data-icon-button data-search-open data-i18n-title="searchArticlesLabel">
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="m 6.5 0 c -3.578125 0 -6.5 2.921875 -6.5 6.5 s 2.921875 6.5 6.5 6.5 c 1.429688 0 2.753906 -0.46875 3.828125 -1.257812 l 2.945313 2.945312 c 0.957031 0.9375 2.363281 -0.5 1.40625 -1.4375 l -2.929688 -2.929688 c 0.785156 -1.074218 1.25 -2.394531 1.25 -3.820312 c 0 -3.578125 -2.921875 -6.5 -6.5 -6.5 z m 0 2 c 2.496094 0 4.5 2.003906 4.5 4.5 s -2.003906 4.5 -4.5 4.5 s -4.5 -2.003906 -4.5 -4.5 s 2.003906 -4.5 4.5 -4.5 z" />
+              </svg>
+              <span class="visually-hidden" data-i18n="searchArticlesLabel">Search articles</span>
+            </button>
+            <h2 id="reader-sidebar-title" tabindex="-1" data-i18n="extensionName">RSSavis</h2>
+          </div>
+          <div class="sidebar-header-end">
+            <button
+              type="button"
+              class="icon-button sidebar-close"
+              data-icon-button
+              data-sidebar-toggle
+              data-i18n-title="closeSidebar"
+            >
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="m 4 4 h 1 h 0.03125 c 0.253906 0.011719 0.511719 0.128906 0.6875 0.3125 l 2.28125 2.28125 l 2.3125 -2.28125 c 0.265625 -0.230469 0.445312 -0.304688 0.6875 -0.3125 h 1 v 1 c 0 0.285156 -0.035156 0.550781 -0.25 0.75 l -2.28125 2.28125 l 2.25 2.25 c 0.1875 0.1875 0.28125 0.453125 0.28125 0.71875 v 1 h -1 c -0.265625 0 -0.53125 -0.09375 -0.71875 -0.28125 l -2.28125 -2.28125 l -2.28125 2.28125 c -0.1875 0.1875 -0.453125 0.28125 -0.71875 0.28125 h -1 v -1 c 0 -0.265625 0.09375 -0.53125 0.28125 -0.71875 l 2.28125 -2.25 l -2.28125 -2.28125 c -0.210938 -0.195312 -0.304688 -0.46875 -0.28125 -0.75 z"
+                />
+              </svg>
+              <span class="visually-hidden" data-i18n="closeSidebar">Close sidebar</span>
+            </button>
+            <button type="button" class="icon-button" data-icon-button data-refresh-all data-i18n-title="refreshAllFeeds">
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="m 7.40625 1 c -0.613281 0.007812 -1.234375 0.089844 -1.847656 0.253906 c -3.273438 0.878906 -5.558594 3.855469 -5.558594 7.246094 s 2.285156 6.367188 5.558594 7.242188 c 3.273437 0.878906 6.742187 -0.558594 8.4375 -3.492188 c 0.277344 -0.480469 0.109375 -1.089844 -0.367188 -1.367188 c -0.476562 -0.273437 -1.089844 -0.109374 -1.367187 0.367188 c -1.246094 2.160156 -3.777344 3.207031 -6.1875 2.5625 c -2.40625 -0.644531 -4.074219 -2.820312 -4.074219 -5.3125 c 0 -2.496094 1.667969 -4.667969 4.074219 -5.3125 c 2.410156 -0.644531 4.941406 0.402344 6.1875 2.5625 c 0.058593 0.085938 0.125 0.164062 0.203125 0.226562 l -0.019532 0.015626 l -0.007812 0.007812 h -1.4375 c -0.550781 0 -1 0.449219 -1 1 c 0 0 0 1 1 1 h 5 v -5 s 0.003906 -1 -1 -1 c -0.550781 0 -1 0.449219 -1 1 v 1.6875 l -0.015625 0.011719 l -0.011719 0.011719 c -1.277344 -2.179688 -3.53125 -3.519532 -5.953125 -3.691407 c -0.203125 -0.015625 -0.40625 -0.019531 -0.613281 -0.019531 z" />
+              </svg>
+              <span class="visually-hidden" data-i18n="refreshAllFeeds">Refresh all feeds</span>
+            </button>
+            <button type="button" class="icon-button" data-icon-button data-add-feed-open data-i18n-title="addFeedSubmit">
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M7 1v6H1v2h6v6h2V9h6V7H9V1z" />
+              </svg>
+              <span class="visually-hidden" data-i18n="addFeedSubmit">Add feed</span>
+            </button>
+            <button
+              type="button"
+              class="icon-button"
+              data-icon-button
+              data-primary-menu-button
+              data-menu-placement="sidebar"
+              data-i18n-title="primaryMenuTitle"
+            >
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M1 2h14v2H1zM1 7h14v2H1zM1 12h14v2H1z" />
+              </svg>
+              <span class="visually-hidden" data-i18n="primaryMenuTitle">Primary menu</span>
+            </button>
+          </div>
+        </div>
+        <nav class="sidebar-nav" aria-labelledby="reader-nav-title">
+          <h3 id="reader-nav-title" data-i18n="readerNavTitle">Library</h3>
+          <ul data-system-scope-list></ul>
+        </nav>
+        <nav class="sidebar-nav" aria-labelledby="feed-nav-title">
+          <h3 id="feed-nav-title" data-i18n="feedNavTitle">Feeds</h3>
+          <ul data-category-scope-list></ul>
+        </nav>
+        </div>
+        <!-- prettier-ignore -->
+        <div class="sidebar-resizer-region"><div class="sidebar-resizer" role="separator" aria-orientation="vertical" tabindex="0" data-sidebar-resizer aria-valuemin="200" aria-valuemax="1200" aria-valuenow="278" data-i18n-aria-label="sidebarResize" data-i18n-title="sidebarResize" title="Resize sidebar"></div></div>
+      </aside>
+      <!-- prettier-ignore -->
+      <dialog class="sidebar-drawer sidebar-reader" data-sidebar-drawer data-reader-sidebar aria-labelledby="reader-sidebar-title" hidden></dialog>
+      <!-- prettier-ignore -->
+      <aside class="sidebar sidebar-settings" data-sidebar-region data-mode="settings" data-settings-sidebar data-open="true" aria-labelledby="settings-sidebar-title" hidden>
+        <div class="sidebar-content" data-sidebar-content data-mode="settings">
+        <div class="sidebar-header">
+          <h2 id="settings-sidebar-title" tabindex="-1" data-i18n="settingsTitle">Preferences</h2>
+          <div class="sidebar-header-end">
+            <!-- prettier-ignore -->
+            <button type="button" class="icon-button" data-icon-button data-primary-menu-button data-menu-placement="sidebar" data-i18n-title="primaryMenuTitle"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2h14v2H1zM1 7h14v2H1zM1 12h14v2H1z" /></svg><span class="visually-hidden" data-i18n="primaryMenuTitle">Primary menu</span></button>
+            <button
+              type="button"
+              class="icon-button sidebar-close"
+              data-icon-button
+              data-sidebar-toggle
+              data-i18n-title="closeSidebar"
+            >
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="m 4 4 h 1 h 0.03125 c 0.253906 0.011719 0.511719 0.128906 0.6875 0.3125 l 2.28125 2.28125 l 2.3125 -2.28125 c 0.265625 -0.230469 0.445312 -0.304688 0.6875 -0.3125 h 1 v 1 c 0 0.285156 -0.035156 0.550781 -0.25 0.75 l -2.28125 2.28125 l 2.25 2.25 c 0.1875 0.1875 0.28125 0.453125 0.28125 0.71875 v 1 h -1 c -0.265625 0 -0.53125 -0.09375 -0.71875 -0.28125 l -2.28125 -2.28125 l -2.28125 2.28125 c -0.1875 0.1875 -0.453125 0.28125 -0.71875 0.28125 h -1 v -1 c 0 -0.265625 0.09375 -0.53125 0.28125 -0.71875 l 2.28125 -2.25 l -2.28125 -2.28125 c -0.210938 -0.195312 -0.304688 -0.46875 -0.28125 -0.75 z"
+                />
+              </svg>
+              <span class="visually-hidden" data-i18n="closeSidebar">Close sidebar</span>
+            </button>
+          </div>
+        </div>
+	        <nav class="sidebar-nav" aria-labelledby="settings-nav-title">
+	          <h3 id="settings-nav-title" data-i18n="settingsNavTitle">Sections</h3>
+	          <!-- prettier-ignore -->
+	          <ul><li><button type="button" class="nav-row" data-settings-section-link="general"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 3.5h6.5v1.4H1.5zM11 3.5h3.5v1.4H11z"/><circle cx="9.5" cy="4.2" r="1.9"/><path d="M1.5 11h3v1.4h-3zM7.5 11h7v1.4h-7z"/><circle cx="6" cy="11.7" r="1.9"/><path d="M1.5 7.3h1.8v1.4H1.5zM6.3 7.3h8.2v1.4H6.3z"/><circle cx="4.8" cy="8" r="1.9"/></svg></span><span data-i18n="settingsGeneral">General</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="appearance"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 2a6 6 0 0 0 0 12z"/><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span><span data-i18n="settingsAppearance">Appearance</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="reading"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 4C6.4 2.9 4 2.9 2.5 3.4v8.4c1.5-.5 3.9-.5 5.5.6 1.6-1.1 4-1.1 5.5-.6V3.4C12 2.9 9.6 2.9 8 4zM8 4v8"/></svg></span><span data-i18n="settingsReading">Reading</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="feeds"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.2 11.1a1.85 1.85 0 1 0 0 3.7 1.85 1.85 0 0 0 0-3.7zM2 6.2v2.45A5.15 5.15 0 0 1 7.15 13.8h2.45A7.6 7.6 0 0 0 2 6.2zM2 2v2.4A9.4 9.4 0 0 1 11.4 13.8h2.4A11.8 11.8 0 0 0 2 2z"/></svg></span><span data-i18n="settingsFeeds">Feeds</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="categories"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 4a1 1 0 0 1 1-1h3.2l1.3 1.5H13a1 1 0 0 1 1 1V12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg></span><span data-i18n="settingsCategories">Categories</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="storage"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><ellipse cx="8" cy="4" rx="5" ry="1.9"/><path d="M3 4v8c0 1.05 2.24 1.9 5 1.9s5-.85 5-1.9V4M3 8c0 1.05 2.24 1.9 5 1.9s5-.85 5-1.9"/></svg></span><span data-i18n="settingsStorage">Storage & Cleanup</span></button></li><li><button type="button" class="nav-row" data-settings-section-link="import"><span class="sidebar-symbolic-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.5v7M5.3 5.8 8 8.5l2.7-2.7M2.5 10.5v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2"/></svg></span><span data-i18n="settingsImport">Import & Export</span></button></li></ul>
+	        </nav>
+        </div>
+        <!-- prettier-ignore -->
+        <div class="sidebar-resizer-region"><div class="sidebar-resizer" role="separator" aria-orientation="vertical" tabindex="0" data-sidebar-resizer aria-valuemin="200" aria-valuemax="1200" aria-valuenow="278" data-i18n-aria-label="sidebarResize" data-i18n-title="sidebarResize" title="Resize sidebar"></div></div>
+      </aside>
+      <!-- prettier-ignore -->
+      <dialog class="sidebar-drawer sidebar-settings" data-sidebar-drawer data-settings-sidebar aria-labelledby="settings-sidebar-title" hidden></dialog>
+      <div class="workspace">
+        <header class="headerbar" data-adw-primitive="headerbar">
+          <div class="headerbar-start">
+            <button
+              type="button"
+              class="icon-button"
+              data-icon-button
+              data-sidebar-toggle
+              data-i18n-title="openSidebar"
+            >
+              <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M3 1h10c1.65 0 3 1.35 3 3v8c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V4c0-1.65 1.35-3 3-3zm0 2c-.57 0-1 .43-1 1v8c0 .57.43 1 1 1h3V3zm5 0v10h5c.57 0 1-.43 1-1V4c0-.57-.43-1-1-1z"
+                />
+              </svg>
+              <span class="visually-hidden" data-i18n="openSidebar">Open sidebar</span>
+            </button>
+            <!-- prettier-ignore -->
+            <button type="button" class="icon-button headerbar-back" data-icon-button data-route-link="reader" data-i18n-title="backToReader" hidden><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z" /></svg><span class="visually-hidden" data-i18n="backToReader">Back to feeds</span></button>
+            <div class="headerbar-title">
+              <h1 id="reader-main-title" data-headerbar-title data-i18n="readerTitle">Unread</h1>
+              <p data-headerbar-subtitle data-i18n="readerSubtitle">No articles loaded</p>
+            </div>
+          </div>
+          <div class="headerbar-end">
+            <!-- prettier-ignore -->
+            <button type="button" class="icon-button" data-icon-button data-view-options-button data-headerbar-reader-controls data-menu-placement="headerbar" data-i18n-title="viewOptionsTitle"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="3" r="1.5" /><circle cx="8" cy="8" r="1.5" /><circle cx="8" cy="13" r="1.5" /></svg><span class="visually-hidden" data-i18n="viewOptionsTitle">View options</span></button>
+            <!-- prettier-ignore -->
+            <button type="button" class="icon-button" data-icon-button data-primary-menu-button data-menu-placement="headerbar" data-i18n-title="primaryMenuTitle" hidden><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2h14v2H1zM1 7h14v2H1zM1 12h14v2H1z" /></svg><span class="visually-hidden" data-i18n="primaryMenuTitle">Primary menu</span></button>
+          </div>
+        </header>
+        <div class="headerbar-search-slot" data-headerbar-slot="search" hidden></div>
+        <!-- prettier-ignore -->
+        <div class="banner-stack" data-banner-stack><section class="adw-banner permission-banner" data-adw-primitive="banner" data-permission-banner role="group" aria-labelledby="permission-banner-title" hidden><p class="adw-banner-title permission-banner-text" id="permission-banner-title" data-permission-banner-text></p><button type="button" class="text-button suggested adw-banner-button permission-banner-button" data-permission-banner-action data-feed-action="grant-permission">Grant Access</button></section><section class="adw-banner new-articles-banner" data-adw-primitive="banner" data-new-articles-banner role="group" aria-labelledby="new-articles-title" hidden><p class="adw-banner-title" id="new-articles-title" data-new-articles-title></p><button type="button" class="text-button adw-banner-button" data-new-articles-action>Show</button></section></div>
+        <main
+          class="view reader-view"
+          id="reader-main"
+          data-reader-main
+          tabindex="-1"
+          aria-labelledby="reader-main-title"
+        >
+          <span data-active-scope hidden></span>
+          <div data-reader-status-root></div>
+          <div class="article-list-root" data-reader-list-root></div>
+        </main>
+        <main
+          class="view settings-view"
+          id="settings-main"
+          data-settings-main
+          tabindex="-1"
+          aria-labelledby="settings-main-title"
+          hidden
+        >
+          <section class="settings-section" data-settings-appearance-section aria-labelledby="settings-main-title">
+            <h2 id="settings-main-title" data-i18n="settingsAppearance">Appearance</h2>
+            <fieldset class="settings-group">
+              <legend data-i18n="colorSchemeLegend">Color scheme</legend>
+              <label
+                ><input type="radio" name="settings-color-scheme" value="system" data-color-scheme-input />
+                <span data-i18n="themeSystem">System</span></label
+              >
+              <label
+                ><input type="radio" name="settings-color-scheme" value="light" data-color-scheme-input />
+                <span data-i18n="themeLight">Light</span></label
+              >
+              <label
+                ><input type="radio" name="settings-color-scheme" value="dark" data-color-scheme-input />
+                <span data-i18n="themeDark">Dark</span></label
+              >
+            </fieldset>
+            <p class="settings-note" data-i18n="themeFamilyReadonly">Theme family: Adwaita</p>
+          </section>
+          <div class="settings-section" data-settings-management-section hidden></div>
+        </main>
+        <main
+          class="view static-view"
+          id="static-main"
+          data-static-main
+          tabindex="-1"
+          aria-labelledby="static-main-title"
+          hidden
+        ></main>
+      </div>
+    </div>
+    <div class="primary-menu" data-primary-menu data-adw-primitive="primary-menu" popover hidden>
+      <!-- prettier-ignore -->
+      <fieldset class="menu-section menu-section-scheme" data-color-scheme-section><legend class="visually-hidden" data-i18n="colorSchemeLegend">Color scheme</legend><label class="scheme-swatch-option" data-i18n-title="themeSystem"><input class="visually-hidden" type="radio" name="primary-menu-color-scheme" value="system" data-color-scheme-input data-color-scheme-radio data-i18n-title="themeSystem" /><span class="scheme-swatch-circle" data-swatch="system" aria-hidden="true"><span class="scheme-swatch-check" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg></span></span><span class="visually-hidden" data-i18n="themeSystem">System</span></label><label class="scheme-swatch-option" data-i18n-title="themeLight"><input class="visually-hidden" type="radio" name="primary-menu-color-scheme" value="light" data-color-scheme-input data-color-scheme-radio data-i18n-title="themeLight" /><span class="scheme-swatch-circle" data-swatch="light" aria-hidden="true"><span class="scheme-swatch-check" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg></span></span><span class="visually-hidden" data-i18n="themeLight">Light</span></label><label class="scheme-swatch-option" data-i18n-title="themeDark"><input class="visually-hidden" type="radio" name="primary-menu-color-scheme" value="dark" data-color-scheme-input data-color-scheme-radio data-i18n-title="themeDark" /><span class="scheme-swatch-circle" data-swatch="dark" aria-hidden="true"><span class="scheme-swatch-check" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg></span></span><span class="visually-hidden" data-i18n="themeDark">Dark</span></label></fieldset>
+      <hr class="menu-separator" />
+      <!-- prettier-ignore -->
+      <div class="menu-section"><button type="button" class="menu-row" data-menu-action="search"><span data-i18n="searchArticlesLabel">Search articles</span><kbd data-menu-shortcut data-shortcut-key="search" aria-hidden="true">Ctrl+F</kbd></button></div>
+      <hr class="menu-separator" />
+      <!-- prettier-ignore -->
+      <div class="menu-section"><button type="button" class="menu-row" data-menu-action="settings"><span data-i18n="settingsTitle">Preferences</span><kbd data-menu-shortcut data-shortcut-key="settings" aria-hidden="true">Ctrl+,</kbd></button><button type="button" class="menu-row" data-menu-action="shortcuts"><span data-i18n="shortcutsOpen">Keyboard shortcuts</span><kbd data-menu-shortcut data-shortcut-key="shortcuts" aria-hidden="true">?</kbd></button><button type="button" class="menu-row" data-menu-action="help"><span data-i18n="helpOpen">Help</span><kbd data-menu-shortcut data-shortcut-key="help" aria-hidden="true">F1</kbd></button><button type="button" class="menu-row" data-menu-action="about" data-i18n="aboutOpen">About RSSavis</button></div>
+    </div>
+    <!-- prettier-ignore -->
+    <div class="view-options-menu" data-view-options-menu data-adw-primitive="view-options-menu" role="menu" popover hidden><div class="menu-section" role="group" data-article-filter-menu data-i18n-aria-label="articleFilterLabel"><button type="button" class="menu-radio" role="menuitemradio" tabindex="0" data-article-filter="all" aria-checked="true"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="articleFilterAll">All</span></button><button type="button" class="menu-radio" role="menuitemradio" tabindex="-1" data-article-filter="unread" aria-checked="false"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="articleFilterUnread">Unread</span></button><button type="button" class="menu-radio" role="menuitemradio" tabindex="-1" data-article-filter="read" aria-checked="false"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="articleFilterRead">Read</span></button></div><hr class="menu-separator" data-article-filter-menu-separator /><div class="menu-section" role="group" data-article-view-menu data-i18n-aria-label="articleViewLabel"><button type="button" class="menu-radio" role="menuitemradio" tabindex="-1" data-article-view="compact" aria-checked="false"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="viewCompact">Compact</span></button><button type="button" class="menu-radio" role="menuitemradio" tabindex="-1" data-article-view="normal" aria-checked="false"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="viewNormal">Normal</span></button><button type="button" class="menu-radio" role="menuitemradio" tabindex="-1" data-article-view="large" aria-checked="false"><svg class="menu-radio-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="viewLarge">Large</span></button></div></div>
+    <!-- prettier-ignore -->
+    <div class="feed-options-menu" data-feed-options-menu data-adw-primitive="feed-menu" popover hidden><button type="button" class="feed-menu-item" data-feed-action="edit" data-i18n="feedEdit">Edit</button><button type="button" class="feed-menu-item" data-feed-action="refresh" data-i18n="feedRefresh">Refresh</button><button type="button" class="feed-menu-item" data-feed-action="mark-read" data-i18n="feedMarkRead">Mark as Read</button><button type="button" class="feed-menu-item" data-feed-action="move-category" data-i18n="feedMoveCategory">Move to category</button><button type="button" class="feed-menu-item feed-menu-toggle" data-feed-action="toggle-main-stream" aria-pressed="false"><svg class="feed-menu-check" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.5 12.1 2.4 8l1.1-1.1 3 3 6-6L13.6 5z" /></svg><span data-i18n="feedMainStream">Main stream</span></button><button type="button" class="feed-menu-item destructive" data-feed-action="delete" data-i18n="feedDelete">Delete feed</button></div>
+    <!-- prettier-ignore -->
+    <dialog class="management-dialog adw-alert-dialog" data-adw-alert-dialog data-adw-primitive="alert-dialog" aria-labelledby="adw-alert-heading" hidden><section><h2 id="adw-alert-heading" data-adw-alert-heading data-i18n="dialogConfirmation">Confirmation</h2><p data-adw-alert-body hidden></p><p data-adw-alert-typed hidden><label data-adw-alert-typed-label for="adw-alert-typed-input"></label><input id="adw-alert-typed-input" data-adw-alert-typed-input type="text" autocomplete="off" /></p><div class="dialog-actions alert-dialog-responses"><button type="button" class="text-button" data-adw-alert-cancel data-dialog-action="cancel" data-dialog-initial-focus="safe-cancel"></button><button type="button" class="text-button" data-adw-alert-affirmative data-dialog-action="affirmative"></button></div></section></dialog>
+    <!-- prettier-ignore -->
+    <dialog class="management-dialog secondary-dialog" data-about-dialog data-adw-primitive="about-dialog" aria-labelledby="about-dialog-heading" hidden><section><header class="dialog-header"><span></span><button type="button" class="dialog-close-icon" data-about-close data-dialog-action="close" data-i18n-title="dialogClose" title="Close"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"><path d="m 4 4 h 1 h 0.03125 c 0.253906 0.011719 0.511719 0.128906 0.6875 0.3125 l 2.28125 2.28125 l 2.3125 -2.28125 c 0.265625 -0.230469 0.445312 -0.304688 0.6875 -0.3125 h 1 v 1 c 0 0.285156 -0.035156 0.550781 -0.25 0.75 l -2.28125 2.28125 l 2.25 2.25 c 0.1875 0.1875 0.28125 0.453125 0.28125 0.71875 v 1 h -1 c -0.265625 0 -0.53125 -0.09375 -0.71875 -0.28125 l -2.28125 -2.28125 l -2.28125 2.28125 c -0.1875 0.1875 -0.453125 0.28125 -0.71875 0.28125 h -1 v -1 c 0 -0.265625 0.09375 -0.53125 0.28125 -0.71875 l 2.28125 -2.25 l -2.28125 -2.28125 c -0.210938 -0.195312 -0.304688 -0.46875 -0.28125 -0.75 z" /></svg><span class="visually-hidden" data-i18n="dialogClose">Close</span></button></header><div data-about-dialog-content></div></section></dialog>
+    <!-- prettier-ignore -->
+    <dialog class="add-feed-dialog action-dialog" data-add-feed-dialog data-adw-primitive="action-dialog" aria-labelledby="add-feed-heading"><section><form data-add-feed-form novalidate aria-describedby="add-feed-help add-feed-error-summary"><div class="action-dialog-header"><button type="button" class="text-button" data-add-feed-close data-dialog-action="cancel" data-i18n="dialogCancel">Cancel</button><h2 id="add-feed-heading" data-i18n="addFeedHeading">Add feed</h2><button type="submit" class="text-button suggested" data-dialog-action="submit" data-i18n="addFeedSubmit">Add feed</button></div><div class="action-dialog-content"><p id="add-feed-help" data-i18n="addFeedHelp"></p><div id="add-feed-error-summary" data-add-feed-error-summary role="alert" hidden></div><p><label for="feed-url" data-i18n="addFeedUrlLabel"></label><input id="feed-url" name="url" type="url" autocomplete="url" autofocus data-dialog-initial-focus required aria-describedby="feed-url-error" /></p><p id="feed-url-error" data-add-feed-field-error="url"></p><p><label for="feed-title" data-i18n="addFeedTitleLabel"></label><input id="feed-title" name="title" type="text" autocomplete="off" required aria-describedby="feed-title-error" /></p><p id="feed-title-error" data-add-feed-field-error="title"></p></div></form></section></dialog>
+    <!-- prettier-ignore -->
+    <dialog class="management-dialog action-dialog" data-move-feed-dialog data-adw-primitive="action-dialog" aria-labelledby="move-feed-heading" hidden><form data-move-feed-form method="dialog"><div class="action-dialog-header"><button type="button" class="text-button" data-move-feed-close data-dialog-action="cancel" data-i18n="dialogCancel">Cancel</button><h2 id="move-feed-heading" data-i18n="feedMoveCategoryTitle">Move to category</h2><button type="submit" class="text-button suggested" data-dialog-action="submit" data-i18n="feedMoveSubmit">Move feed</button></div><div class="action-dialog-content"><p data-move-feed-current></p><p data-move-feed-confirmation></p><p><label for="move-feed-category" data-i18n="feedMoveTargetCategory">Category</label><select id="move-feed-category" name="categoryId" data-move-feed-category-select data-dialog-initial-focus></select></p><fieldset data-move-feed-category-radios hidden><legend data-i18n="feedMoveTargetCategory">Category</legend></fieldset></div></form></dialog>
+    <!-- prettier-ignore -->
+    <dialog class="management-dialog action-dialog" data-feed-edit-dialog data-adw-primitive="action-dialog" aria-labelledby="feed-edit-heading" hidden><form data-feed-edit-form novalidate aria-describedby="feed-edit-errors"><div class="action-dialog-header"><button type="button" class="text-button" data-feed-edit-close data-dialog-action="cancel" data-i18n="dialogCancel">Cancel</button><h2 id="feed-edit-heading" data-i18n="feedEditTitle">Edit feed</h2><button type="submit" class="text-button suggested" data-dialog-action="submit" data-i18n="feedEditSubmit">Save</button></div><div class="action-dialog-content"><div id="feed-edit-errors" data-management-error-summary role="alert" hidden></div><p><label for="feed-edit-title" data-i18n="feedTitleLabel">Title</label><input id="feed-edit-title" name="title" type="text" data-dialog-initial-focus aria-describedby="feed-edit-title-help feed-edit-title-error" /><span class="field-hint" id="feed-edit-title-help" data-i18n="feedCustomTitleHelp"></span><span class="field-error" id="feed-edit-title-error"></span></p><p><label for="feed-edit-url" data-i18n="feedUrlLabel">Feed URL</label><input id="feed-edit-url" name="url" type="url" required aria-describedby="feed-edit-url-error" /><span class="field-error" id="feed-edit-url-error"></span></p><p><label for="feed-edit-category" data-i18n="settingsCategories">Categories</label><select id="feed-edit-category" name="categoryId"></select></p><label class="settings-row settings-toggle-row"><span class="settings-row-copy"><span class="settings-row-title" data-i18n="feedMainStream">Main stream</span></span><input id="feed-edit-main" name="mainStreamState" type="checkbox" /></label><label class="settings-row settings-toggle-row"><span class="settings-row-copy"><span class="settings-row-title" data-i18n="feedKeepReadOnPurge">Keep read articles when purging</span></span><input id="feed-edit-keep-read" name="keepReadOnPurge" type="checkbox" /></label><p><label for="feed-edit-icon-source" data-i18n="feedIconSourceLabel">Icon</label><select id="feed-edit-icon-source" name="iconSource" data-feed-edit-icon-source><option value="auto" data-i18n="feedIconSourceAuto">Automatic</option><option value="favicon" data-i18n="feedIconSourceFavicon">Site favicon</option></select></p><fieldset class="icon-color-options" data-feed-edit-icon-color><legend data-i18n="feedIconColorLabel">Icon color</legend><label class="icon-color-option" data-i18n-title="feedIconColorAuto"><input class="visually-hidden" type="radio" name="iconColor" value="" checked data-i18n-title="feedIconColorAuto" /><span class="icon-color-circle" data-icon-color="auto" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColorAuto">Automatic</span></label><label class="icon-color-option" data-i18n-title="feedIconColor0"><input class="visually-hidden" type="radio" name="iconColor" value="0" data-i18n-title="feedIconColor0" /><span class="icon-color-circle" data-icon-color="0" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor0">Blue</span></label><label class="icon-color-option" data-i18n-title="feedIconColor1"><input class="visually-hidden" type="radio" name="iconColor" value="1" data-i18n-title="feedIconColor1" /><span class="icon-color-circle" data-icon-color="1" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor1">Teal</span></label><label class="icon-color-option" data-i18n-title="feedIconColor2"><input class="visually-hidden" type="radio" name="iconColor" value="2" data-i18n-title="feedIconColor2" /><span class="icon-color-circle" data-icon-color="2" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor2">Green</span></label><label class="icon-color-option" data-i18n-title="feedIconColor3"><input class="visually-hidden" type="radio" name="iconColor" value="3" data-i18n-title="feedIconColor3" /><span class="icon-color-circle" data-icon-color="3" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor3">Yellow</span></label><label class="icon-color-option" data-i18n-title="feedIconColor4"><input class="visually-hidden" type="radio" name="iconColor" value="4" data-i18n-title="feedIconColor4" /><span class="icon-color-circle" data-icon-color="4" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor4">Orange</span></label><label class="icon-color-option" data-i18n-title="feedIconColor5"><input class="visually-hidden" type="radio" name="iconColor" value="5" data-i18n-title="feedIconColor5" /><span class="icon-color-circle" data-icon-color="5" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor5">Red</span></label><label class="icon-color-option" data-i18n-title="feedIconColor6"><input class="visually-hidden" type="radio" name="iconColor" value="6" data-i18n-title="feedIconColor6" /><span class="icon-color-circle" data-icon-color="6" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor6">Pink</span></label><label class="icon-color-option" data-i18n-title="feedIconColor7"><input class="visually-hidden" type="radio" name="iconColor" value="7" data-i18n-title="feedIconColor7" /><span class="icon-color-circle" data-icon-color="7" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor7">Purple</span></label><label class="icon-color-option" data-i18n-title="feedIconColor8"><input class="visually-hidden" type="radio" name="iconColor" value="8" data-i18n-title="feedIconColor8" /><span class="icon-color-circle" data-icon-color="8" aria-hidden="true"></span><span class="visually-hidden" data-i18n="feedIconColor8">Slate</span></label></fieldset></div></form></dialog>
+    <!-- prettier-ignore -->
+    <dialog class="management-dialog action-dialog" data-category-name-dialog data-adw-primitive="action-dialog" aria-labelledby="category-name-heading" hidden><form novalidate aria-describedby="category-name-errors"><div class="action-dialog-header"><button type="button" class="text-button" data-category-name-close data-dialog-action="cancel" data-i18n="dialogCancel">Cancel</button><h2 id="category-name-heading" data-category-name-heading>Category</h2><button type="submit" class="text-button suggested" data-category-name-submit data-dialog-action="submit">Save</button></div><div class="action-dialog-content"><div id="category-name-errors" data-management-error-summary role="alert" hidden></div><p><label for="category-name-input" data-i18n="categoryNameLabel">Name</label><input id="category-name-input" name="title" type="text" data-dialog-initial-focus required aria-describedby="category-name-input-error" /><span class="field-error" id="category-name-input-error"></span></p></div></form></dialog>
+    <p class="visually-hidden" data-rssavis-status role="status" aria-live="polite"></p>
+    <span class="visually-hidden" data-toast-dismiss-label data-i18n="toastDismissLabel" hidden>Dismiss toast</span>
+    <div class="toast-stack" data-toast-stack data-adw-primitive="toast-stack"></div>
+    <!-- prettier-ignore -->
+    <template data-sidebar-system-icon-template="all"><span class="sidebar-symbolic-icon" data-sidebar-system-icon data-icon="all"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2h12v1.7H2zM2 7.15h12v1.7H2zM2 11.1h12v1.7H2z" /></svg></span></template>
+    <!-- prettier-ignore -->
+    <template data-sidebar-system-icon-template="unread"><span class="sidebar-symbolic-icon" data-sidebar-system-icon data-icon="unread"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.2a1.6 1.6 0 0 1 1.6-1.6h8.8A1.6 1.6 0 0 1 14 4.2v.5L8 8.3 2 4.7zM2 6.6l6 3.6 6-3.6v5.2a1.6 1.6 0 0 1-1.6 1.6H3.6A1.6 1.6 0 0 1 2 11.8z" /></svg></span></template>
+    <!-- prettier-ignore -->
+    <template data-sidebar-system-icon-template="starred"><span class="sidebar-symbolic-icon" data-sidebar-system-icon data-icon="starred"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.4l1.95 4.1 4.45.62-3.25 3.1.8 4.48L8 11.65 4.05 13.7l.8-4.48L1.6 6.12l4.45-.62z" /></svg></span></template>
+    <!-- prettier-ignore -->
+    <template data-sidebar-system-icon-template="main"><span class="sidebar-symbolic-icon" data-sidebar-system-icon data-icon="main"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 11.1a1.85 1.85 0 1 0 0 3.7 1.85 1.85 0 0 0 0-3.7zM2 6.2v2.45A5.15 5.15 0 0 1 7.15 13.8h2.45A7.6 7.6 0 0 0 2 6.2zM2 2v2.4A9.4 9.4 0 0 1 11.4 13.8h2.4A11.8 11.8 0 0 0 2 2z" /></svg></span></template>
+    <!-- prettier-ignore -->
+    <template data-scope-row-template><li><button type="button" class="nav-row" data-scope-key><span class="feed-icon" data-feed-icon aria-hidden="true" hidden><img data-feed-icon-image src="../icons/app-32.png" alt="" hidden /></span><span data-scope-label>Scope</span><span class="nav-count" data-scope-count>0</span></button></li></template>
+    <!-- prettier-ignore -->
+    <template data-category-group-template><li><section class="sidebar-category"><div class="category-header-row"><button type="button" class="icon-button category-disclosure-button" data-category-toggle aria-expanded="true"><span class="category-disclosure" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16"><path d="m 4 2 c 0 -.265625 .105469 -.519531 .292969 -.707031 .390625 -.390625 1.023437 -.390625 1.414062 0 l 6 6 c .1875 .1875 .292969 .441406 .292969 .707031 s -.105469 .519531 -.292969 .707031 l -6 6 c -.390625 .390625 -1.023437 .390625 -1.414062 0 C4.105469 14.519531 4 14.265625 4 14s.105469-.519531.292969-.707031L9.585938 8 4.292969 2.707031C4.105469 2.519531 4 2.265625 4 2z" /></svg></span><span class="visually-hidden" data-i18n="toggleCategory">Toggle category</span></button><button type="button" class="nav-row category-row" data-category-scope><span data-category-label>Category</span><span class="nav-count" data-category-count>0</span></button></div><ul data-category-feed-list></ul></section></li></template>
+    <!-- prettier-ignore -->
+    <template data-article-date-section-template><section class="article-date-group"><h2>Date</h2><div class="article-stack"></div></section></template>
+    <template data-article-row-template>
+      <article class="article-row">
+        <span class="article-unread-dot" aria-hidden="true"></span>
+        <span class="feed-icon" data-feed-icon aria-hidden="true"
+          ><img data-feed-icon-image src="../icons/app-32.png" alt="" hidden
+        /></span>
+        <time></time>
+        <button type="button" class="article-row-main" aria-expanded="false">
+          <span class="visually-hidden" data-read-state-label>Unread article</span>
+          <span class="article-row-titleline"
+            ><span class="article-row-title">Article</span><span class="article-row-meta">Feed</span></span
+          >
+        </button>
+        <figure class="article-row-image" hidden>
+          <img src="../icons/app-32.png" alt="" />
+        </figure>
+        <button type="button" class="article-row-star" data-article-star aria-pressed="false">
+          <svg class="article-star-unpressed" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="m 8 0 c -0.429688 0 -0.8125 0.273438 -0.949219 0.683594 l -1.449219 4.339844 l -4.589843 -0.015626 c -0.4375 0 -0.828125 0.28125 -0.9609378 0.695313 c -0.1328124 0.417969 0.0195313 0.871094 0.3789068 1.125 l 3.625 2.554687 l -1.5 4.285157 c -0.140626 0.40625 -0.011719 0.855469 0.328124 1.121093 c 0.335938 0.261719 0.804688 0.285157 1.164063 0.050782 l 4.003906 -2.59375 l 3.894531 2.585937 c 0.359376 0.238281 0.828126 0.222657 1.167969 -0.042969 c 0.339844 -0.261718 0.472657 -0.714843 0.332031 -1.117187 l -1.503906 -4.289063 l 3.644532 -2.578124 c 0.351562 -0.25 0.503906 -0.703126 0.371093 -1.113282 c -0.128906 -0.414062 -0.511719 -0.695312 -0.945312 -0.699218 l -4.660157 -0.015626 l -1.402343 -4.285156 c -0.132813 -0.410156 -0.515625 -0.68749975 -0.949219 -0.691406 z m -0.007812 4.1875 l 0.683593 2.097656 c 0.132813 0.40625 0.515625 0.6875 0.945313 0.6875 l 2.253906 0.007813 l -1.703125 1.203125 c -0.363281 0.257812 -0.511719 0.726562 -0.363281 1.148437 l 0.765625 2.191407 l -1.964844 -1.304688 c -0.332031 -0.222656 -0.761719 -0.222656 -1.097656 -0.007812 l -2.101563 1.363281 l 0.785156 -2.242188 c 0.144532 -0.421875 -0.003906 -0.890625 -0.367187 -1.148437 l -1.652344 -1.164063 l 2.144531 0.007813 c 0.429688 0 0.8125 -0.277344 0.949219 -0.683594 z m 0 0"
+            />
+          </svg>
+          <svg class="article-star-pressed" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 1.4l1.95 4.1 4.45.62-3.25 3.1.8 4.48L8 11.65 4.05 13.7l.8-4.48L1.6 6.12l4.45-.62z" />
+          </svg>
+          <span class="visually-hidden" data-star-label>Star article</span>
+        </button>
+        <p class="article-row-summary">Summary</p>
+      </article>
+    </template>
+    <!-- prettier-ignore -->
+    <template data-sidebar-empty-template><li><p class="nav-row is-empty" data-i18n="feedNavEmpty"></p></li></template>
+    <!-- prettier-ignore -->
+    <template data-feed-initials-template><span class="feed-initials" data-feed-initials></span></template>
+    <!-- prettier-ignore --><template data-feed-row-template><div class="settings-row management-item-row" data-feed-row draggable="true"><button type="button" class="management-icon-button management-grip" data-feed-grip><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 0h3v3H3zM9 0h3v3H9zM3 6h3v3H3zM9 6h3v3H9zM3 12h3v3H3zM9 12h3v3H9z" /></svg><span class="visually-hidden" data-i18n="feedReorderGrip">Reorder feed</span></button><span class="feed-icon management-feed-icon" data-feed-icon aria-hidden="true" hidden><img data-feed-icon-image src="../icons/app-32.png" alt="" hidden /></span><span class="settings-row-copy"><span class="settings-row-title" data-feed-row-title></span><span class="settings-row-subtitle" data-feed-row-url></span><span class="settings-row-subtitle management-row-status" data-feed-row-status hidden></span></span><span class="management-pill" data-feed-row-category></span><button type="button" class="management-icon-button" data-feed-menu-trigger><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="3" cy="8" r="1.5" /><circle cx="8" cy="8" r="1.5" /><circle cx="13" cy="8" r="1.5" /></svg><span class="visually-hidden" data-i18n="feedOptions">Feed options</span></button></div></template>
+    <!-- prettier-ignore --><template data-category-row-template><div class="settings-row management-item-row" data-category-row draggable="true"><button type="button" class="management-icon-button management-grip" data-category-grip><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 0h3v3H3zM9 0h3v3H9zM3 6h3v3H3zM9 6h3v3H9zM3 12h3v3H3zM9 12h3v3H9z" /></svg><span class="visually-hidden">Reorder category</span></button><span class="settings-row-copy"><span class="settings-row-title" data-category-row-title></span><span class="settings-row-subtitle" data-category-row-count></span></span><button type="button" class="management-icon-button" data-category-action="rename"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.6 1.8 14.2 4.4 5.6 13H3v-2.6zM12.7.7 15.3 3.3 14 4.6 11.4 2z" /></svg><span class="visually-hidden" data-i18n="categoryRenameTitle">Rename category</span></button><button type="button" class="management-icon-button destructive" data-category-action="delete"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5h4l.5 1.5H14v1.5H2V3h3.5zM3 5.5h10l-.7 8.2a1 1 0 0 1-1 .8H4.7a1 1 0 0 1-1-.8z" /></svg><span class="visually-hidden" data-i18n="categoryDelete">Delete category</span></button></div></template>
+    <!-- prettier-ignore --><template data-management-header-template><div class="management-section-header"><hgroup class="management-section-heading"><h2 data-settings-management-title tabindex="-1">Section</h2><p class="settings-row-subtitle" data-management-section-subtitle hidden></p></hgroup><button type="button" class="text-button suggested" data-management-header-action hidden></button></div></template>
+    <!-- prettier-ignore -->
+    <template data-reader-search-template><section class="reader-search" data-reader-search data-adw-primitive="searchbar-template" hidden aria-labelledby="reader-search-heading"><form data-search-form role="search" aria-labelledby="reader-search-heading"><label class="visually-hidden" id="reader-search-heading" for="article-search" data-search-label>Search articles</label><input id="article-search" type="search" autocomplete="off" spellcheck="false" aria-describedby="reader-search-status" data-search-input /><button type="submit" class="visually-hidden" data-search-submit>Search</button><button type="button" class="text-button" data-search-close>Close</button></form><p id="reader-search-status" data-search-status></p></section></template>
+    <!-- prettier-ignore -->
+    <template data-status-page-template><section class="status-page" data-status-page data-adw-primitive="status-page" aria-labelledby="status-page-title"><span class="status-page-visual" data-status-page-visual aria-hidden="true"><img class="status-page-product-icon" src="../icons/app-128.png" alt="" width="128" height="128" /></span><p class="scope-kicker" data-status-page-kicker hidden></p><h2 class="status-page-title" id="status-page-title" data-status-page-heading>Status</h2><p class="status-page-body" data-status-page-body></p><div class="status-page-actions" data-status-page-action-slot hidden><button type="button" class="text-button status-page-action" data-status-page-action hidden></button></div></section></template>
+    <!-- prettier-ignore -->
+    <template data-toast-template><section class="toast" data-adw-primitive="toast"><p class="toast-message" data-toast-message></p><button type="button" class="text-button toast-action" data-toast-action hidden></button><button type="button" class="icon-button toast-dismiss" data-toast-dismiss><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.2 3 8 6.8 11.8 3 13 4.2 9.2 8l3.8 3.8-1.2 1.2L8 9.2 4.2 13 3 11.8 6.8 8 3 4.2z" /></svg><span class="visually-hidden" data-toast-dismiss-text>Dismiss toast</span></button></section></template>
+    <!-- prettier-ignore -->
+    <template data-banner-template><section class="adw-banner" data-adw-primitive="banner" role="group"><p class="adw-banner-title" data-banner-title></p><button type="button" class="text-button adw-banner-button" data-banner-action hidden></button></section></template>
+    <template data-error-summary-template><div hidden role="alert"></div></template>
+    <template data-field-error-template><span class="field-error"></span></template>
+    <template data-text-button-template><button type="button" class="text-button">Action</button></template>
+    <!-- prettier-ignore -->
+    <template data-settings-section-template><section class="settings-section" aria-labelledby="settings-section-template-title"><h2 id="settings-section-template-title" data-settings-management-title>Preferences</h2></section></template>
+    <!-- prettier-ignore -->
+    <template data-settings-form-template><form class="settings-form" novalidate><fieldset class="settings-group"><legend>Preferences</legend><div class="settings-list" data-settings-list></div></fieldset><div hidden role="alert" data-settings-error-summary></div><button type="submit" class="text-button" data-template-submit hidden>Submit</button></form></template>
+    <!-- prettier-ignore --><template data-settings-reset-row-template><div class="settings-list"><div class="settings-row management-action-row settings-reset-row"><span class="settings-row-copy"><span class="settings-row-title" data-settings-reset-title></span><span class="settings-row-subtitle" data-settings-reset-subtitle></span></span><button type="button" class="text-button management-row-button destructive" data-settings-reset>Reset</button></div></div></template>
+    <template data-management-actions-template><div class="management-actions"></div></template>
+    <template data-settings-note-template><p class="settings-note"></p></template>
+    <!-- prettier-ignore --><template data-settings-warning-template><div class="settings-warning" data-storage-warning role="status" hidden></div></template>
+    <!-- prettier-ignore -->
+    <template data-settings-input-row-template><div class="settings-row settings-input-row"><div class="settings-row-copy"><label class="settings-row-title">Field</label><span class="settings-row-subtitle" hidden></span></div><span class="settings-row-control"><input type="text" required /><span class="field-error"></span></span></div></template>
+    <!-- prettier-ignore --><template data-settings-spin-row-template><div class="settings-row settings-spin-row" data-settings-spin-row><div class="settings-row-copy"><label class="settings-row-title">Field</label><span class="settings-row-subtitle" hidden></span></div><span class="settings-row-control settings-spin-control"><button type="button" class="settings-spin-button" data-settings-spin-decrement>-</button><input type="number" required /><button type="button" class="settings-spin-button" data-settings-spin-increment>+</button><span class="field-error"></span></span></div></template>
+    <!-- prettier-ignore -->
+    <template data-settings-static-row-template><div class="settings-row settings-static-row"><span class="settings-row-copy"><span class="settings-row-title">Field</span><span class="settings-row-subtitle" hidden></span></span><span class="settings-row-value"></span></div></template>
+    <!-- prettier-ignore -->
+    <template data-settings-checkbox-row-template><label class="settings-row settings-toggle-row"><span class="settings-row-copy"><span class="settings-row-title">Option</span><span class="settings-row-subtitle" hidden></span></span><input type="checkbox" /></label></template>
+    <!-- prettier-ignore -->
+    <template data-settings-combo-row-template><div class="settings-row settings-combo-row" data-settings-combo-row><span class="settings-row-copy"><span class="settings-row-title" data-settings-combo-title>Field</span><span class="settings-row-subtitle" hidden></span></span><span class="settings-row-control"><button type="button" class="settings-combo-trigger" data-settings-combo-trigger aria-haspopup="listbox" aria-expanded="false"><span data-settings-combo-value>Value</span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 6h8l-4 4z" /></svg></button><select hidden></select></span></div></template>
+    <!-- prettier-ignore -->
+    <template data-settings-listbox-option-template><button type="button" class="settings-listbox-option" role="option">Option</button></template>
+    <!-- prettier-ignore -->
+    <template data-settings-accent-swatch-row-template><fieldset class="settings-row settings-accent-row" data-accent-swatch-row><legend class="settings-row-title">Accent color</legend><span class="accent-swatch-options" data-accent-swatch-options><label class="accent-swatch-option"><input class="visually-hidden" type="radio" data-accent-swatch-radio /><span class="accent-swatch-circle" aria-hidden="true"></span><span class="visually-hidden">Accent</span></label></span></fieldset></template>
+    <div class="settings-listbox" data-settings-listbox popover hidden></div>
+    <!-- prettier-ignore -->
+    <template data-static-document-template><section class="static-document" aria-labelledby="static-main-title"><h2 id="static-main-title" data-static-title>Static page</h2></section></template>
+    <!-- prettier-ignore -->
+    <template data-help-document-template><article class="help-document" data-static-page="help" aria-labelledby="static-main-title"><p class="help-lead" data-help-intro></p><div class="help-groups" data-help-groups></div></article></template>
+    <!-- prettier-ignore -->
+    <template data-help-group-template><section class="help-group"><h2 data-help-group-title>Section</h2><p data-help-group-body></p></section></template>
+    <!-- prettier-ignore --><template data-about-icon-template><img class="about-icon" src="../icons/app-96.png" alt="" width="96" height="96" /></template>
+    <!-- prettier-ignore --><template data-about-row-template><button type="button" class="about-row" data-about-subpage-open><span data-about-row-label>Details</span><span class="about-row-glyph" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="m 4 2 c 0 -.265625 .105469 -.519531 .292969 -.707031 .390625 -.390625 1.023437 -.390625 1.414062 0 l 6 6 c .1875 .1875 .292969 .441406 .292969 .707031 s -.105469 .519531 -.292969 .707031 l -6 6 c -.390625 .390625 -1.023437 .390625 -1.414062 0 C4.105469 14.519531 4 14.265625 4 14s.105469-.519531.292969-.707031L9.585938 8 4.292969 2.707031C4.105469 2.519531 4 2.265625 4 2z" /></svg></span></button></template>
+    <!-- prettier-ignore --><template data-about-resource-template><button type="button" class="about-resource-button" data-about-resource><span class="about-resource-label" data-about-resource-label>Resource</span><svg class="about-resource-symbol" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5h-2V5.4L7.7 9.7 6.3 8.3 10.6 4H9zM3 3h4v2H5v6h6V9h2v4H3z" /></svg></button></template>
+    <!-- prettier-ignore --><template data-about-subpage-template><div class="about-subpage" data-about-page hidden><button type="button" class="text-button about-back" data-about-subpage-back>Back</button><div data-about-subpage-body></div></div></template>
+    <!-- prettier-ignore -->
+    <template data-static-body-template><div class="static-copy"></div></template>
+    <!-- prettier-ignore -->
+    <template data-static-paragraph-template><p>Static copy</p></template>
+    <!-- prettier-ignore -->
+    <template data-static-group-template><section class="static-copy"><h3 data-static-group-title>Section</h3><p data-static-group-body>Body</p></section></template>
+    <!-- prettier-ignore --><template data-keycap-template><kbd class="keycap"></kbd></template>
+    <!-- prettier-ignore --><template data-keycap-separator-template><span class="keycap-separator" aria-hidden="true">+</span></template>
+    <!-- prettier-ignore -->
+    <template data-shortcut-row-template><div><dt class="shortcut-keys" data-shortcut-key></dt><dd data-shortcut-description>Description</dd></div></template>
+    <!-- prettier-ignore -->
+    <template data-shortcuts-dialog-template><dialog class="shortcuts-dialog" data-shortcuts-dialog data-adw-primitive="shortcuts-dialog" hidden aria-labelledby="shortcuts-heading"><section><header class="dialog-header"><h2 id="shortcuts-heading" data-dialog-initial-focus tabindex="-1" data-i18n="shortcutsTitle">Keyboard shortcuts</h2><button type="button" class="dialog-close-icon" data-shortcuts-close data-dialog-action="close" data-i18n-title="dialogClose" title="Close"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"><path d="m 4 4 h 1 h 0.03125 c 0.253906 0.011719 0.511719 0.128906 0.6875 0.3125 l 2.28125 2.28125 l 2.3125 -2.28125 c 0.265625 -0.230469 0.445312 -0.304688 0.6875 -0.3125 h 1 v 1 c 0 0.285156 -0.035156 0.550781 -0.25 0.75 l -2.28125 2.28125 l 2.25 2.25 c 0.1875 0.1875 0.28125 0.453125 0.28125 0.71875 v 1 h -1 c -0.265625 0 -0.53125 -0.09375 -0.71875 -0.28125 l -2.28125 -2.28125 l -2.28125 2.28125 c -0.1875 0.1875 -0.453125 0.28125 -0.71875 0.28125 h -1 v -1 c 0 -0.265625 0.09375 -0.53125 0.28125 -0.71875 l 2.28125 -2.25 l -2.28125 -2.28125 c -0.210938 -0.195312 -0.304688 -0.46875 -0.28125 -0.75 z" /></svg><span class="visually-hidden" data-i18n="dialogClose">Close</span></button></header><p class="shortcut-section-title" data-i18n="shortcutsSectionGeneral">General</p><dl class="shortcut-list" data-shortcuts-dialog-list></dl></section></dialog></template>
+    <!-- prettier-ignore -->
+    <template data-opml-import-section-template><section class="settings-section" aria-labelledby="opml-import-template-title"><h2 id="opml-import-template-title" data-settings-management-title>Import &amp; Export</h2><div id="opml-error-summary" data-opml-error-summary role="alert" hidden></div><form data-opml-preview-form novalidate aria-describedby="opml-help opml-error-summary"><div class="settings-list"><div class="settings-row management-action-row"><div class="settings-row-copy"><label class="settings-row-title" for="opml-file" data-opml-file-label>OPML file</label><span class="settings-row-subtitle" id="opml-help" data-opml-help></span><span class="field-error" id="opml-file-error" data-opml-file-error></span></div><span class="settings-row-control management-row-controls"><input id="opml-file" name="opmlFile" type="file" accept=".opml,application/xml,text/xml" required aria-describedby="opml-help" /><button type="submit" class="text-button management-row-button" data-opml-preview-submit>Preview OPML</button></span></div><div class="settings-row management-action-row"><div class="settings-row-copy"><span class="settings-row-title" id="opml-preview-summary" data-opml-preview-summary role="status"></span><div data-opml-preview-counts role="group" aria-describedby="opml-preview-summary" hidden><p data-opml-preview-count="validCount"></p><p data-opml-preview-count="duplicateInFileCount"></p><p data-opml-preview-count="alreadySubscribedCount"></p><p data-opml-preview-count="invalidCount"></p><p data-opml-preview-count="categoryCount"></p><p data-opml-preview-count="uniqueOriginCount"></p></div><ul data-opml-origin-list></ul></div><button type="button" class="text-button suggested" data-opml-commit disabled>Grant access and import</button></div></div></form><div class="settings-list"><div class="settings-row management-action-row"><span class="settings-row-copy"><span class="settings-row-title" data-opml-export-title></span><span class="settings-row-subtitle" data-opml-export-subtitle></span></span><button type="button" class="text-button management-row-button" data-opml-export>Export OPML</button></div></div></section></template>
+    <!-- prettier-ignore -->
+    <template data-opml-origin-item-template><li></li></template>
+    <!-- prettier-ignore -->
+    <template data-move-category-radio-template><label><input type="radio" name="categoryId" data-dialog-initial-focus /><span> Category</span></label></template>
+    <!-- prettier-ignore -->
+    <span data-article-destination-label data-i18n="articleLinkDestinationLabel" hidden>Destination</span>
+
+    <template data-article-destination-template
+      ><span class="article-destination" data-article-destination
+        ><span data-article-destination-link-slot></span
+        ><span class="article-destination-tooltip" data-article-destination-tooltip role="tooltip"></span></span
+    ></template>
+
+    <template data-article-preview-template><section class="article-preview"></section></template>
+    <!-- prettier-ignore -->
+    <template data-article-preview-status-template><div data-article-preview-content><h3 data-article-preview-heading>Article preview</h3><p class="article-preview-status" data-article-preview-status></p></div></template>
+    <!-- prettier-ignore -->
+    <template data-article-preview-ready-template><div data-article-preview-content><h3 data-article-preview-heading><span data-article-preview-heading-placeholder>Article preview</span><a class="article-preview-title" data-article-preview-title-link data-article-open hidden>Article preview</a><span class="article-preview-title" data-article-preview-title-text hidden>Article preview</span></h3><p class="article-preview-meta" data-article-preview-meta><span data-article-preview-meta-feed hidden></span><span data-article-preview-meta-author hidden></span><time data-article-preview-meta-time hidden></time></p><div class="article-preview-columns"><figure class="article-preview-image" data-article-preview-image hidden><img src="../icons/app-32.png" alt="" /></figure><div class="article-preview-rich" data-article-preview-rich hidden></div><p class="article-preview-body" data-article-preview-body></p><p class="article-preview-image-note" data-article-preview-image-note></p></div><div class="article-preview-actions" role="group" data-article-preview-actions><a class="text-button suggested" data-article-open>Open original</a><button type="button" class="text-button" data-article-read>Mark read</button><button type="button" class="text-button" data-article-star aria-pressed="false">Star article</button><button type="button" class="text-button" data-article-copy>Copy link</button></div></div></template>
+    <!-- prettier-ignore -->
+    <template data-load-more-template><button type="button" class="text-button load-more-button" data-load-more data-i18n="articleLoadMore">Load more</button></template>
+    <!-- prettier-ignore -->
+    <template data-database-recovery-template><section class="database-recovery status-page" data-database-recovery-panel data-adw-primitive="status-page" aria-labelledby="database-recovery-heading"><span class="status-page-icon" data-status-page-icon aria-hidden="true"><svg fill="currentColor" viewBox="0 0 16 16"><path d="M8 1.2 15 14H1zm0 3.2L3.7 12.5h8.6zM7.25 6h1.5v3.5h-1.5zm0 4.5h1.5V12h-1.5z" /></svg></span><h2 class="status-page-title" id="database-recovery-heading" tabindex="-1" data-database-recovery-heading>Database recovery</h2><p class="status-page-body" data-database-recovery-message></p><p class="status-page-body"><span data-i18n="databaseRecoveryCodeLabel">Error code</span>: <code data-database-recovery-code></code></p><div class="database-recovery-actions status-page-actions"><button type="button" class="text-button suggested" data-database-recovery-retry>Try again</button><button type="button" class="text-button" data-database-recovery-reload>Reload RSSavis</button><button type="button" class="text-button" data-database-recovery-close>Close</button></div></section></template>
+  </body>
+</html>

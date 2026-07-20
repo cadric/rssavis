@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system" data-effective-scheme="light" data-accent-color="blue">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSSavis</title>
+    <script src="./theme-bootstrap.js"></script>
+    <link rel="stylesheet" href="../styles/themes/tokens.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-light.css" />
+    <link rel="stylesheet" href="../styles/themes/adwaita-dark.css" />
+    <link rel="stylesheet" href="../styles/themes/accents.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/article-list.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/accessibility.css" />
+    <script src="./open-original.js" type="module"></script>
+  </head>
+  <body>
+    <main class="static-view open-original-view" data-open-original-root aria-labelledby="open-original-heading">
+      <h1 id="open-original-heading" tabindex="-1" data-i18n="openOriginalHeading">Opening article</h1>
+      <p data-open-original-status data-i18n="openOriginalStatus">Opening the original article.</p>
+      <section data-open-original-recovery hidden aria-labelledby="open-original-recovery-heading">
+        <h2 id="open-original-recovery-heading" data-i18n="openOriginalRecoveryHeading">Could not open article</h2>
+        <p data-open-original-error></p>
+        <div class="database-recovery-actions">
+          <button type="button" class="text-button suggested" data-open-original-reader data-i18n="openOriginalReader">
+            Return to RSSavis
+          </button>
+          <button type="button" class="text-button" data-open-original-close data-i18n="databaseRecoveryClose">
+            Close
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
