@@ -3,6 +3,7 @@
 import { normalizeScope, scopeToStorageKey } from '../domain/scopes.js';
 import { refreshAllFeeds } from './api-client.js';
 import { isHtmlElement } from './app-shell-utils.js';
+import { createExpansionLayoutHooks } from './article-expansion-position.js';
 import { ARTICLE_ACTION_SELECTOR, shouldUseArticleBridgeNavigation } from './article-link-navigation.js';
 import { closeExpandedArticle, handleArticleActionClick } from './article-workflow.js';
 import { newArticlesQueryKey } from './new-articles-availability.js';
@@ -75,7 +76,7 @@ export async function handleReaderClick(input, runtime, event, actions) {
     if (shouldUseArticleBridgeNavigation(event, articleAction)) return;
     event.preventDefault();
   }
-  if (await handleArticleActionClick(input, target)) return;
+  if (await handleArticleActionClick(input, target, createExpansionLayoutHooks(input, runtime))) return;
   const newArticlesAction = target.closest('[data-new-articles-action]');
   if (isHtmlElement(newArticlesAction)) {
     await showNewArticles(input, runtime, actions, input.options.documentRef.activeElement === newArticlesAction);

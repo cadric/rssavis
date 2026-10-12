@@ -16,6 +16,12 @@ import {
 } from './article-read-intent.js';
 import { mergeOpenOriginalReadResult } from './article-open-result.js';
 import { isCurrentExpandedPreview, nextPreviewDetailGeneration } from './article-preview-request.js';
+import {
+  rollbackArticleStateValue,
+  setArticleStateValue,
+  setPreview,
+  setReadyArticleDetail,
+} from './article-workflow-state.js';
 import { showToast } from './toasts.js';
 
 /**
@@ -29,14 +35,16 @@ import { showToast } from './toasts.js';
  * @property {(next: ArticleState) => void} setArticleState
  * @property {(id: string, field: 'readState' | 'starredState', expectedValue: number, nextValue: number, article: Record<string, unknown>, options?: {authoritativeDataRevision?: number}) => void} [patchCachedArticleField]
  * @property {(patch: Record<string, unknown>) => Promise<unknown>} writeState
+ * @typedef {Partial<import('./article-expansion-position.js').ExpansionLayoutHooks>} ExpansionHooks
  */
 
 /**
  * @param {WorkflowInput} input
  * @param {HTMLElement} target
+ * @param {ExpansionHooks} [hooks]
  * @returns {Promise<boolean>}
  */
-export async function handleArticleActionClick(input, target) {
+export async function handleArticleActionClick(input, target, hooks = {}) {
   const copyButton = target.closest('[data-article-copy]');
   if (isHtmlElement(input.options.documentRef, copyButton)) {
     await copyArticleLink(input, copyButton.dataset.articleCopy ?? '');
@@ -64,7 +72,7 @@ export async function handleArticleActionClick(input, target) {
   }
   const expandButton = target.closest('[data-article-expand]');
   if (isHtmlElement(input.options.documentRef, expandButton)) {
-    await toggleExpandedArticle(input, expandButton.dataset.articleExpand ?? '');
+    await toggleExpandedArticle(input, expandButton.dataset.articleExpand ?? '', hooks);
     return true;
   }
   return false;
@@ -73,12 +81,14 @@ export async function handleArticleActionClick(input, target) {
 /**
  * @param {WorkflowInput} input
  * @param {KeyboardEvent} event
+ * @param {ExpansionHooks} [hooks]
  */
-export function handleArticleEscape(input, event) {
+export function handleArticleEscape(input, event, hooks = {}) {
   if (event.key !== 'Escape') return false;
   const expandedId = input.getState()?.expandedArticleId ?? '';
   if (!expandedId) return false;
   void closeExpandedArticle(input, expandedId).then(() => {
+    hooks.onExpansionCommitted?.(expandedId, false);
     const button = input.options.documentRef.querySelector(`[data-article-expand="${cssEscape(expandedId)}"]`);
     if (isHtmlElement(input.options.documentRef, button)) button.focus();
   });
@@ -124,22 +134,27 @@ async function toggleRead(input, id) {
 /**
  * @param {WorkflowInput} input
  * @param {string} id
+ * @param {ExpansionHooks} hooks
  */
-async function toggleExpandedArticle(input, id) {
+async function toggleExpandedArticle(input, id, hooks) {
   const current = input.getState();
   if (!current || !id) return;
   if (current.expandedArticleId === id) {
     await closeExpandedArticle(input, id);
+    hooks.onExpansionCommitted?.(id, false);
     return;
   }
   const detailGeneration = nextPreviewDetailGeneration(input, id);
   await input.writeState({ expandedArticleId: id });
+  hooks.onExpansionCommitted?.(id, true);
   if (shouldMarkRead(input, id, 'markReadOnExpand')) {
     await setArticleFlag(input, id, 'readState', 1, () => setArticleRead(id, 1, input.options.browserApi));
   }
   try {
     const detail = await getArticleDetail(id, input.options.browserApi);
-    if (isCurrentExpandedPreview(input, id, detailGeneration)) setReadyArticleDetail(input, id, detail);
+    if (!isCurrentExpandedPreview(input, id, detailGeneration)) return;
+    setReadyArticleDetail(input, id, detail);
+    hooks.onExpansionContentReady?.(id);
   } catch (error) {
     if (!isCurrentExpandedPreview(input, id, detailGeneration)) return;
     const safe = toSafeError(error);
@@ -253,33 +268,6 @@ async function setArticleFlag(input, id, field, nextState, operation) {
 }
 
 /**
- * Rolls back only the still-current optimistic field. Concurrent snapshot,
- * availability, preview and unrelated flag state remains owned by its source.
- * @param {WorkflowInput} input
- * @param {string} id
- * @param {'readState' | 'starredState'} field
- * @param {number} optimisticState
- * @param {number} previousState
- */
-function rollbackArticleStateValue(input, id, field, optimisticState, previousState) {
-  const current = input.getArticleState();
-  const article = articleById(current, id);
-  if (!article || numberValue(article[field]) !== optimisticState) return;
-  const preview = current.previewByArticleId[id];
-  input.setArticleState({
-    ...current,
-    items: current.items.map((item) => (item.id === id ? { ...item, [field]: previousState } : item)),
-    previewByArticleId:
-      preview?.detail && numberValue(preview.detail[field]) === optimisticState
-        ? {
-            ...current.previewByArticleId,
-            [id]: { ...preview, detail: { ...preview.detail, [field]: previousState } },
-          }
-        : current.previewByArticleId,
-  });
-}
-
-/**
  * @param {WorkflowInput} input
  * @param {string} operation
  * @param {unknown} error
@@ -304,57 +292,6 @@ function shouldMarkRead(input, id, setting) {
   return (
     input.getArticleState().settings[setting] && numberValue(articleById(input.getArticleState(), id)?.readState) === 0
   );
-}
-
-/**
- * @param {WorkflowInput} input
- * @param {string} id
- * @param {Record<string, unknown>} detail
- */
-function setReadyArticleDetail(input, id, detail) {
-  const current = input.getArticleState();
-  const article = articleById(current, id);
-  const synchronizedDetail = article
-    ? { ...detail, readState: article.readState, starredState: article.starredState }
-    : detail;
-  input.setArticleState({
-    ...current,
-    previewByArticleId: { ...current.previewByArticleId, [id]: { detail: synchronizedDetail, status: 'ready' } },
-  });
-}
-
-/**
- * @param {WorkflowInput} input
- * @param {string} id
- * @param {'readState' | 'starredState'} field
- * @param {number} value
- */
-function setArticleStateValue(input, id, field, value) {
-  const current = input.getArticleState();
-  const nextPreview = current.previewByArticleId[id];
-  input.setArticleState({
-    ...current,
-    items: current.items.map((article) => (article.id === id ? { ...article, [field]: value } : article)),
-    previewByArticleId: nextPreview?.detail
-      ? {
-          ...current.previewByArticleId,
-          [id]: { ...nextPreview, detail: { ...nextPreview.detail, [field]: value } },
-        }
-      : current.previewByArticleId,
-  });
-}
-
-/**
- * @param {WorkflowInput} input
- * @param {string} id
- * @param {PreviewEntry} entry
- */
-function setPreview(input, id, entry) {
-  const current = input.getArticleState();
-  input.setArticleState({
-    ...current,
-    previewByArticleId: { ...current.previewByArticleId, [id]: entry },
-  });
 }
 
 /**

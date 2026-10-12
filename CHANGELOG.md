@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.0.0 — 2026-07-20
+## 1.0.1 — 2026-10-12
+
+### Fixes
+
+- Pins an article opened from the list to the top of the Reader, so collapsing a long previously opened article no longer throws the list far down. Rows moved by that repositioning are no longer marked read by "Mark read on scroll"; only rows the user actually scrolls past are.
 
 ### Features
 

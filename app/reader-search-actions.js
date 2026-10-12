@@ -1,5 +1,6 @@
 // @ts-check
 
+import { createExpansionLayoutHooks } from './article-expansion-position.js';
 import { handleArticleEscape } from './article-workflow.js';
 import { scopeToStorageKey } from '../domain/scopes.js';
 import { captureArticleListFocus, restoreArticleListFocus } from './article-list-focus.js';
@@ -40,7 +41,7 @@ export function handleReaderKeydown(input, runtime, event, reload) {
     runReaderTask(input, 'reader-search-close-keydown', () => closeSearch(input, runtime, reload));
     return true;
   }
-  return handleArticleEscape(input, event);
+  return handleArticleEscape(input, event, createExpansionLayoutHooks(input, runtime));
 }
 
 /**

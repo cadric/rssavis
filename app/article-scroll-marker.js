@@ -40,6 +40,16 @@ export function createScrollReadMarker() {
      * @param {ScrollMarkerInput} input
      */
     reconcile: (input) => reconcile(runtime, input),
+    /**
+     * Restarts observation after a programmatic layout move (expansion pin or
+     * collapse) so rows it carried over the top are seeded, never marked read.
+     * @param {ScrollMarkerInput} input
+     */
+    reseed: (input) => {
+      if (runtime.flushing) return;
+      pauseObserver(runtime);
+      reconcile(runtime, input);
+    },
   };
 }
 
